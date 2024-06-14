@@ -133,8 +133,40 @@ get_header(); ?>
 </div>
 
 <!-- Section 4 -->
-<div class="section-4" style="padding: 50px 20px;">
-    <!-- Add your content for Section 4 here -->
+<!-- Trader Section -->
+<div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
+    <div class="trader-content" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
+        <!-- Left Text Block -->
+        <div class="trader-text" style="flex-basis: 50%; color: white;">
+            <h2 style="font-size: 36px;">ARE YOU A</h2>
+            <h1 style="font-size: 48px; font-weight: bold;">PROFITABLE TRADER?</h1>
+            <p style="font-size: 18px;">Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for$35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
+            <a href="#" class="join-btn" style="display: inline-block; padding: 12px 20px; background-color: #009CFF; color: white; text-decoration: none; border: none; border-radius: 120px; font-weight: 600; font-size: 18px; margin-top: 20px;">JOIN NOW</a>
+        </div>
+        <!-- Right Cards Block -->
+        <div class="trader-cards" style="flex-basis: 45%;">
+            <!-- Card 1 -->
+            <div class="card" style="background: #1B1B1B; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+                <h3 style="font-size: 24px; color: white;">SHOWCASE YOUR SKILLS</h3>
+                <p style="font-size: 16px; color: white;">The prize goes to the winner but the job goes to the best trader based on statistics and analytics.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card" style="background: #1B1B1B; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+                <h3 style="font-size: 24px; color: white;">SECURE DATA ENCRYPTION</h3>
+                <p style="font-size: 16px; color: white;">Receive daily trading statistics to help you learn, grow and refine your craft.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card" style="background: #1B1B1B; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+                <h3 style="font-size: 24px; color: white;">GET USEFUL FEEDBACK & MENTORSHIP</h3>
+                <p style="font-size: 16px; color: white;">Join our global traders network! Tap into 4 decades of experience.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="card" style="background: #1B1B1B; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+                <h3 style="font-size: 24px; color: white;">USE THE BEST TOOLS</h3>
+                <p style="font-size: 16px; color: white;">Traders use our proprietary platform, Trading Technologies [TT].</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>

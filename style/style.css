@@ -1,0 +1,139 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set body and html to 100% width to prevent overflow */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Add this CSS to your stylesheet */
+.breakout-logo {
+     
+    bottom: 0;
+    left: 50%;
+     
+     
+}
+
+/* Main container */
+.landing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('../img/stat.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: left;
+    padding: 50px 20px;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+a:hover {
+    background-color: #007ACC;
+    color: #FFFFFF;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Define the font family */
+@font-face {
+    font-family: 'Acumin Pro ExtraCondensed';
+    src: url('path/to/acumin-pro-extracondensed.woff2') format('woff2'), /* modern browsers */
+         url('path/to/acumin-pro-extracondensed.woff') format('woff'); /* older browsers */
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Apply the font, weight, size, line height, and alignment to the heading */
+h1 {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 78px;
+    line-height: 78px;
+    text-align: left;
+}
+
+p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25.2px;
+    letter-spacing: -2%;
+    text-align: left;
+}
+
+.copy {
+    font-weight: 800;
+}
+
+.landing-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.landing-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.landing-content .btn {
+    background-color: #009CFF;
+    color: white;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.landing-content .btn {
+    background-color: #009CFF;
+    color: white;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px; /* This margin only applies on hover */
+}
+
+.landing-content .btn:hover {
+    background-color: #0056b3;
+    
+}
+
+/* Add this CSS for the logo positioning */
+.breakout-logo {
+    margin-left: 30px; /* This margin applies regardless of hover */
+}
+
+
+.landing-logo img {
+    max-width: 80%;
+    height: auto;
+    margin-top: -7%;
+    margin-left: 10%;
+}
+
+
+
+
+
+
+
+
+

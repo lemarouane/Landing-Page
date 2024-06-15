@@ -137,10 +137,11 @@ get_header(); ?>
 <div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
     <div class="trader-content" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
         <!-- Left Text Block -->
-        <div class="trader-text" style="flex-basis: 50%; color: white;">
-            <h2 style="font-size: 36px;">ARE YOU A</h2>
-            <h1 style="font-size: 48px; font-weight: bold;">PROFITABLE TRADER?</h1>
-            <p style="font-size: 18px;">Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for$35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
+        <div class="trader-text" style="flex-basis: 50%; color: white; text-align: left;">
+            <a href="#" class="contest-overview-btn" style="display: inline-block; padding: 16px 24px; background-color: #; color: white; text-decoration: none; border: 1px solid #0173BC; border-radius: 100px; font-family: 'General Sans Variable'; font-size: 12px; font-weight: 500; line-height: 16.2px; text-align: left; margin-bottom: 16px; margin-bottom: 60px;">Contest Overview</a>
+            <h2 style="font-size: 42px; text-align: left;">ARE YOU A</h2>
+            <h2 style="font-size: 42px;  text-align: left;">PROFITABLE TRADER?</h1>
+            <p style="font-size: 18px; text-align: left;">Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
             <a href="#" class="join-btn" style="display: inline-block; padding: 12px 20px; background-color: #009CFF; color: white; text-decoration: none; border: none; border-radius: 120px; font-weight: 600; font-size: 18px; margin-top: 20px;">JOIN NOW</a>
         </div>
         <!-- Right Cards Block -->

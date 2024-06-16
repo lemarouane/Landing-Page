@@ -170,6 +170,70 @@ get_header(); ?>
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+        <!-- Section Timer -->
+        <div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
+    <div class="section-content" style="color: white; font-family: 'Acumin Pro ExtraCondensed', sans-serif; letter-spacing: -5px;">
+        
+        <!-- Timer Block -->
+        <div class="block-container" style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+            
+            <!-- Countdown Timer Block -->
+            <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 100rem; height: 30rem; color: #FFFFFF; text-align: center; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);">
+                <div class="prize-value" style="font-size: 60px; margin-bottom: 10px; font-weight: bold;">STARTS IN</div>
+                <div id="countdown" style="margin-top: 10px; font-weight: bold; display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center;">
+                        <div id="days" style="font-size: 120px;"></div>
+                        <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">DAYS</div>
+                    </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line" style="height: 150px; margin: 50px;">
+                    <div style="text-align: center; margin: 0 20px;">
+                        <div id="hours" style="font-size: 120px;"></div>
+                        <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">HOURS</div>
+                    </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line" style="height: 150px; margin: 50px;">
+                    <div style="text-align: center;">
+                        <div id="minutes" style="font-size: 120px;"></div>
+                        <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">MINS</div>
+                    </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line" style="height: 150px; margin: 50px;">
+                    <div style="text-align: center; margin-left: 20px;">
+                        <div id="seconds" style="font-size: 120px;"></div>
+                        <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">SECS</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div style="margin-top: 40px;">
+            <a href="#" style="padding: 16px 24px; background-color: #009CFF; color: white; text-decoration: none; border-radius: 120px; font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 600; font-size: 24px; display: inline-block; transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; letter-spacing: -5px; font-style: italic;">
+                JOIN NOW
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
     document.querySelectorAll('.prize-block').forEach(function(block) {
         block.addEventListener('mouseover', function() {
@@ -184,6 +248,37 @@ get_header(); ?>
             this.querySelector('.apply-button').style.display = 'none'; // Hide the apply button
         });
     });
+
+
+    var countDownDate = new Date("June 30, 2024 15:37:25").getTime();
+
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now and the countdown date
+        var distance = countDownDate - now;
+        
+        // Calculations for days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Display the countdown values in their respective div elements
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+        
+        // If the countdown is over, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+    }, 1000);
 </script>
 
 <?php get_footer(); ?>

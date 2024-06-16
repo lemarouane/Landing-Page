@@ -208,16 +208,22 @@ get_header(); ?>
                         <div id="seconds" style="font-size: 120px;"></div>
                         <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">SECS</div>
                     </div>
+                    
                 </div>
+               <!-- Add this inside your .prize-block div, after the #countdown div -->
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px; font-size: 24px; font-style: italic; letter-spacing: normal; font-family: 'Acumin Pro ExtraCondensed', sans-serif;">
+    <span style="margin-right: 10px;">Don't wait!</span>
+    <a href="your-apply-link-here" style="color: #009CFF; text-decoration: none;">
+        Apply now
+    </a>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/apply.png" alt="apply" style="width: 50px ;height: 50px; margin-left: 10px;">
+</div>
+ 
             </div>
             
         </div>
         
-        <div style="margin-top: 40px;">
-            <a href="#" style="padding: 16px 24px; background-color: #009CFF; color: white; text-decoration: none; border-radius: 120px; font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 600; font-size: 24px; display: inline-block; transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; letter-spacing: -5px; font-style: italic;">
-                JOIN NOW
-            </a>
-        </div>
+         
     </div>
 </div>
 

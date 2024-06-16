@@ -213,7 +213,7 @@ get_header(); ?>
                <!-- Add this inside your .prize-block div, after the #countdown div -->
 <div style="display: flex; align-items: center; justify-content: center; margin-top: 20px; font-size: 24px; font-style: italic; letter-spacing: normal; font-family: 'Acumin Pro ExtraCondensed', sans-serif;">
     <span style="margin-right: 10px;">Don't wait!</span>
-    <a href="your-apply-link-here" style="color: #009CFF; text-decoration: none;">
+    <a href="#" style="color: #009CFF; text-decoration: none;">
         Apply now
     </a>
     <img src="<?php echo get_template_directory_uri(); ?>/img/apply.png" alt="apply" style="width: 50px ;height: 50px; margin-left: 10px;">

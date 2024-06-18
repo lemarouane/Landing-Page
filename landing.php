@@ -13,220 +13,625 @@ add_action('wp_enqueue_scripts', 'enqueue_landing_page_styles');
 
 get_header(); ?>
 
+<!-- Internal CSS -->
+<style>
+    /* Landing Section */
+    .landing-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: url('<?php echo get_template_directory_uri(); ?>/img/stat.png') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: left;
+        padding: 50px 20px;
+        min-height: 100vh;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .landing-content {
+        flex: 1;
+    }
+    .landing-content h1 {
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 78px;
+        line-height: 78px;
+        letter-spacing: -4px;
+    }
+    .landing-content p {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25.2px;
+        letter-spacing: -2%;
+    }
+    .landing-content .btn {
+        background-color: #009CFF;
+        color: white;
+        padding: 16px 24px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .breakout-logo {
+        margin-top: 25%;
+    }
+    .breakout-logo img {
+        max-width: 40%;
+        height: auto;
+    }
+    .landing-logo {
+        flex: 0 0 auto;
+        margin-left: 20px;
+    }
+    .landing-logo img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    /* Full Background Section */
+    .full-background {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .section-content {
+        color: white;
+        margin-top: -50px; /* Adjust margin-top to position title correctly */
+    }
+    .section-content h1 {
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 50px; /* Reduce font-size for better alignment */
+        line-height: 1.2; /* Adjust line-height as needed */
+        margin-bottom: 60px;
+        letter-spacing: -4px;
+        text-transform: uppercase;
+    }
+    .block-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .prize-block {
+        background-color: #243B55;
+        border-radius: 10px;
+        padding: 40px;
+        width: 400px;
+        height: 400px;
+        color: #FFFFFF;
+        text-align: center;
+        transition: background 0.3s;
+        background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    .prize-value {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    .star-icon img {
+        width: 150px;
+        height: auto;
+    }
+    .placement-text {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    .description-text {
+        font-size: 25px;
+    }
+    .join-now-btn {
+        padding: 16px 24px;
+        background-color: #009CFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 120px;
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        display: inline-block;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+        margin-top: 40px;
+    }
+    .apply-button {
+        display: none;
+        padding: 12px 20px;
+        background-color: #009CFF;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 120px;
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        cursor: pointer;
+        z-index: 2;
+        transition: background-color 0.3s;
+    }
+    .line-vector {
+        display: none;
+        width: 100%;
+        height: 3px;
+        background: url('<?php echo get_template_directory_uri(); ?>/img/Vector.png') no-repeat center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 1;
+    }
+
+    /* Trader Section */
+    .trader-content {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .trader-text {
+        flex-basis: 50%;
+        color: white;
+        text-align: left;
+    }
+    .trader-text .contest-overview-btn {
+        display: inline-block;
+        padding: 16px 24px;
+        background-color: #009CFF;
+        color: white;
+        text-decoration: none;
+        border: 1px solid #0173BC;
+        border-radius: 100px;
+        font-family: 'General Sans Variable';
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16.2px;
+        text-align: left;
+        margin-bottom: 16px;
+        margin-bottom: 60px;
+    }
+    .trader-text h2 {
+        font-size: 42px;
+        text-align: left;
+    }
+    .trader-text p {
+        font-size: 18px;
+        text-align: left;
+    }
+    .trader-text .join-btn {
+        display: inline-block;
+        padding: 12px 20px;
+        background-color: #009CFF;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 120px;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .trader-cards {
+        flex-basis: 45%;
+    }
+    .card {
+        background: #1B1B1B;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    .card h3 {
+        font-size: 24px;
+        color: white;
+    }
+    .card p {
+        font-size: 16px;
+        color: white;
+    }
+
+        /* Section Timer */
+        .section-timer {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-timer .section-content {
+        color: white;
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        letter-spacing: -5px;
+    }
+
+    .section-timer .block-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .section-timer .prize-block {
+        background-color: #243B55;
+        border-radius: 10px;
+        padding: 40px;
+        width: 100rem;
+        height: 35rem;
+        color: #FFFFFF;
+        text-align: center;
+        transition: background 0.3s;
+        background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    }
+
+    .section-timer .prize-value {
+        font-size: 60px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .section-timer #countdown {
+        margin-top: 10px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-timer #countdown > div {
+        text-align: center;
+    }
+
+    .section-timer #countdown > div img {
+        height: 150px;
+        margin: 50px;
+    }
+
+    .section-timer #countdown div {
+        font-size: 120px;
+        margin: 30px
+    }
+
+    .section-timer #countdown div + div {
+        font-size: 80px;
+        letter-spacing: -5px;
+        font-style: italic;
+    }
+
+    .section-timer .apply-now {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-style: italic;
+        letter-spacing: normal;
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    }
+
+    .section-timer .apply-now span {
+        margin-right: 10px;
+    }
+
+    .section-timer .apply-now a {
+        color: #009CFF;
+        text-decoration: none;
+    }
+
+    .section-timer .apply-now img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    /* Section CEO */
+    .section-ceo {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .section-ceo .boss-image {
+        position: absolute;
+        left: 0;
+        top: 48%;
+        transform: translateY(-50%);
+        height: 60%;
+        z-index: 100;
+    }
+
+    .section-ceo .section-content {
+        color: white;
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        letter-spacing: -5px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-ceo .block-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .section-ceo .prize-block {
+        background-color: #243B55;
+        border-radius: 10px;
+        padding: 40px;
+        width: 100rem;
+        height: 30rem;
+        color: #FFFFFF;
+        text-align: center;
+        transition: background 0.3s;
+        background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+        border: 0.1px solid #434343;
+    }
+
+    .section-ceo .prize-value {
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 52.8px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-right: 15%;
+    }
+
+    .section-ceo .prize-title {
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 52.8px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-right: 37%;
+    }
+
+    .section-ceo .prize-description {
+        font-family: 'Manrope', sans-serif;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-left: 10%;
+    }
+</style>
+
+
+
+
+
+
 <!-- Main Banner Section -->
 <section class="main-banner">
-    <div class="landing-container" style="display: flex; justify-content: space-between; align-items: center; background: url('<?php echo get_template_directory_uri(); ?>/img/stat.png') no-repeat center center; background-size: cover; color: white; text-align: left; padding: 50px 20px; min-height: 100vh; box-sizing: border-box; width: 100%;">
+    <div class="landing-container">
         <!-- Introduction Section -->
-        <div class="landing-content" style="flex: 1;">
-            <h1 style="font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 900; font-style: italic; font-size: 78px; line-height: 78px; letter-spacing: -4px;">THE BREAKOUT <br>TRADING&nbsp;CONTEST</h1>
-            <p style="font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 18px; line-height: 25.2px; letter-spacing: -2%;">Gelber Group is happy to announce THE BREAKOUT <br>- a fully remote, discretionary, simulated Futures & FX<br> trading competition that will take place this<br> September/October 2024</p>
+        <div class="landing-content">
+            <h1>THE BREAKOUT <br>TRADING&nbsp;CONTEST</h1>
+            <p>Gelber Group is happy to announce THE BREAKOUT <br>- a fully remote, discretionary, simulated Futures & FX<br> trading competition that will take place this<br> September/October 2024</p>
             
             <!-- Call to Action Section -->
-            <a href="#" class="btn" style="background-color: #009CFF; color: white; padding: 16px 24px; border: none; border-radius: 5px; font-size: 1em; text-decoration: none; display: inline-block; margin-top: 20px;">JOIN NOW</a>
+            <a href="#" class="btn">JOIN NOW</a>
             
             <!-- The Breakout Logo Section -->
-            <div class="breakout-logo" style="margin-top: 25%;">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Logo" style="max-width: 40%; height: auto;">
+            <div class="breakout-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Logo">
             </div>
         </div>
 
         <!-- Logo Section -->
-        <div class="landing-logo" style="flex: 0 0 auto; margin-left: 20px;">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" style="max-width: 80%; height: auto;">
+        <div class="landing-logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
         </div>
     </div>
 </section>
+
 
 <!-- What is The Breakout Trading Contest Section -->
 <section class="what-is-breakout">
-    <div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
-        <div class="section-content" style="color: white;">
-            <h1 style="font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 900; font-style: italic; font-size: 78px; line-height: 78px; margin-bottom: 60%; letter-spacing: -4px;">WHAT IS THE BREAKOUT <br> <center>TRADING&nbsp;CONTEST</center></h1>
+    <div class="full-background">
+        <div class="section-content">
+            <h1>WHAT IS THE BREAKOUT <br> <center>TRADING&nbsp;CONTEST</center></h1>
         </div>
     </div>
 </section>
 
+
+<!-- Prizes Section -->
 <!-- Prizes Section -->
 <section class="prizes">
-    <div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
-        <div class="section-content" style="color: white;">
-            <h1 style="font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 900; font-style: italic; font-size: 100px; line-height: 78px; margin-bottom: 60%; letter-spacing: -4px;">
-                <center>$40,000 IN CASH PRIZES</center>
-            </h1>
-            <p style="font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 600; font-size: 24px; margin-top: -55%;">
-                <center>Cash prizes will be strictly for the top three P&L performers</center>
-            </p>
+    <div class="full-background">
+        <div class="section-content">
+            <h1><center>$40,000 IN CASH PRIZES</center></h1>
+            <p><center>Cash prizes will be strictly for the top three P&L performers</center></p>
             
             <!-- Prize Blocks -->
-            <div class="block-container" style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+            <div class="block-container">
                 <!-- First Place Block -->
-                <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 400px; height: 400px; color: #FFFFFF; text-align: center; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%); ">
-                    <div class="prize-value" style="font-size: 36px; margin-bottom: 10px;">$20,000</div>
+                <div class="prize-block">
+                    <div class="prize-value">$20,000</div>
                     <!-- Add star icon here -->
                     <div class="star-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/gold.png" alt="Gold Star" style="width: 150px; height: auto;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/gold.png" alt="Gold Star">
                     </div>
-                    <div class="placement-text" style="font-size: 24px; margin-bottom: 5px;">1ST PLACE</div>
-                    <div class="description-text" style="font-size: 25px;">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</div>
+                    <div class="placement-text">1ST PLACE</div>
+                    <div class="description-text">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</div>
                 </div>
                 <!-- Second Place Block -->
-                <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 400px; height: 400px; color: #FFFFFF; text-align: center; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);">
-                    <div class="prize-value" style="font-size: 36px; margin-bottom: 10px;">$15,000</div>
+                <div class="prize-block">
+                    <div class="prize-value">$15,000</div>
                     <!-- Add star icon here -->
                     <div class="star-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/silver.png" alt="Silver Star" style="width: 150px; height: auto;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/silver.png" alt="Silver Star">
                     </div>
-                    <div class="placement-text" style="font-size: 24px; margin-bottom: 5px;">2ND PLACE</div>
-                    <div class="description-text" style="font-size: 25px;">Achieve your goals with our support and resources at your fingertips.</div>
+                    <div class="placement-text">2ND PLACE</div>
+                    <div class="description-text">Achieve your goals with our support and resources at your fingertips.</div>
                 </div>
                 <!-- Third Place Block -->
-                <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 400px; height: 400px; color: #FFFFFF; text-align: center; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);">
-                    <div class="prize-value" style="font-size: 36px; margin-bottom: 10px;">$5,000</div>
-                <!-- Add star icon here -->
-                <div class="star-icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/bronze.png" alt="Bronze Star" style="width: 150px; height: auto;">
+                <div class="prize-block">
+                    <div class="prize-value">$5,000</div>
+                    <!-- Add star icon here -->
+                    <div class="star-icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/bronze.png" alt="Bronze Star">
+                    </div>
+                    <div class="placement-text">3RD PLACE</div>
+                    <div class="description-text">Empower your trading journey with cutting-edge tools and strategies.</div>
                 </div>
-                <div class="placement-text" style="font-size: 24px; margin-bottom: 5px;">3RD PLACE</div>
-                <div class="description-text" style="font-size: 25px;">Empower your trading journey with cutting-edge tools and strategies.</div>
-                </div>
-                </div>
+            </div>
         
-        <div style="margin-top: 40px;">
-            <a href="#" style="padding: 16px 24px; background-color: #009CFF; color: white; text-decoration: none; border-radius: 120px; font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 600; font-size: 24px; display: inline-block; transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;">
-                JOIN NOW
-            </a>
+            <div>
+                <a href="#" class="join-now-btn">JOIN NOW</a>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
 
 <!-- Section Join in 3 Steps -->
-<div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
-    <div class="section-content" style="color: white;">
-        <h1 style="font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 900; font-style: italic; font-size: 50px; line-height: 50px; margin-bottom: 60px; letter-spacing: -4px; text-transform: uppercase;"><center>JOIN GELBER GROUP<br>TRADING CONTEST IN 3 EASY STEPS</center></h1>
+<section class="steps">
+    <div class="full-background">
+        <div class="section-content">
+            <h1><center>JOIN GELBER GROUP<br>TRADING CONTEST IN 3 EASY STEPS</center></h1>
 
-        <!-- Steps Blocks -->
-        <div class="block-container" style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-            <!-- First step -->
-            <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 400px; height: 400px; color: #FFFFFF; text-align: center; position: relative; overflow: hidden; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);">
-                <div class="content-wrap" style="position: relative; z-index: 2;">
-                    <div class="prize-value" style="font-size: 36px; margin-bottom: 10px;">STEP 1</div>
-                    <div class="description-text" style="font-size: 25px;"><br><br>See if you fit the criteria of contestants eligible to participate in the competition.</div>
+            <!-- Steps Blocks -->
+            <div class="block-container">
+                <!-- First step -->
+                <div class="prize-block">
+                    <div class="content-wrap">
+                        <div class="prize-value">STEP 1</div>
+                        <div class="description-text"><br><br>See if you fit the criteria of contestants eligible to participate in the competition.</div>
+                    </div>
+                    <button class="apply-button">APPLY NOW</button>
+                    <div class="line-vector"></div>
                 </div>
-                <button class="apply-button" style="display: none; padding: 12px 20px; background-color: #009CFF; color: white; text-decoration: none; border: none; border-radius: 120px; font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 600; font-size: 18px; position: absolute; bottom: 20px; left: 20px; cursor: pointer; z-index: 2; transition: background-color 0.3s;">APPLY NOW</button>
-                <div class="line-vector" style="display: none; width: 100%; height: 3px; background: url('<?php echo get_template_directory_uri(); ?>/img/Vector.png') no-repeat center; position: absolute; top: 70px; left: 0; z-index: 1;"></div>
-            </div>
-            <!-- Second step -->
-            <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 400px; height: 400px; color: #FFFFFF; text-align: center; position: relative; overflow: hidden; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);">
-                <div class="content-wrap" style="position: relative; z-index: 2;">
-                    <div class="prize-value" style="font-size: 36px; margin-bottom: 10px;">STEP 2</div>
-                    <div class="description-text" style="font-size: 25px;"><br><br>Fill the form with as many details as possible.</div>
+                <!-- Second step -->
+                <div class="prize-block">
+                    <div class="content-wrap">
+                        <div class="prize-value">STEP 2</div>
+                        <div class="description-text"><br><br>Fill the form with as many details as possible.</div>
+                    </div>
+                    <button class="apply-button">APPLY NOW</button>
+                    <div class="line-vector"></div>
                 </div>
-                <button class="apply-button" style="display: none; padding: 12px 20px; background-color: #009CFF; color: white; text-decoration: none; border: none; border-radius: 120px; font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 600; font-size: 18px; position: absolute; bottom: 20px; left: 20px; cursor: pointer; z-index: 2; transition: background-color 0.3s;">APPLY NOW</button>
-                <div class="line-vector" style="display: none; width: 100%; height: 3px; background: url('<?php echo get_template_directory_uri(); ?>/img/Vector.png') no-repeat center; position: absolute; top: 70px; left: 0; z-index: 1;"></div>
-            </div>
-            <!-- Third step -->
-            <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 400px; height: 400px; color: #FFFFFF; text-align: center; position: relative; overflow: hidden; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);">
-                <div class="content-wrap" style="position: relative; z-index: 2;">
-                    <div class="prize-value" style="font-size: 36px; margin-bottom: 10px;">STEP 3</div>
-                    <div class="description-text" style="font-size: 25px;"><br><br>If selected, you will be onboarded onto the competition and receive access credentials to your account.</div>
+                <!-- Third step -->
+                <div class="prize-block">
+                    <div class="content-wrap">
+                        <div class="prize-value">STEP 3</div>
+                        <div class="description-text"><br><br>If selected, you will be onboarded onto the competition and receive access credentials to your account.</div>
+                    </div>
+                    <button class="apply-button">APPLY NOW</button>
+                    <div class="line-vector"></div>
                 </div>
-                <button class="apply-button" style="display: none; padding: 12px 20px; background-color: #009CFF; color: white; text-decoration: none; border: none; border-radius: 120px; font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-weight: 600; font-size: 18px; position: absolute; bottom: 20px; left: 20px; cursor: pointer; z-index: 2; transition: background-color 0.3s;">APPLY NOW</button>
-                <div class="line-vector" style="display: none; width: 100%; height: 3px; background: url('<?php echo get_template_directory_uri(); ?>/img/Vector.png') no-repeat center; position: absolute; top: 70px; left: 0; z-index: 1;"></div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Section 4 -->
 <!-- Trader Section -->
-<div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
-    <div class="trader-content" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
-        <!-- Left Text Block -->
-        <div class="trader-text" style="flex-basis: 50%; color: white; text-align: left;">
-            <a href="#" class="contest-overview-btn" style="display: inline-block; padding: 16px 24px; background-color: #; color: white; text-decoration: none; border: 1px solid #0173BC; border-radius: 100px; font-family: 'General Sans Variable'; font-size: 12px; font-weight: 500; line-height: 16.2px; text-align: left; margin-bottom: 16px; margin-bottom: 60px;">Contest Overview</a>
-            <h2 style="font-size: 42px; text-align: left;">ARE YOU A</h2>
-            <h2 style="font-size: 42px;  text-align: left;">PROFITABLE TRADER?</h1>
-            <p style="font-size: 18px; text-align: left;">Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
-            <a href="#" class="join-btn" style="display: inline-block; padding: 12px 20px; background-color: #009CFF; color: white; text-decoration: none; border: none; border-radius: 120px; font-weight: 600; font-size: 18px; margin-top: 20px;">JOIN NOW</a>
-        </div>
-        <!-- Right Cards Block -->
-        <div class="trader-cards" style="flex-basis: 45%;">
-            <!-- Card 1 -->
-            <div class="card" style="background: #1B1B1B; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
-                <h3 style="font-size: 24px; color: white;">SHOWCASE YOUR SKILLS</h3>
-                <p style="font-size: 16px; color: white;">The prize goes to the winner but the job goes to the best trader based on statistics and analytics.</p>
+<section class="trader-section">
+    <div class="full-background">
+        <div class="trader-content">
+            <!-- Left Text Block -->
+            <div class="trader-text">
+                <a href="#" class="contest-overview-btn">Contest Overview</a>
+                <h2>ARE YOU A</h2>
+                <h2>PROFITABLE TRADER?</h2>
+                <p>Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
+                <a href="#" class="join-btn">JOIN NOW</a>
             </div>
-            <!-- Card 2 -->
-            <div class="card" style="background: #1B1B1B; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
-                <h3 style="font-size: 24px; color: white;">SECURE DATA ENCRYPTION</h3>
-                <p style="font-size: 16px; color: white;">Receive daily trading statistics to help you learn, grow and refine your craft.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="card" style="background: #1B1B1B; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
-                <h3 style="font-size: 24px; color: white;">GET USEFUL FEEDBACK & MENTORSHIP</h3>
-                <p style="font-size: 16px; color: white;">Join our global traders network! Tap into 4 decades of experience.</p>
-            </div>
-            <!-- Card 4 -->
-            <div class="card" style="background: #1B1B1B; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
-                <h3 style="font-size: 24px; color: white;">USE THE BEST TOOLS</h3>
-                <p style="font-size: 16px; color: white;">Traders use our proprietary platform, Trading Technologies [TT].</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
- 
-        <!-- Section Timer -->
-        <div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
-    <div class="section-content" style="color: white; font-family: 'Acumin Pro ExtraCondensed', sans-serif; letter-spacing: -5px;">
-        
-        <!-- Timer Block -->
-        <div class="block-container" style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-            
-            <!-- Countdown Timer Block -->
-            <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 100rem; height: 30rem; color: #FFFFFF; text-align: center; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);">
-                <div class="prize-value" style="font-size: 60px; margin-bottom: 10px; font-weight: bold;">STARTS IN</div>
-                <div id="countdown" style="margin-top: 10px; font-weight: bold; display: flex; align-items: center; justify-content: center;">
-                    <div style="text-align: center;">
-                        <div id="days" style="font-size: 120px;"></div>
-                        <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">DAYS</div>
-                    </div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line" style="height: 150px; margin: 50px;">
-                    <div style="text-align: center; margin: 0 20px;">
-                        <div id="hours" style="font-size: 120px;"></div>
-                        <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">HOURS</div>
-                    </div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line" style="height: 150px; margin: 50px;">
-                    <div style="text-align: center;">
-                        <div id="minutes" style="font-size: 120px;"></div>
-                        <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">MINS</div>
-                    </div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line" style="height: 150px; margin: 50px;">
-                    <div style="text-align: center; margin-left: 20px;">
-                        <div id="seconds" style="font-size: 120px;"></div>
-                        <div style="font-size: 80px; letter-spacing: -5px; font-style: italic;">SECS</div>
-                    </div>
-                    
+            <!-- Right Cards Block -->
+            <div class="trader-cards">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>SHOWCASE YOUR SKILLS</h3>
+                    <p>The prize goes to the winner but the job goes to the best trader based on statistics and analytics.</p>
                 </div>
-               <!-- Add this inside your .prize-block div, after the #countdown div -->
-<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px; font-size: 24px; font-style: italic; letter-spacing: normal; font-family: 'Acumin Pro ExtraCondensed', sans-serif;">
-    <span style="margin-right: 10px;">Don't wait!</span>
-    <a href="#" style="color: #009CFF; text-decoration: none;">
-        Apply now
-    </a>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/apply.png" alt="apply" style="width: 50px ;height: 50px; margin-left: 10px;">
-</div>
- 
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>SECURE DATA ENCRYPTION</h3>
+                    <p>Receive daily trading statistics to help you learn, grow and refine your craft.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>GET USEFUL FEEDBACK & MENTORSHIP</h3>
+                    <p>Join our global traders network! Tap into 4 decades of experience.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <h3>USE THE BEST TOOLS</h3>
+                    <p>Traders use our proprietary platform, Trading Technologies [TT].</p>
+                </div>
             </div>
-            
         </div>
-        
-         
     </div>
-</div>
+</section>
 
-
+ 
+<!-- Section Timer -->
+<section class="section-timer">
+    <div class="full-background">
+        <div class="section-content">
+            <!-- Timer Block -->
+            <div class="block-container">
+                <!-- Countdown Timer Block -->
+                <div class="prize-block">
+                    <div class="prize-value">STARTS IN</div>
+                    <div id="countdown">
+                        <div>
+                            <div id="days"></div>
+                            <div>DAYS</div>
+                        </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line">
+                        <div>
+                            <div id="hours"></div>
+                            <div>HOURS</div>
+                        </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line">
+                        <div>
+                            <div id="minutes"></div>
+                            <div>MINS</div>
+                        </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="line">
+                        <div>
+                            <div id="seconds"></div>
+                            <div>SECS</div>
+                        </div>
+                    </div>
+                    <div class="apply-now">
+                        <span>Don't wait!</span>
+                        <a href="#">Apply now</a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/apply.png" alt="apply">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -237,32 +642,23 @@ get_header(); ?>
 
 
 <!-- Section CEO -->
-<div class="full-background" style="background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; position: relative;">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/boss.png" alt="Boss Image" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 60%; z-index: 100;">
+<section class="section-ceo">
+    <div class="full-background">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/boss.png" alt="Boss Image" class="boss-image">
 
-    <div class="section-content" style="color: white; font-family: 'Acumin Pro ExtraCondensed', sans-serif; letter-spacing: -5px;">
-
-        <div class="block-container" style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; position: relative; z-index: 2;">
-            
-            <!-- INFOS Block -->
-            <div class="prize-block" style="background-color: #243B55; border-radius: 10px; padding: 40px; width: 100rem; height: 30rem; color: #FFFFFF; text-align: center; transition: background 0.3s; background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%); border: 0.1px solid #434343;">                
-            <div class="prize-value" style="font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-size: 48px; font-style: italic; font-weight: 900; line-height: 52.8px; letter-spacing: -0.02em; text-align: center; margin-right: 15%;">BRIAN GELBER </div>
-            <div class="prize-value" style="font-family: 'Acumin Pro ExtraCondensed', sans-serif; font-size: 25px; font-style: italic; font-weight: 900; line-height: 52.8px; letter-spacing: -0.02em; text-align: center; margin-right: 37%;">CEO <br><br><br> </div>            
-        
-            <div class="prize-value" style="font-family: 'Manrope', sans-serif; font-size: 12px; font-style: italic; font-weight: 900; line-height: 52.8px; letter-spacing: -0.02em; text-align: center; margin-left: 10%;">Are you trading big ? Have you made some money today? If not, here's your chance to shine! theBreakout is a way <br> for everyone to test themselves against the world. </div>            </div>
-
-        
-        </div>
-
-            
-    
-        </div>
-            
+        <div class="section-content">
+            <div class="block-container">
+                <!-- CEO Info Block -->
+                <div class="prize-block">
+                    <div class="prize-value">BRIAN GELBER</div>
+                    <div class="prize-title">CEO</div>
+                    <div class="prize-description">
+                     </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-
+</section>
 
 
 

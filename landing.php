@@ -562,6 +562,37 @@ get_header(); ?>
     }
 }
 
+
+ /* Image Section */
+ .image-section {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        padding: 100px 0; /* Add top and bottom padding */
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px; /* Add gap between images */
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-section h1 {
+            font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+            font-size: 64px;
+            font-style: italic;
+            font-weight: 900;
+            line-height: 70.4px;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: white;
+        }
+
 </style>
 
 
@@ -866,17 +897,30 @@ get_header(); ?>
     </div>
 </section>
 
+ 
+
+ 
 
 
 
 
 
+<section class="image-section">
+    <div class="image-container">
+        <h1 class="competition-title">COMPETITION UPDATES</h1>
+        <?php
+        $images = array(
+            'img/1_.png',
+            'img/2_.png',
+            'img/3_.png'
+        );
 
-
-
-
-
-
+        foreach ($images as $image) {
+            echo '<img src="' . get_template_directory_uri() . '/' . $image . '" alt="Image">';
+        }
+        ?>
+    </div>
+</section>
 
 
 

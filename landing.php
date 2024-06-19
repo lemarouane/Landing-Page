@@ -481,6 +481,87 @@ get_header(); ?>
             font-size: 1em;
         }
     }
+
+
+
+
+
+ 
+
+ 
+
+.faq h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-block {
+    position: relative;
+    background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 20px;
+    width: 350%; /* Changed width to 100% */
+    max-width: 20; /* Added max-width for responsiveness */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: height 0.3s ease-in-out, background 0.3s ease-in-out;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+.faq-block:hover {
+    height: 250px;
+    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+}
+
+.faq-block .question {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.faq-block .answer {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.arrow-img {
+    position: absolute;
+    top: 40px;
+    right: 40px ;
+    transition: transform 0.3s ease;
+}
+
+.faq-block:hover .arrow-img {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .faq h1 {
+        font-size: 1.5em;
+    }
+    .faq-block {
+        width: 90%;
+        max-width: 100%; /* Adjust max-width for smaller screens */
+    }
+    .faq-block .question {
+        font-size: 1.2em;
+    }
+    .faq-block .answer {
+        font-size: 0.9em;
+    }
+}
+
 </style>
 
 
@@ -746,6 +827,62 @@ get_header(); ?>
 </div>
 
                         
+
+
+
+
+
+
+
+
+<!-- FAQ Section -->
+<section class="faq">
+    <div class="full-background">
+        <div class="section-content">
+            <h1 style="text-align: center;">CONTEST FAQ</h1>
+
+            <!-- FAQ Blocks -->
+            <div class="faq-container">
+                <!-- First FAQ Block -->
+                <div class="faq-block">
+                    <div class="question">Are all nationalities welcome to participate?</div>
+                    <div class="answer">Only American nationals are allowed to participate in the Breakout.</div>
+                    <?php echo '<img class="arrow-img" src="' . get_template_directory_uri() . '/img/arrow.png" alt="Arrow">' ?>
+                </div>
+                <!-- Second FAQ Block -->
+                <div class="faq-block">
+                    <div class="question">What markets are eligible to trade in the competition?</div>
+                    
+                    <?php echo '<img class="arrow-img" src="' . get_template_directory_uri() . '/img/arrow.png" alt="Arrow">' ?>
+                    
+                </div>
+                <!-- Third FAQ Block -->
+                <div class="faq-block">
+                    <div class="question">I only trade single name stocks and options - do I qualify?</div>
+                    <?php echo '<img class="arrow-img" src="' . get_template_directory_uri() . '/img/arrow.png" alt="Arrow">' ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -13,33 +13,45 @@ add_action('wp_enqueue_scripts', 'enqueue_landing_page_styles');
 
 get_header(); ?>
 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <!-- Internal CSS -->
 <style>
-    /* Landing Section */
-    .landing-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: url('<?php echo get_template_directory_uri(); ?>/img/stat.png') no-repeat center center;
-        background-size: cover;
-        color: white;
-        text-align: left;
-        padding: 50px 20px;
-        min-height: 100vh;
-        box-sizing: border-box;
-        width: 100%;
-    }
+/* Global box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Landing Section */
+.landing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('<?php echo get_template_directory_uri(); ?>/img/stat.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: left;
+    padding: 50px 20px;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Prevent overflow */
+}
     .landing-content {
         flex: 1;
     }
     .landing-content h1 {
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-        font-weight: 900;
-        font-style: italic;
-        font-size: 78px;
-        line-height: 78px;
-        letter-spacing: -4px;
-    }
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 78px;
+    line-height: 78px;
+    letter-spacing: -4px;
+}
     .landing-content p {
         font-family: 'Manrope', sans-serif;
         font-weight: 600;
@@ -419,6 +431,56 @@ get_header(); ?>
         text-align: center;
         margin-left: 10%;
     }
+
+
+
+    #page-banner-1034 {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    #page-banner-header-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    #page-banner-header-inner {
+        padding: 20px;
+    }
+    #page-banner-header-inner h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif; 
+}
+    #page-banner-header-inner {
+    padding: 20px;
+    margin-bottom: 50px; /* Add the desired margin-bottom value */
+}
+.btn {
+    background-color: rgba(0, 156, 255, 1);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 126px;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif; /* Add this line */
+}
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    @media (max-width: 768px) {
+        #page-banner-header-inner h1 {
+            font-size: 1.5em;
+        }
+        #page-banner-header-inner p {
+            font-size: 1em;
+        }
+    }
 </style>
 
 
@@ -660,6 +722,30 @@ get_header(); ?>
     </div>
 </section>
 
+
+
+
+
+
+<div class="full-background">
+    <div id="page-banner-1034" class="page-banner">
+        <div id="image-wrapper">
+            <img width="2560" height="1707" src="<?php echo get_template_directory_uri(); ?>/img/group.png" class="attachment-full size-full wp-post-image" alt="" decoding="async" fetchpriority="high" />
+        </div>
+        <div id="page-banner-header-wrap">
+            <div id="page-banner-header">
+                <div id="page-banner-header-inner">
+                    <h1>JOIN THE BREAKOUT</h1>
+                    <h1>GELBER GROUP TRADING CONTEST</h1>
+                    <p>Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</p>
+                    <a href="#" class="btn btn-primary" style="text-transform: uppercase;">Let's Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
 
 
 

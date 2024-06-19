@@ -594,6 +594,49 @@ get_header(); ?>
             color: white;
         }
 
+
+        .update-card {
+  background: #1e2733;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: auto;
+}
+
+.update-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.update-card video {
+  width: 500%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.update-card .highlight {
+  color: #1DA1F2;
+}
+
+.update-card .card-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.update-card .hashtag {
+  color: #1DA1F2;
+}
+ 
+
 </style>
 
 
@@ -922,6 +965,190 @@ get_header(); ?>
         ?>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="updates-section" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; background: #0e1e34; padding: 40px;">
+  <!-- Card 1 -->
+  <div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: 20%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center;">
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+        <div>
+          <div style="font-weight: bold;">theBreakout</div>
+          <div style="color: #bbb;">6h ago</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center;">
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 100%; height: 24px; margin-right: 10px;">'; ?>
+        <div style="cursor: pointer;">
+          <i class="fab fa-x-twitter" style="color: white;"></i>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 10px;">
+      This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
+    </div>
+    <?php echo '<img src="' . get_template_directory_uri() . '/img/mask.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
+  </div>
+
+<!-- Card 2 -->
+<div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: auto;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center;">
+      <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+      <div>
+        <div style="font-weight: bold;">theBreakout</div>
+        <div style="color: #bbb;">6h ago</div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center;">
+    <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 100%; height: 24px; margin-right: 10px;">'; ?>
+    <div style="cursor: pointer;">
+        <i class="fab fa-x-twitter" style="color: white;"></i>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 10px;">
+    This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.<br><br>
+    I love how easy it is to navigate through different sections and access all the <span style="color: #1DA1F2;">#TOOLS</span> I need to make informed decisions.
+  </div>
+  <?php echo '<img src="' . get_template_directory_uri() . '/img/mask3.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
+</div>
+
+
+<!-- Card 3 -->
+<div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: auto;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center;">
+      <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+      <div>
+        <div style="font-weight: bold;">theBreakout</div>
+        <div style="color: #bbb;">7h ago</div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
+      <div style="cursor: pointer;">
+        <i class="fab fa-x-twitter" style="color: white;"></i>
+      </div>
+    </div>
+  </div>
+  <div class="card-text" style="margin-top: 10px;">
+    This <span class="hashtag">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span class="hashtag">#PROFITABLE</span>.
+    I love how easy it is to navigate through different sections and access all the <span class="hashtag">#TOOLS</span> I need to make informed decisions.
+  </div>
+  <div style="margin-top: 10px; display: flex; justify-content: center;">
+    <video controls style="width: 380px; height: 676px; border-radius: 10px;">
+      <source src="<?php echo get_template_directory_uri(); ?>/img/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+
+  <!-- Card 4 -->
+  <div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: 20% ; margin-top: -12%">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center;">
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+        <div>
+          <div style="font-weight: bold;">theBreakout</div>
+          <div style="color: #bbb;">6h ago</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center;">
+      <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
+      <div style="cursor: pointer;">
+          <i class="fab fa-x-twitter" style="color: white;"></i>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 10px;">
+      This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
+    </div>
+    <?php echo '<img src="' . get_template_directory_uri() . '/img/mask2.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: 30%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center;">
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+        <div>
+          <div style="font-weight: bold;">theBreakout</div>
+          <div style="color: #bbb;">6h ago</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center;">
+      <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
+      <div style="cursor: pointer;">
+          <i class="fab fa-x-twitter" style="color: white;"></i>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 10px;">
+      This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
+    </div>
+    <?php echo '<img src="' . get_template_directory_uri() . '/img/mask4.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: auto; margin-top: -4.5%">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center;">
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+        <div>
+          <div style="font-weight: bold;">theBreakout</div>
+          <div style="color: #bbb;">6h ago</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center;">
+      <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
+      <div style="cursor: pointer;">
+          <i class="fab fa-x-twitter" style="color: white;"></i>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 10px;">
+      This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
+    </div>
+    <?php echo '<img src="' . get_template_directory_uri() . '/img/mask5.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
+  </div>
+
+ 
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

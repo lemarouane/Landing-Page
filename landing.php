@@ -19,7 +19,8 @@ get_header(); ?>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <!-- Internal CSS -->
-<style>
+<style> 
+
 /* Global box-sizing */
 *,
 *::before,
@@ -640,7 +641,7 @@ get_header(); ?>
 <section class="prizes">
     <div class="full-background">
         <div class="section-content">
-            <h1><center>$40,000 IN CASH PRIZES</center></h1>
+            <h1><center>$35,000 IN CASH PRIZES</center></h1>
             <p><center>Cash prizes will be strictly for the top three P&L performers</center></p>
             
             <!-- Prize Blocks -->

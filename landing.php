@@ -42,10 +42,10 @@ get_header(); ?>
     width: 100%;
     overflow: hidden; /* Prevent overflow */
 }
-    .landing-content {
-        flex: 1;
-    }
-    .landing-content h1 {
+.landing-content {
+    flex: 1;
+}
+.landing-content h1 {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
     font-weight: 900;
     font-style: italic;
@@ -53,410 +53,408 @@ get_header(); ?>
     line-height: 78px;
     letter-spacing: -4px;
 }
-    .landing-content p {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 25.2px;
-        letter-spacing: -2%;
-    }
-    .landing-content .btn {
-        background-color: #009CFF;
-        color: white;
-        padding: 16px 24px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 20px;
-    }
-    .breakout-logo {
-        margin-top: 25%;
-    }
-    .breakout-logo img {
-        max-width: 40%;
-        height: auto;
-    }
-    .landing-logo {
-        flex: 0 0 auto;
-        margin-left: 20px;
-    }
-    .landing-logo img {
-        max-width: 80%;
-        height: auto;
-    }
+.landing-content p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25.2px;
+    letter-spacing: -2%;
+}
+.landing-content .btn {
+    background-color: #009CFF;
+    color: white;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.breakout-logo {
+    margin-top: 25%;
+}
+.breakout-logo img {
+    max-width: 40%;
+    height: auto;
+}
+.landing-logo {
+    flex: 0 0 auto;
+    margin-left: 20px;
+}
+.landing-logo img {
+    max-width: 80%;
+    height: auto;
+}
 
-    /* Full Background Section */
-    .full-background {
-        background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-    }
-    .section-content {
-        color: white;
-        margin-top: -50px; /* Adjust margin-top to position title correctly */
-    }
-    .section-content h1 {
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-        font-weight: 900;
-        font-style: italic;
-        font-size: 50px; /* Reduce font-size for better alignment */
-        line-height: 1.2; /* Adjust line-height as needed */
-        margin-bottom: 60px;
-        letter-spacing: -4px;
-        text-transform: uppercase;
-    }
-    .block-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-    }
-    .prize-block {
-        background-color: #243B55;
-        border-radius: 10px;
-        padding: 40px;
-        width: 400px;
-        height: 400px;
-        color: #FFFFFF;
-        text-align: center;
-        transition: background 0.3s;
-        background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
-        position: relative;
-        overflow: hidden;
-    }
-    .prize-value {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
-    .star-icon img {
-        width: 150px;
-        height: auto;
-    }
-    .placement-text {
-        font-size: 24px;
-        margin-bottom: 5px;
-    }
-    .description-text {
-        font-size: 25px;
-    }
-    .join-now-btn {
-        padding: 16px 24px;
-        background-color: #009CFF;
-        color: white;
-        text-decoration: none;
-        border-radius: 120px;
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-        font-weight: 600;
-        font-size: 24px;
-        display: inline-block;
-        transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
-        margin-top: 40px;
-    }
-    .apply-button {
-        display: none;
-        padding: 12px 20px;
-        background-color: #009CFF;
-        color: white;
-        text-decoration: none;
-        border: none;
-        border-radius: 120px;
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-        font-weight: 600;
-        font-size: 18px;
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        cursor: pointer;
-        z-index: 2;
-        transition: background-color 0.3s;
-    }
-    .line-vector {
-        display: none;
-        width: 100%;
-        height: 3px;
-        background: url('<?php echo get_template_directory_uri(); ?>/img/Vector.png') no-repeat center;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        z-index: 1;
-    }
+/* Full Background Section */
+.full-background {
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.section-content {
+    color: white;
+    margin-top: -50px; /* Adjust margin-top to position title correctly */
+}
+.section-content h1 {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 50px; /* Reduce font-size for better alignment */
+    line-height: 1.2; /* Adjust line-height as needed */
+    margin-bottom: 60px;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+}
+.block-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.prize-block {
+    background-color: #243B55;
+    border-radius: 10px;
+    padding: 40px;
+    width: 400px;
+    height: 400px;
+    color: #FFFFFF;
+    text-align: center;
+    transition: background 0.3s;
+    background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    position: relative;
+    overflow: hidden;
+}
+.prize-value {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.star-icon img {
+    width: 150px;
+    height: auto;
+}
+.placement-text {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.description-text {
+    font-size: 25px;
+}
+.join-now-btn {
+    padding: 16px 24px;
+    background-color: #009CFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 120px;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin-top: 40px;
+}
+.apply-button {
+    display: none;
+    padding: 12px 20px;
+    background-color: #009CFF;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 120px;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s;
+}
+.line-vector {
+    display: none;
+    width: 100%;
+    height: 3px;
+    background: url('<?php echo get_template_directory_uri(); ?>/img/Vector.png') no-repeat center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1;
+}
 
-    /* Trader Section */
-    .trader-content {
-        max-width: 1200px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .trader-text {
-        flex-basis: 50%;
-        color: white;
-        text-align: left;
-    }
-    .trader-text .contest-overview-btn {
-        display: inline-block;
-        padding: 16px 24px;
-        background-color: #009CFF;
-        color: white;
-        text-decoration: none;
-        border: 1px solid #0173BC;
-        border-radius: 100px;
-        font-family: 'General Sans Variable';
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 16.2px;
-        text-align: left;
-        margin-bottom: 16px;
-        margin-bottom: 60px;
-    }
-    .trader-text h2 {
-        font-size: 42px;
-        text-align: left;
-    }
-    .trader-text p {
-        font-size: 18px;
-        text-align: left;
-    }
-    .trader-text .join-btn {
-        display: inline-block;
-        padding: 12px 20px;
-        background-color: #009CFF;
-        color: white;
-        text-decoration: none;
-        border: none;
-        border-radius: 120px;
-        font-weight: 600;
-        font-size: 18px;
-        margin-top: 20px;
-    }
-    .trader-cards {
-        flex-basis: 45%;
-    }
-    .card {
-        background: #1B1B1B;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 10px;
-    }
-    .card h3 {
-        font-size: 24px;
-        color: white;
-    }
-    .card p {
-        font-size: 16px;
-        color: white;
-    }
+/* Trader Section */
+.trader-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trader-text {
+    flex-basis: 50%;
+    color: white;
+    text-align: left;
+}
+.trader-text .contest-overview-btn {
+    display: inline-block;
+    padding: 16px 24px;
+    background-color: #009CFF;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #0173BC;
+    border-radius: 100px;
+    font-family: 'General Sans Variable';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.2px;
+    text-align: left;
+    margin-bottom: 16px;
+    margin-bottom: 60px;
+}
+.trader-text h2 {
+    font-size: 42px;
+    text-align: left;
+}
+.trader-text p {
+    font-size: 18px;
+    text-align: left;
+}
+.trader-text .join-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #009CFF;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 120px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.trader-cards {
+    flex-basis: 45%;
+}
+.card {
+    background: #1B1B1B;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.card h3 {
+    font-size: 24px;
+    color: white;
+}
+.card p {
+    font-size: 16px;
+    color: white;
+}
 
-        /* Section Timer */
-        .section-timer {
-        background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+/* Section Timer */
+.section-timer {
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-    .section-timer .section-content {
-        color: white;
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-        letter-spacing: -5px;
-    }
+.section-timer .section-content {
+    color: white;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    letter-spacing: -5px;
+}
 
-    .section-timer .block-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-    }
+.section-timer .block-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
 
-    .section-timer .prize-block {
-        background-color: #243B55;
-        border-radius: 10px;
-        padding: 40px;
-        width: 100rem;
-        height: 35rem;
-        color: #FFFFFF;
-        text-align: center;
-        transition: background 0.3s;
-        background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
-    }
+.section-timer .prize-block {
+    background-color: #243B55;
+    border-radius: 10px;
+    padding: 40px;
+    width: 100rem;
+    height: 35rem;
+    color: #FFFFFF;
+    text-align: center;
+    transition: background 0.3s;
+    background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+}
 
-    .section-timer .prize-value {
-        font-size: 60px;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
+.section-timer .prize-value {
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
-    .section-timer #countdown {
-        margin-top: 10px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.section-timer #countdown {
+    margin-top: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .section-timer #countdown > div {
-        text-align: center;
-    }
+.section-timer #countdown > div {
+    text-align: center;
+}
 
-    .section-timer #countdown > div img {
-        height: 150px;
-        margin: 50px;
-    }
+.section-timer #countdown > div img {
+    height: 150px;
+    margin: 50px;
+}
 
-    .section-timer #countdown div {
-        font-size: 120px;
-        margin: 30px
-    }
+.section-timer #countdown div {
+    font-size: 120px;
+    margin: 30px
+}
 
-    .section-timer #countdown div + div {
-        font-size: 80px;
-        letter-spacing: -5px;
-        font-style: italic;
-    }
+.section-timer #countdown div + div {
+    font-size: 80px;
+    letter-spacing: -5px;
+    font-style: italic;
+}
 
-    .section-timer .apply-now {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        font-style: italic;
-        letter-spacing: normal;
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    }
+.section-timer .apply-now {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: normal;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+}
 
-    .section-timer .apply-now span {
-        margin-right: 10px;
-    }
+.section-timer .apply-now span {
+    margin-right: 10px;
+}
 
-    .section-timer .apply-now a {
-        color: #009CFF;
-        text-decoration: none;
-    }
+.section-timer .apply-now a {
+    color: #009CFF;
+    text-decoration: none;
+}
 
-    .section-timer .apply-now img {
-        width: 50px;
-        height: 50px;
-        margin-left: 10px;
-    }
+.section-timer .apply-now img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
 
-    /* Section CEO */
-    .section-ceo {
-        background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
-    }
+/* Section CEO */
+.section-ceo {
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
 
-    .section-ceo .boss-image {
-        position: absolute;
-        left: 0;
-        top: 48%;
-        transform: translateY(-50%);
-        height: 60%;
-        z-index: 100;
-    }
+.section-ceo .boss-image {
+    position: absolute;
+    left: 0;
+    top: 48%;
+    transform: translateY(-50%);
+    height: 60%;
+    z-index: 100;
+}
 
-    .section-ceo .section-content {
-        color: white;
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-        letter-spacing: -5px;
-        position: relative;
-        z-index: 2;
-    }
+.section-ceo .section-content {
+    color: white;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    letter-spacing: -5px;
+    position: relative;
+    z-index: 2;
+}
 
-    .section-ceo .block-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-        position: relative;
-    }
+.section-ceo .block-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    position: relative;
+}
 
-    .section-ceo .prize-block {
-        background-color: #243B55;
-        border-radius: 10px;
-        padding: 40px;
-        width: 100rem;
-        height: 30rem;
-        color: #FFFFFF;
-        text-align: center;
-        transition: background 0.3s;
-        background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
-        border: 0.1px solid #434343;
-    }
+.section-ceo .prize-block {
+    background-color: #243B55;
+    border-radius: 10px;
+    padding: 40px;
+    width: 100rem;
+    height: 30rem;
+    color: #FFFFFF;
+    text-align: center;
+    transition: background 0.3s;
+    background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    border: 0.1px solid #434343;
+}
 
-    .section-ceo .prize-value {
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-        font-size: 48px;
-        font-style: italic;
-        font-weight: 900;
-        line-height: 52.8px;
-        letter-spacing: -0.02em;
-        text-align: center;
-        margin-right: 15%;
-    }
+.section-ceo .prize-value {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 52.8px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-right: 15%;
+}
 
-    .section-ceo .prize-title {
-        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-        font-size: 25px;
-        font-style: italic;
-        font-weight: 900;
-        line-height: 52.8px;
-        letter-spacing: -0.02em;
-        text-align: center;
-        margin-right: 37%;
-    }
+.section-ceo .prize-title {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 52.8px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-right: 37%;
+}
 
-    .section-ceo .prize-description {
-        font-family: 'Manrope', sans-serif;
-        font-size: 18px;
-        font-style: italic;
-        font-weight: 500;
-        line-height: 28px;
-        letter-spacing: -0.02em;
-        text-align: center;
-        margin-left: 10%;
-    }
+.section-ceo .prize-description {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-left: 10%;
+}
 
+#page-banner-1034 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
 
-
-    #page-banner-1034 {
-        position: relative;
-        text-align: center;
-        color: white;
-    }
-
-    #page-banner-header-wrap {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-    }
-    #page-banner-header-inner {
-        padding: 20px;
-    }
-    #page-banner-header-inner h1 {
+#page-banner-header-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+#page-banner-header-inner {
+    padding: 20px;
+}
+#page-banner-header-inner h1 {
     font-size: 2.5em;
     margin: 0;
     font-family: 'Acumin Pro ExtraCondensed', sans-serif; 
 }
-    #page-banner-header-inner {
+#page-banner-header-inner {
     padding: 20px;
     margin-bottom: 50px; /* Add the desired margin-bottom value */
 }
@@ -471,25 +469,17 @@ get_header(); ?>
     margin-top: 50px;
     font-family: 'Poppins', sans-serif; /* Add this line */
 }
-    .btn:hover {
-        background-color: #0056b3;
+.btn:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    #page-banner-header-inner h1 {
+        font-size: 1.5em;
     }
-    @media (max-width: 768px) {
-        #page-banner-header-inner h1 {
-            font-size: 1.5em;
-        }
-        #page-banner-header-inner p {
-            font-size: 1em;
-        }
+    #page-banner-header-inner p {
+        font-size: 1em;
     }
-
-
-
-
-
- 
-
- 
+}
 
 .faq h1 {
     font-size: 2em;
@@ -508,7 +498,7 @@ get_header(); ?>
     border-radius: 15px;
     margin: 20px 0;
     padding: 20px;
-    width: 350%; /* Changed width to 100% */
+    width: 300%; /* Changed width to 100% */
     max-width: 20; /* Added max-width for responsiveness */
     text-align: left;
     display: flex;
@@ -518,7 +508,7 @@ get_header(); ?>
     height: 200px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.3);
- }
+}
 
 .faq-block:hover {
     height: 250px;
@@ -563,47 +553,53 @@ get_header(); ?>
     }
 }
 
+/* Update card common styles */
+.update-card {
+    width: 30%;
+    background: #1e2733;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
 
- /* Image Section */
- .image-section {
-        background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
-        background-size: cover;
-        padding: 100px 0; /* Add top and bottom padding */
-    }
+.update-card:hover {
+    background-color: white;
+    color: black;
+}
 
-    .image-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px; /* Add gap between images */
-    }
+.update-card:hover .logo-img {
+    content: url('<?php echo get_template_directory_uri(); ?>/img/X_logo_dark.png');
+}
 
-    .image-container img {
-        max-width: 100%;
-        height: auto;
-    }
+/* Specific styles for each card */
+.card-1 {
+    height: 20%;
+}
 
-    .image-section h1 {
-            font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-            font-size: 64px;
-            font-style: italic;
-            font-weight: 900;
-            line-height: 70.4px;
-            letter-spacing: -0.02em;
-            text-align: center;
-            color: white;
-        }
+.card-2 {
+    height: 90%;
+}
 
+.card-3 {
+    height: 20%;
+}
 
-        .update-card {
-  background: #1e2733;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  color: white;
-  height: auto;
+.card-4 {
+    height: 20%;
+    margin-top: -16.5%;
+}
+
+.card-5 {
+    height: 30%;
+}
+
+.card-6 {
+    height: auto;
+    margin-top: -10.5%;
 }
 
 .update-card img {
@@ -615,7 +611,7 @@ get_header(); ?>
 
 .update-card video {
   width: 500%;
-  height: 500px;
+  height: 34em;
   border-radius: 10px;
 }
 
@@ -635,14 +631,21 @@ get_header(); ?>
 .update-card .hashtag {
   color: #1DA1F2;
 }
- 
+
+/* Updates Section */
+.updates-section {
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
 
 </style>
-
-
-
-
-
 
 <!-- Main Banner Section -->
 <section class="main-banner">
@@ -668,7 +671,6 @@ get_header(); ?>
     </div>
 </section>
 
-
 <!-- What is The Breakout Trading Contest Section -->
 <section class="what-is-breakout">
     <div class="full-background">
@@ -678,8 +680,6 @@ get_header(); ?>
     </div>
 </section>
 
-
-<!-- Prizes Section -->
 <!-- Prizes Section -->
 <section class="prizes">
     <div class="full-background">
@@ -727,7 +727,6 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
 
 <!-- Section Join in 3 Steps -->
 <section class="steps">
@@ -809,7 +808,6 @@ get_header(); ?>
     </div>
 </section>
 
- 
 <!-- Section Timer -->
 <section class="section-timer">
     <div class="full-background">
@@ -851,14 +849,6 @@ get_header(); ?>
     </div>
 </section>
 
-
-
-
-
-
-
-
-
 <!-- Section CEO -->
 <section class="section-ceo">
     <div class="full-background">
@@ -878,11 +868,6 @@ get_header(); ?>
     </div>
 </section>
 
-
-
-
-
-
 <div class="full-background">
     <div id="page-banner-1034" class="page-banner">
         <div id="image-wrapper">
@@ -901,15 +886,6 @@ get_header(); ?>
     </div>
 </div>
 
-                        
-
-
-
-
-
-
-
-
 <!-- FAQ Section -->
 <section class="faq">
     <div class="full-background">
@@ -927,9 +903,7 @@ get_header(); ?>
                 <!-- Second FAQ Block -->
                 <div class="faq-block">
                     <div class="question">What markets are eligible to trade in the competition?</div>
-                    
                     <?php echo '<img class="arrow-img" src="' . get_template_directory_uri() . '/img/arrow.png" alt="Arrow">' ?>
-                    
                 </div>
                 <!-- Third FAQ Block -->
                 <div class="faq-block">
@@ -941,222 +915,148 @@ get_header(); ?>
     </div>
 </section>
 
- 
+<!-- Updates Section -->
+<section class="updates-section">
+    <div class="update-card card-1">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+                <div>
+                    <div style="font-weight: bold;">theBreakout</div>
+                    <div style="color: #bbb;">6h ago</div>
+                </div>
+            </div>
+            <div class="logo-container" style="display: flex; align-items: center;">
+                <?php echo '<img class="logo-img" src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 100%; height: 24px; margin-right: 10px; ">'; ?>
+                <div style="cursor: pointer;">
+                    <i class="fab fa-x-twitter" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card-text" style="margin-top: 10px;">
+            This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
+        </div>
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/mask.png" alt="Image" style="width: 100%; height: 30em; border-radius: 10px; margin-top: 10px; ">'; ?>
+    </div>
 
- 
+    <div class="update-card card-2">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+                <div>
+                    <div style="font-weight: bold;">theBreakout</div>
+                    <div style="color: #bbb;">6h ago</div>
+                </div>
+            </div>
+            <div class="logo-container" style="display: flex; align-items: center;">
+                <?php echo '<img class="logo-img" src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 100%; height: 24px; margin-right: 10px;">'; ?>
+                <div style="cursor: pointer;">
+                    <i class="fab fa-x-twitter" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card-text" style="margin-top: 10px;">
+            This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.<br><br>
+            I love how easy it is to navigate through different sections and access all the <span style="color: #1DA1F2;">#TOOLS</span> I need to make informed decisions.
+        </div>
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/mask3.png" alt="Image" style="width: 100%; height: 45em; border-radius: 10px; margin-top: 10px;">'; ?>
+    </div>
 
+    <div class="update-card card-3">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+                <div>
+                    <div style="font-weight: bold;">theBreakout</div>
+                    <div style="color: #bbb;">7h ago</div>
+                </div>
+            </div>
+            <div class="logo-container" style="display: flex; align-items: center;">
+                <?php echo '<img class="logo-img" src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
+                <div style="cursor: pointer;">
+                    <i class="fab fa-x-twitter" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card-text" style="margin-top: 10px;">
+            This <span class="hashtag">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span class="hashtag">#PROFITABLE</span>.
+            I love how easy it is to navigate through different sections and access all the <span class="hashtag">#TOOLS</span> I need to make informed decisions.
+        </div>
+        <div style="margin-top: 10px; display: flex; justify-content: center;">
+        <video autoplay muted loop style="width: max-content; border-radius: 10px;">
+    <source src="<?php echo get_template_directory_uri(); ?>/img/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
+        </div>
+    </div>
 
+    <div class="update-card card-4">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+                <div>
+                    <div style="font-weight: bold;">theBreakout</div>
+                    <div style="color: #bbb;">6h ago</div>
+                </div>
+            </div>
+            <div class="logo-container" style="display: flex; align-items: center;">
+                <?php echo '<img class="logo-img" src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
+                <div style="cursor: pointer;">
+                    <i class="fab fa-x-twitter" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card-text" style="margin-top: 10px;">
+            This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
+        </div>
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/mask2.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
+    </div>
 
+    <div class="update-card card-5">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+                <div>
+                    <div style="font-weight: bold;">theBreakout</div>
+                    <div style="color: #bbb;">6h ago</div>
+                </div>
+            </div>
+            <div class="logo-container" style="display: flex; align-items: center;">
+                <?php echo '<img class="logo-img" src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
+                <div style="cursor: pointer;">
+                    <i class="fab fa-x-twitter" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card-text" style="margin-top: 10px;">
+            This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
+        </div>
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/mask4.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
+    </div>
 
-<section class="image-section">
-    <div class="image-container">
-        <h1 class="competition-title">COMPETITION UPDATES</h1>
-        <?php
-        $images = array(
-            'img/1_.png',
-            'img/2_.png',
-            'img/3_.png'
-        );
-
-        foreach ($images as $image) {
-            echo '<img src="' . get_template_directory_uri() . '/' . $image . '" alt="Image">';
-        }
-        ?>
+    <div class="update-card card-6">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
+                <div>
+                    <div style="font-weight: bold;">theBreakout</div>
+                    <div style="color: #bbb;">6h ago</div>
+                </div>
+            </div>
+            <div class="logo-container" style="display: flex; align-items: center;">
+                <?php echo '<img class="logo-img" src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
+                <div style="cursor: pointer;">
+                    <i class="fab fa-x-twitter" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card-text" style="margin-top: 10px;">
+            This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
+        </div>
+        <?php echo '<img src="' . get_template_directory_uri() . '/img/mask5.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="updates-section" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; background: #0e1e34; padding: 40px;">
-  <!-- Card 1 -->
-  <div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: 20%;">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center;">
-        <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
-        <div>
-          <div style="font-weight: bold;">theBreakout</div>
-          <div style="color: #bbb;">6h ago</div>
-        </div>
-      </div>
-      <div style="display: flex; align-items: center;">
-        <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 100%; height: 24px; margin-right: 10px;">'; ?>
-        <div style="cursor: pointer;">
-          <i class="fab fa-x-twitter" style="color: white;"></i>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top: 10px;">
-      This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
-    </div>
-    <?php echo '<img src="' . get_template_directory_uri() . '/img/mask.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
-  </div>
-
-<!-- Card 2 -->
-<div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: auto;">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <div style="display: flex; align-items: center;">
-      <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
-      <div>
-        <div style="font-weight: bold;">theBreakout</div>
-        <div style="color: #bbb;">6h ago</div>
-      </div>
-    </div>
-    <div style="display: flex; align-items: center;">
-    <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 100%; height: 24px; margin-right: 10px;">'; ?>
-    <div style="cursor: pointer;">
-        <i class="fab fa-x-twitter" style="color: white;"></i>
-      </div>
-    </div>
-  </div>
-  <div style="margin-top: 10px;">
-    This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.<br><br>
-    I love how easy it is to navigate through different sections and access all the <span style="color: #1DA1F2;">#TOOLS</span> I need to make informed decisions.
-  </div>
-  <?php echo '<img src="' . get_template_directory_uri() . '/img/mask3.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
-</div>
-
-
-<!-- Card 3 -->
-<div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: auto;">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <div style="display: flex; align-items: center;">
-      <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
-      <div>
-        <div style="font-weight: bold;">theBreakout</div>
-        <div style="color: #bbb;">7h ago</div>
-      </div>
-    </div>
-    <div style="display: flex; align-items: center;">
-      <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
-      <div style="cursor: pointer;">
-        <i class="fab fa-x-twitter" style="color: white;"></i>
-      </div>
-    </div>
-  </div>
-  <div class="card-text" style="margin-top: 10px;">
-    This <span class="hashtag">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span class="hashtag">#PROFITABLE</span>.
-    I love how easy it is to navigate through different sections and access all the <span class="hashtag">#TOOLS</span> I need to make informed decisions.
-  </div>
-  <div style="margin-top: 10px; display: flex; justify-content: center;">
-    <video controls style="width: 380px; height: 676px; border-radius: 10px;">
-      <source src="<?php echo get_template_directory_uri(); ?>/img/video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-
-
-  <!-- Card 4 -->
-  <div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: 20% ; margin-top: -12%">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center;">
-        <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
-        <div>
-          <div style="font-weight: bold;">theBreakout</div>
-          <div style="color: #bbb;">6h ago</div>
-        </div>
-      </div>
-      <div style="display: flex; align-items: center;">
-      <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
-      <div style="cursor: pointer;">
-          <i class="fab fa-x-twitter" style="color: white;"></i>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top: 10px;">
-      This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
-    </div>
-    <?php echo '<img src="' . get_template_directory_uri() . '/img/mask2.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
-  </div>
-
-  <!-- Card 5 -->
-  <div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: 30%;">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center;">
-        <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
-        <div>
-          <div style="font-weight: bold;">theBreakout</div>
-          <div style="color: #bbb;">6h ago</div>
-        </div>
-      </div>
-      <div style="display: flex; align-items: center;">
-      <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
-      <div style="cursor: pointer;">
-          <i class="fab fa-x-twitter" style="color: white;"></i>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top: 10px;">
-      This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
-    </div>
-    <?php echo '<img src="' . get_template_directory_uri() . '/img/mask4.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
-  </div>
-
-  <!-- Card 6 -->
-  <div class="update-card" style="width: 30%; background: #1e2733; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; color: white; height: auto; margin-top: -4.5%">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center;">
-        <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
-        <div>
-          <div style="font-weight: bold;">theBreakout</div>
-          <div style="color: #bbb;">6h ago</div>
-        </div>
-      </div>
-      <div style="display: flex; align-items: center;">
-      <?php echo '<img src="' . get_template_directory_uri() . '/img/X_logo.png" alt="Twitter X Logo" style="width: 24px; height: 24px; margin-right: 10px;">'; ?>
-      <div style="cursor: pointer;">
-          <i class="fab fa-x-twitter" style="color: white;"></i>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top: 10px;">
-      This <span style="color: #1DA1F2;">#TRADING</span> platform is a game-changer! The intuitive interface and robust features have made my trading experience seamless and <span style="color: #1DA1F2;">#PROFITABLE</span>.
-    </div>
-    <?php echo '<img src="' . get_template_directory_uri() . '/img/mask5.png" alt="Image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 10px;">'; ?>
-  </div>
-
- 
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1175,7 +1075,6 @@ get_header(); ?>
             this.querySelector('.apply-button').style.display = 'none'; // Hide the apply button
         });
     });
-
 
     var countDownDate = new Date("June 30, 2024 15:37:25").getTime();
 

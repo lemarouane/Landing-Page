@@ -188,6 +188,9 @@ get_header(); ?>
     z-index: 1;
 }
 
+/* Import Manrope font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
 /* Trader Section */
 .trader-content {
     max-width: 1200px;
@@ -239,21 +242,171 @@ get_header(); ?>
 }
 .trader-cards {
     flex-basis: 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
+.card-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual Card Styles */
 .card {
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+.card-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    margin: 1em;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+.card-icon img {
+    width: 50%;
+    height: 50%;
+}
+
+#card-1 .card-icon {
+    background-color: black; /* Set background layer for icon on card 1 to black */
+}
+
+#card-1 {
     background: #1B1B1B;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20em;
+    margin-top: -6em;
 }
-.card h3 {
+#card-1 h3 {
     font-size: 24px;
     color: white;
+    margin-top: 3em;
+    transition: color 0.3s;
 }
-.card p {
+#card-1 p {
     font-size: 16px;
     color: white;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 4em;
+    transition: color 0.3s;
 }
+#card-1 .apply-now {
+    color: #009CFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    transition: color 0.3s;
+}
+#card-1 .apply-now::after {
+    content: url('<?php echo get_template_directory_uri(); ?>/img/arrow.png');
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+
+#card-2 {
+    background: #1C1C1C;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20em;
+}
+#card-2 h3 {
+    font-size: 24px;
+    color: white;
+    margin-top: 3em;
+    transition: color 0.3s;
+}
+#card-2 p {
+    font-size: 16px;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 5em;
+    transition: color 0.3s;
+}
+
+#card-3 {
+    background: #1D1D1D;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20em;
+}
+#card-3 h3 {
+    font-size: 24px;
+    color: white;
+    margin-top: 3em;
+    transition: color 0.3s;
+}
+#card-3 p {
+    font-size: 16px;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 4em;
+    transition: color 0.3s;
+}
+
+#card-4 {
+    background: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20em;
+}
+#card-4 h3 {
+    font-size: 24px;
+    color: white;
+    margin-top: 3em;
+    transition: color 0.3s;
+}
+#card-4 p {
+    font-size: 16px;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 5em;
+    transition: color 0.3s;
+}
+
+.card:hover {
+    background-color: white; /* Change card background to white on hover */
+    color: black; /* Change card text color to black on hover */
+}
+.card:hover h3,
+.card:hover p,
+.card:hover .apply-now {
+    color: black; /* Change text color to black on hover */
+}
+
+
+
+
+
 
 /* Section Timer */
 .section-timer {
@@ -783,30 +936,53 @@ get_header(); ?>
             </div>
             <!-- Right Cards Block -->
             <div class="trader-cards">
-                <!-- Card 1 -->
-                <div class="card">
-                    <h3>SHOWCASE YOUR SKILLS</h3>
-                    <p>The prize goes to the winner but the job goes to the best trader based on statistics and analytics.</p>
+                <!-- Group 1: Card 1 and Card 3 -->
+                <div class="card-group">
+                    <!-- Card 1 -->
+                    <div class="card" id="card-1">
+                        <div class="card-icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/card1.png" alt="Card 1 Icon">
+                        </div>
+                        <h3>SHOWCASE YOUR SKILLS</h3>
+                        <p>The prize goes to the winner but the job goes to the best trader based on statistics and analytics.</p>
+                        <a href="#" class="apply-now">APPLY NOW</a>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card" id="card-3">
+                        <div class="card-icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/card2.png" alt="Card 3 Icon">
+                        </div>
+                        <h3>GET FEEDBACK & MENTORSHIP</h3>
+                        <p>Get valuable feedback and mentorship from professional veteran Traders with decades of experience in generating 7-figure P&L's.</p>
+                    </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="card">
-                    <h3>SECURE DATA ENCRYPTION</h3>
-                    <p>Receive daily trading statistics to help you learn, grow and refine your craft.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="card">
-                    <h3>GET USEFUL FEEDBACK & MENTORSHIP</h3>
-                    <p>Join our global traders network! Tap into 4 decades of experience.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="card">
-                    <h3>USE THE BEST TOOLS</h3>
-                    <p>Traders use our proprietary platform, Trading Technologies [TT].</p>
+                <!-- Group 2: Card 2 and Card 4 -->
+                <div class="card-group">
+                    <!-- Card 2 -->
+                    <div class="card" id="card-2">
+                        <div class="card-icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/card3.png" alt="Card 2 Icon">
+                        </div>
+                        <h3>SECURE DATA ENCRYPTION</h3>
+                        <p>Receive daily trading statistics to help you learn, grow and refine your craft.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card" id="card-4">
+                        <div class="card-icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/card4.png" alt="Card 4 Icon">
+                        </div>
+                        <h3>USE THE BEST TOOLS</h3>
+                        <p>Trade for free on the world's premier Futures platform, Trading Technologies (TT).</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
+
 
 <!-- Section Timer -->
 <section class="section-timer">
@@ -922,7 +1098,8 @@ get_header(); ?>
             <div style="display: flex; align-items: center;">
                 <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
                 <div>
-                    <div style="font-weight: bold;">theBreakout</div>
+                <div style="font-weight: bold; font-family: 'Manrope', sans-serif;">theBreakout</div>
+
                     <div style="color: #bbb;">6h ago</div>
                 </div>
             </div>
@@ -944,8 +1121,8 @@ get_header(); ?>
             <div style="display: flex; align-items: center;">
                 <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
                 <div>
-                    <div style="font-weight: bold;">theBreakout</div>
-                    <div style="color: #bbb;">6h ago</div>
+                <div style="font-weight: bold; font-family: 'Manrope', sans-serif;">theBreakout</div>
+                <div style="color: #bbb;">6h ago</div>
                 </div>
             </div>
             <div class="logo-container" style="display: flex; align-items: center;">
@@ -967,7 +1144,7 @@ get_header(); ?>
             <div style="display: flex; align-items: center;">
                 <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
                 <div>
-                    <div style="font-weight: bold;">theBreakout</div>
+<div style="font-weight: bold; font-family: 'Manrope', sans-serif;">theBreakout</div>
                     <div style="color: #bbb;">7h ago</div>
                 </div>
             </div>
@@ -996,7 +1173,7 @@ get_header(); ?>
             <div style="display: flex; align-items: center;">
                 <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
                 <div>
-                    <div style="font-weight: bold;">theBreakout</div>
+<div style="font-weight: bold; font-family: 'Manrope', sans-serif;">theBreakout</div>
                     <div style="color: #bbb;">6h ago</div>
                 </div>
             </div>
@@ -1018,7 +1195,7 @@ get_header(); ?>
             <div style="display: flex; align-items: center;">
                 <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
                 <div>
-                    <div style="font-weight: bold;">theBreakout</div>
+<div style="font-weight: bold; font-family: 'Manrope', sans-serif;">theBreakout</div>
                     <div style="color: #bbb;">6h ago</div>
                 </div>
             </div>
@@ -1040,7 +1217,7 @@ get_header(); ?>
             <div style="display: flex; align-items: center;">
                 <?php echo '<img src="' . get_template_directory_uri() . '/img/logoX.png" alt="Profile Image" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">'; ?>
                 <div>
-                    <div style="font-weight: bold;">theBreakout</div>
+<div style="font-weight: bold; font-family: 'Manrope', sans-serif;">theBreakout</div>
                     <div style="color: #bbb;">6h ago</div>
                 </div>
             </div>

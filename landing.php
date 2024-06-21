@@ -640,6 +640,84 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 
+.join-section {
+    position: relative;
+    background-image: url('<?php echo get_template_directory_uri(); ?>/img/group.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding does not affect total width */
+}
+
+.join-content {
+     padding: 50px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.join-title {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 52.8px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.join-description {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.join-button {
+    display: inline-block;
+    padding: 16px 24px;
+    background: linear-gradient(90.15deg, #0077C2 2.26%, #003D66 99.9%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .join-section {
+        padding: 50px 20px;
+    }
+
+    .join-title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .join-description {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .join-button {
+        padding: 12px 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 </style>
@@ -784,6 +862,24 @@ body::-webkit-scrollbar-thumb:hover {
         <p><br><br><br><br><br><br>Are you trading big? Have you made some money today? If not, here’s your chance to shine! The Breakout is a way for everyone to test themselves against the world.</p>
     </div>
 </section>
+
+
+
+
+
+
+<section class="join-section">
+    <div class="join-content">
+        <h2 class="join-title">JOIN THE BREAKOUT<br>GELBER GROUP TRADING&nbsp;CONTEST</h2>
+        <p class="join-description">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</p>
+        <a href="#" class="join-button">LET'S GET STARTED</a>
+    </div>
+</section>
+
+
+
+
+
 
 
 

@@ -328,7 +328,7 @@ body {
     padding: 50px 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #fff;
 }
@@ -369,6 +369,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center; /* Added to center the cards horizontally */
 }
 
 .contest-card {
@@ -380,23 +381,11 @@ body {
     text-align: left;
     position: relative;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    height: 250px; /* Adjusted height */
+    height: 200px; /* Adjusted height for horizontal layout */
 }
 
-.contest-card1 {
-    margin-top: -20px; /* Adjusted position */
-}
-
-.contest-card2 {
-    margin-top: 20px; /* Adjusted position */
-}
-
-.contest-card3 {
-    margin-top: -20px; /* Adjusted position */
-}
-
-.contest-card4 {
-    margin-top: 20px; /* Adjusted position */
+.contest-card1, .contest-card2, .contest-card3, .contest-card4 {
+    margin-top: 0; /* Reset position adjustments */
 }
 
 .contest-card img {
@@ -409,12 +398,13 @@ body {
 
 .contest-card h3 {
     font-size: 1.5em;
-    margin: 60px 0 10px 0;
+    margin: 20px 0 10px 80px; /* Adjusted margin for horizontal layout */
 }
 
 .contest-card p {
     font-size: 1em;
     margin-bottom: 10px;
+    margin-left: 80px; /* Adjusted margin for horizontal layout */
 }
 
 .contest-card:hover {
@@ -441,10 +431,6 @@ body {
     .contest-card {
         width: 100%;
     }
-
-    .contest-card1, .contest-card3, .contest-card2, .contest-card4 {
-        margin-top: 0; /* Reset position adjustments for mobile view */
-    }
 }
 
 /* Custom scrollbar */
@@ -464,6 +450,198 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: #005b99;
 }
+
+
+
+
+
+
+
+.timer-section {
+ 
+    color: #fff;
+}
+
+.timer-card {
+    background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    border-radius: 10px;
+    padding: 50px;
+     margin: 0 auto;
+    position: relative;
+    text-align: center;
+    transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.timer-card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.timer-card:hover {
+    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+}
+
+.timer-card h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.timer div {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.timer span {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    display: block;
+    font-size: em;
+    text-transform: uppercase;
+}
+
+.timer img {
+    height: 250px;
+    margin: 0 30px;
+}
+
+.apply-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 1.5em;
+}
+
+.apply-now a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.apply-now a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .timer-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .timer {
+        flex-direction: column;
+    }
+
+    .timer img {
+        display: none;
+    }
+
+    .timer div {
+        margin-bottom: 20px;
+    }
+
+    .apply-now {
+        flex-direction: column;
+        font-size: 1em;
+    }
+
+    .apply-now a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+.boss-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.boss-image {
+    flex: 1;
+    max-width: 40%;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.boss-card {
+    flex: 2;
+    background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    border-radius: 0 10px 10px 0;
+    padding: 30px;
+    text-align: left;
+    transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    height: 35em;
+ }
+
+.boss-card:hover {
+    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+}
+
+.boss-card h2 {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 52.8px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.boss-card h3 {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic; 
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.boss-card p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .boss-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .boss-image {
+        max-width: 80%;
+        margin: 0 auto 20px;
+        border-radius: 10px;
+    }
+
+    .boss-card {
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
 </style>
 
 <section class="hero">
@@ -563,12 +741,67 @@ body::-webkit-scrollbar-thumb:hover {
             </div>
         </div>
     </section>
+
+
+
+    <section class="timer-section">
+    <div class="timer-card">
+        <h2>Starts In</h2>
+        <div class="timer">
+            <div>
+                <span id="days"></span>
+                <span>Days</span>
+            </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="Line">
+            <div>
+                <span id="hours"></span>
+                <span>Hours</span>
+            </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="Line">
+            <div>
+                <span id="minutes"></span>
+                <span>Mins</span>
+            </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="Line">
+            <div>
+                <span id="seconds"></span>
+                <span>Secs</span>
+            </div>
+        </div>
+        <div class="apply-now">
+            <span>Don't wait! </span>
+            <a href="#">Apply Now <img src="<?php echo get_template_directory_uri(); ?>/img/apply-icon.png" alt="Apply Now Icon"></a>
+        </div>
+    </div>
+</section> 
+
+
+<section class="boss-section">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/boss.png" alt="Boss Image" class="boss-image">
+    <div class="boss-card">
+        <h2>Brian Gelber</h2>
+        <h3>CEO</h3>
+        <p><br><br><br><br><br><br>Are you trading big? Have you made some money today? If not, here’s your chance to shine! The Breakout is a way for everyone to test themselves against the world.</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const prizeCards = document.querySelectorAll('.prize-card');
     const stepCards = document.querySelectorAll('.step-card');
+    const timerCard = document.querySelector('.timer-card');
     const observerOptions = {
         threshold: 0.1
     };
@@ -590,6 +823,30 @@ document.addEventListener('DOMContentLoaded', function() {
     stepCards.forEach(card => {
         observer.observe(card);
     });
+
+    observer.observe(timerCard);
+
+    function updateCountdown() {
+        const deadline = new Date('June 30, 2024 00:00:00').getTime();
+        const now = new Date().getTime();
+        const timeRemaining = deadline - now;
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        if (timeRemaining < 0) {
+            document.querySelector('.timer').innerHTML = '<div>Expired</div>';
+        } else {
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        }
+    }
+
+    setInterval(updateCountdown, 1000);
 });
 </script>
 

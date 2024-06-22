@@ -16,6 +16,10 @@ get_header(); ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acumin+Pro+ExtraCondensed:wght@900&family=Manrope:wght@600&display=swap" rel="stylesheet">
+
 
 <style>
 body {
@@ -711,6 +715,95 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 
+.faq-section {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.faq-title {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-size: 78px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 78px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.faq-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.faq-card {
+    background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    text-align: left;
+    position: relative;
+    transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.faq-card:hover {
+    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    transform: scaleY(1.1);
+}
+
+.faq-question {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #fff;
+}
+
+.faq-arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) rotate(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-card:hover .faq-arrow {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .faq-card {
+        width: 100%;
+    }
+
+    .faq-title {
+        font-size: 48px;
+        line-height: 48px;
+    }
+}
+
+
+
+
+
 
 
 
@@ -885,8 +978,37 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 
+<section class="faq-section">
+    <h2 class="faq-title">Contest FAQ</h2>
+    <div class="faq-cards">
+        <div class="faq-card">
+            <h3 class="faq-question">Are all nationalities welcome to participate?</h3>
+            <p class="faq-answer">Only American nationals are allowed to participate in theBreakout.</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" alt="Arrow Icon" class="faq-arrow">
+        </div>
+        <div class="faq-card">
+            <h3 class="faq-question">What markets are eligible to trade in the competition?</h3>
+            <p class="faq-answer">All major markets are eligible for trading in the competition.</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" alt="Arrow Icon" class="faq-arrow">
+        </div>
+        <div class="faq-card">
+            <h3 class="faq-question">I only trade single name stocks and options - do I qualify?</h3>
+            <p class="faq-answer">Yes, you qualify as long as you meet the other contest criteria.</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" alt="Arrow Icon" class="faq-arrow">
+        </div>
+    </div>
+</section>
 
 
+
+
+
+
+
+
+
+
+ 
 
 
 

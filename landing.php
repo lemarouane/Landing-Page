@@ -28,6 +28,12 @@ body {
     padding: 0;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .hero {
     position: relative;
     background-image: url('<?php echo get_template_directory_uri(); ?>/img/stat.png');
@@ -351,11 +357,13 @@ body {
     line-height: 78px;
     color: #fff;
     margin-bottom: 20px;
+    text-align: center; /* Center text */
 }
 
 .contest-text p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    text-align: center; /* Center text */
 }
 
 .contest-text .contest-button {
@@ -366,6 +374,7 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
+    margin: 0 auto; /* Center button */
 }
 
 .contest-cards {
@@ -435,6 +444,17 @@ body {
     .contest-card {
         width: 100%;
     }
+
+    .contest-text h2 {
+        font-size: 48px;
+        line-height: 48px;
+        padding: 0 20px; 
+       }
+       
+    .contest-text p {
+        text-align: center; /* Center text on mobile */
+ 
+    }
 }
 
 /* Custom scrollbar */
@@ -455,14 +475,7 @@ body::-webkit-scrollbar-thumb:hover {
     background: #005b99;
 }
 
-
-
-
-
-
-
 .timer-section {
- 
     color: #fff;
 }
 
@@ -470,7 +483,7 @@ body::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     border-radius: 10px;
     padding: 50px;
-     margin: 0 auto;
+    margin: 0 auto;
     position: relative;
     text-align: center;
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -591,7 +604,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-align: left;
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     height: 35em;
- }
+}
 
 .boss-card:hover {
     background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
@@ -641,9 +654,6 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 
-
-
-
 .join-section {
     position: relative;
     background-image: url('<?php echo get_template_directory_uri(); ?>/img/group.png');
@@ -659,7 +669,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .join-content {
-     padding: 50px;
+    padding: 50px;
     border-radius: 10px;
     max-width: 800px;
 }
@@ -713,8 +723,6 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 
-
-
 .faq-section {
     background-size: cover;
     background-position: center;
@@ -757,7 +765,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .faq-question {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-style: italic;
     font-weight: 900;
     line-height: 44px;
@@ -799,13 +807,6 @@ body::-webkit-scrollbar-thumb:hover {
         line-height: 48px;
     }
 }
-
-
-
-
-
-
-
 
 
 

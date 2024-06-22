@@ -450,7 +450,7 @@ body {
         line-height: 48px;
         padding: 0 20px; 
        }
-       
+
     .contest-text p {
         text-align: center; /* Center text on mobile */
  
@@ -755,8 +755,16 @@ body::-webkit-scrollbar-thumb:hover {
     width: 80%;
     text-align: left;
     position: relative;
-    transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+    transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translateY(100px);
+    opacity: 0;
 }
+
+.faq-card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 
 .faq-card:hover {
     background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
@@ -1020,6 +1028,7 @@ body::-webkit-scrollbar-thumb:hover {
 document.addEventListener('DOMContentLoaded', function() {
     const prizeCards = document.querySelectorAll('.prize-card');
     const stepCards = document.querySelectorAll('.step-card');
+    const faqCards = document.querySelectorAll('.faq-card');
     const timerCard = document.querySelector('.timer-card');
     const observerOptions = {
         threshold: 0.1
@@ -1040,6 +1049,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     stepCards.forEach(card => {
+        observer.observe(card);
+    });
+
+    faqCards.forEach(card => {
         observer.observe(card);
     });
 

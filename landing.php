@@ -28,6 +28,12 @@ body {
     padding: 0;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .hero {
     position: relative;
     background-image: url('<?php echo get_template_directory_uri(); ?>/img/stat.png');
@@ -82,9 +88,6 @@ body {
 .hero-logo {
     max-width: 50%;
     height: auto;
-    position: absolute;
-    top: 20px;
-    left: 20px;
 }
 
 @media (max-width: 768px) {
@@ -123,8 +126,6 @@ body {
 
     .hero-logo {
         max-width: 80%;
-        position: static;
-        margin: 0 auto 20px;
     }
 }
 
@@ -166,6 +167,7 @@ body {
     text-align: center;
     color: #fff;
 }
+
 
 .prizes-title {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
@@ -498,7 +500,7 @@ body {
     color: #000;
 }
 
-.apply-now {
+.apply-now-contest {
     display: none;
     position: absolute;
     bottom: 20px;  
@@ -993,7 +995,7 @@ body {
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card1.png" alt="Card 1">
                 <h3>SHOWCASE YOUR SKILLS</h3>
                 <p>The prize goes to the winner but the job goes to the best trader based on statistics and analytics.</p>
-                <div class="apply-now">
+                <div class="apply-now-contest">
                     APPLY NOW
                     <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
                 </div>
@@ -1002,7 +1004,7 @@ body {
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card3.png" alt="Card 3">
                 <h3>SECURE DATA ENCRYPTION</h3>
                 <p>Receive daily trading statistics to help you learn, grow and refine your craft.</p>
-                <div class="apply-now">
+                <div class="apply-now-contest">
                     APPLY NOW
                     <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
                 </div>
@@ -1013,7 +1015,7 @@ body {
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card2.png" alt="Card 2">
                 <h3>GET FEEDBACK & MENTORSHIP</h3>
                 <p>Get valuable feedback and mentorship from professional veteran Traders with decades of experience in generating 7-figure P&L's.</p>
-                <div class="apply-now">
+                <div class="apply-now-contest">
                     APPLY NOW
                     <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
                 </div>
@@ -1022,7 +1024,7 @@ body {
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card4.png" alt="Card 4">
                 <h3>USE THE BEST TOOLS</h3>
                 <p>Trade for free on the world's premier Futures platform, Trading Technologies (TT).</p>
-                <div class="apply-now">
+                <div class="apply-now-contest">
                     APPLY NOW
                     <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
                 </div>

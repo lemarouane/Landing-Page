@@ -28,12 +28,6 @@ body {
     padding: 0;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .hero {
     position: relative;
     background-image: url('<?php echo get_template_directory_uri(); ?>/img/stat.png');
@@ -88,6 +82,9 @@ body {
 .hero-logo {
     max-width: 50%;
     height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 @media (max-width: 768px) {
@@ -126,6 +123,8 @@ body {
 
     .hero-logo {
         max-width: 80%;
+        position: static;
+        margin: 0 auto 20px;
     }
 }
 
@@ -378,51 +377,147 @@ body {
 }
 
 .contest-cards {
-    flex: 1;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    justify-content: center; /* Added to center the cards horizontally */
+    flex-wrap: wrap;
+}
+
+.contest-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contest-card {
     background: rgba(27, 27, 27, 1);
     color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 20px;
-    width: calc(50% - 10px);
+    width: 400px; /* Adjust width as needed */
     text-align: left;
     position: relative;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    height: 200px; /* Adjusted height for horizontal layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to start */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contest-card1 {
+    background: rgba(27, 27, 27, 1);
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px; /* Adjust width as needed */
+    text-align: left;
+    position: relative;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 22em;
+}
+.contest-card2 {
+    background: rgba(27, 27, 27, 1);
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px; /* Adjust width as needed */
+    text-align: left;
+    position: relative;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 6em;
+    height: 22em;
 }
 
-.contest-card1, .contest-card2, .contest-card3, .contest-card4 {
-    margin-top: 0; /* Reset position adjustments */
+.contest-card3 {
+    background: rgba(27, 27, 27, 1);
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px; /* Adjust width as needed */
+    text-align: left;
+    position: relative;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 22em;
+}
+
+.contest-card4 {
+    background: rgba(27, 27, 27, 1);
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px; /* Adjust width as needed */
+    text-align: left;
+    position: relative;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 22em;
 }
 
 .contest-card img {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     width: 50px;
     height: 50px;
+    padding: 10px;
+    margin-bottom: 10px; /* Reduce margin */
+    align-self: flex-start; /* Align image to start */
 }
 
 .contest-card h3 {
-    font-size: 1.5em;
-    margin: 20px 0 10px 80px; /* Adjusted margin for horizontal layout */
+    font-size: 1.3em;
+    margin: 0 0 10px 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .contest-card p {
     font-size: 1em;
     margin-bottom: 10px;
-    margin-left: 80px; /* Adjusted margin for horizontal layout */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .contest-card:hover {
     background: #fff;
     color: #000;
+}
+
+.apply-now {
+    display: none;
+    position: absolute;
+    bottom: 20px;  
+    left: 30px;  
+    text-transform: uppercase;
+    color: inherit; /* Match text color */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between text and icon */
+}
+
+.contest-card:hover .apply-now {
+    display: flex; /* Show on hover */
+}
+
+.contest-arrow {
+    width: 16px;
+    height: 16px;
 }
 
 @media (max-width: 768px) {
@@ -439,6 +534,19 @@ body {
 
     .contest-cards {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .contest-column {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .contest-card1,
+    .contest-card2,
+    .contest-card3,
+    .contest-card4 {
+        width: 100%;
     }
 
     .contest-card {
@@ -449,30 +557,19 @@ body {
         font-size: 48px;
         line-height: 48px;
         padding: 0 20px; 
-       }
+    }
 
     .contest-text p {
-        text-align: center; /* Center text on mobile */
- 
+        text-align: center;
     }
-}
 
-/* Custom scrollbar */
-body::-webkit-scrollbar {
-    width: 10px;
-}
+    .contest-card h3 {
+        margin: 10px 0;
+    }
 
-body::-webkit-scrollbar-track {
-    background: #1b1b1b; 
-}
-
-body::-webkit-scrollbar-thumb {
-    background: linear-gradient(90.15deg, #0077C2 2.26%, #003D66 99.9%);
-    border-radius: 5px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: #005b99;
+    .contest-card p {
+        margin-left: 0;
+    }
 }
 
 .timer-section {
@@ -537,7 +634,7 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .apply-now a {
@@ -765,7 +862,6 @@ body::-webkit-scrollbar-thumb:hover {
     opacity: 1;
 }
 
-
 .faq-card:hover {
     background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     transform: scaleY(1.1);
@@ -815,13 +911,6 @@ body::-webkit-scrollbar-thumb:hover {
         line-height: 48px;
     }
 }
-
-
-
-
-
-
-
 </style>
 
 <section class="hero">
@@ -893,36 +982,54 @@ body::-webkit-scrollbar-thumb:hover {
     </section>
 
     <section class="contest-overview">
-        <div class="contest-text">
-            <h2>Are you a profitable Trader?</h2>
-            <p>Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
-            <a href="#" class="contest-button">Apply Now</a>
-        </div>
-        <div class="contest-cards">
+    <div class="contest-text">
+        <h2>Are you a profitable Trader?</h2>
+        <p>Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
+        <a href="#" class="contest-button">Apply Now</a>
+    </div>
+    <div class="contest-cards">
+        <div class="contest-column">
             <div class="contest-card contest-card1">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card1.png" alt="Card 1">
                 <h3>SHOWCASE YOUR SKILLS</h3>
                 <p>The prize goes to the winner but the job goes to the best trader based on statistics and analytics.</p>
-            </div>
-            <div class="contest-card contest-card2">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/card2.png" alt="Card 2">
-                <h3>GET FEEDBACK & MENTORSHIP</h3>
-                <p>Get valuable feedback and mentorship from professional veteran Traders with decades of experience in generating 7-figure P&L's.</p>
+                <div class="apply-now">
+                    APPLY NOW
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
+                </div>
             </div>
             <div class="contest-card contest-card3">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card3.png" alt="Card 3">
                 <h3>SECURE DATA ENCRYPTION</h3>
                 <p>Receive daily trading statistics to help you learn, grow and refine your craft.</p>
+                <div class="apply-now">
+                    APPLY NOW
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
+                </div>
+            </div>
+        </div>
+        <div class="contest-column">
+            <div class="contest-card contest-card2">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/card2.png" alt="Card 2">
+                <h3>GET FEEDBACK & MENTORSHIP</h3>
+                <p>Get valuable feedback and mentorship from professional veteran Traders with decades of experience in generating 7-figure P&L's.</p>
+                <div class="apply-now">
+                    APPLY NOW
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
+                </div>
             </div>
             <div class="contest-card contest-card4">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card4.png" alt="Card 4">
                 <h3>USE THE BEST TOOLS</h3>
                 <p>Trade for free on the world's premier Futures platform, Trading Technologies (TT).</p>
+                <div class="apply-now">
+                    APPLY NOW
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
+                </div>
             </div>
         </div>
-    </section>
-
-
+    </div>
+</section>
 
     <section class="timer-section">
     <div class="timer-card">
@@ -955,7 +1062,6 @@ body::-webkit-scrollbar-thumb:hover {
     </div>
 </section> 
 
-
 <section class="boss-section">
     <img src="<?php echo get_template_directory_uri(); ?>/img/boss.png" alt="Boss Image" class="boss-image">
     <div class="boss-card">
@@ -965,11 +1071,6 @@ body::-webkit-scrollbar-thumb:hover {
     </div>
 </section>
 
-
-
-
-
-
 <section class="join-section">
     <div class="join-content">
         <h2 class="join-title">JOIN THE BREAKOUT<br>GELBER GROUP TRADING&nbsp;CONTEST</h2>
@@ -977,7 +1078,6 @@ body::-webkit-scrollbar-thumb:hover {
         <a href="#" class="join-button">LET'S GET STARTED</a>
     </div>
 </section>
-
 
 
 

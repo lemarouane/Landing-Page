@@ -28,11 +28,8 @@ body {
     padding: 0;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+
+
 
 .hero {
     position: relative;
@@ -171,7 +168,7 @@ body {
 
 .prizes-title {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 78px;
+    font-size: 50px;
     font-style: italic;
     font-weight: 900;
     line-height: 78px;
@@ -189,19 +186,20 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-}
+ }
 
 .prize-card {
     background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     border-radius: 10px;
     padding: 20px;
-    width: 500px;
+    width: 450px;
     text-align: center;
     position: relative;
     height: 350px;
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(100px);
     opacity: 0;
+    border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
 .prize-card.show {
@@ -247,7 +245,7 @@ body {
 
 .steps-title {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 78px;
+    font-size: 50px;
     font-style: italic;
     font-weight: 900;
     line-height: 78px;
@@ -265,19 +263,20 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-}
+ }
 
 .step-card {
     background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     border-radius: 10px;
     padding: 20px;
-    width: 500px;
+    width: 450px;
     text-align: center;
     position: relative;
     height: 350px;
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(100px);
     opacity: 0;
+    border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
 .step-card.show {
@@ -358,13 +357,16 @@ body {
     line-height: 78px;
     color: #fff;
     margin-bottom: 20px;
-    text-align: center; /* Center text */
+    text-align: left;  
+    text-transform: 
 }
 
 .contest-text p {
     font-size: 1.2em;
     margin-bottom: 20px;
-    text-align: center; /* Center text */
+    text-align: center; 
+    text-align: left;  
+ 
 }
 
 .contest-text .contest-button {
@@ -375,7 +377,7 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    margin: 0 auto; /* Center button */
+    margin: 0 auto;  
 }
 
 .contest-cards {
@@ -383,6 +385,7 @@ body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-left: 8em
 }
 
 .contest-column {
@@ -521,6 +524,24 @@ body {
     width: 16px;
     height: 16px;
 }
+.contest-overview-button {
+    display: inline-block;
+    padding: 16px 24px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 0; /* Adjust margin as needed */
+    text-align: center;
+    border: 2px solid #0077C2;
+}
+
+.contest-overview-button:hover {
+    background: #0077C2;
+    color: #fff;
+}
 
 @media (max-width: 768px) {
     .contest-overview {
@@ -537,6 +558,7 @@ body {
     .contest-cards {
         flex-direction: column;
         align-items: center;
+        margin-left:-0.2em;
     }
 
     .contest-column {
@@ -559,6 +581,7 @@ body {
         font-size: 48px;
         line-height: 48px;
         padding: 0 20px; 
+        text-align: center;
     }
 
     .contest-text p {
@@ -588,6 +611,7 @@ body {
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(100px);
     opacity: 0;
+    border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
 .timer-card.show {
@@ -703,6 +727,7 @@ body {
     text-align: left;
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     height: 35em;
+ 
 }
 
 .boss-card:hover {
@@ -744,12 +769,17 @@ body {
         max-width: 80%;
         margin: 0 auto 20px;
         border-radius: 10px;
+        z-index:100;
     }
 
     .boss-card {
         padding: 20px;
         border-radius: 10px;
         margin-left: 0;
+        margin-top:-3em;
+        border-bottom: 0.1px solid rgba(255, 255, 255, 0.3);
+    border-left: 0.1px solid rgba(255, 255, 255, 0.3);
+    border-right: 0.1px solid rgba(255, 255, 255, 0.3);
     }
 }
 
@@ -845,7 +875,7 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-}
+ }
 
 .faq-card {
     background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
@@ -857,6 +887,7 @@ body {
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(100px);
     opacity: 0;
+    border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
 .faq-card.show {
@@ -871,7 +902,7 @@ body {
 
 .faq-question {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-style: italic;
     font-weight: 900;
     line-height: 44px;
@@ -985,10 +1016,12 @@ body {
 
     <section class="contest-overview">
     <div class="contest-text">
-        <h2>Are you a profitable Trader?</h2>
-        <p>Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
-        <a href="#" class="contest-button">Apply Now</a>
-    </div>
+    <a href="#" class="contest-overview-button">Contest Overview</a>
+    <h2>Are you a profitable Trader?</h2>
+    <p>Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
+    <a href="#" class="contest-button">Apply Now</a>
+</div>
+
     <div class="contest-cards">
         <div class="contest-column">
             <div class="contest-card contest-card1">

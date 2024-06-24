@@ -13,78 +13,103 @@ add_action('wp_enqueue_scripts', 'enqueue_landing_page_styles');
 
 get_header(); ?>
 
+<!-- Preconnect for performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Acumin+Pro+ExtraCondensed:wght@900&family=Manrope:wght@600&display=swap" rel="stylesheet">
 
+<!-- Including Google Fonts for fallback or additional styling -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: 'Acumin Pro ExtraCondensed';
+    src: url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.woff2') format('woff2'),
+         url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.woff') format('woff'),
+         url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'Manrope ExtraLight';
+    src: url('<?php echo get_template_directory_uri(); ?>/fonts/manrope-extralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+.section-bg, .prizes-section, .steps-section, .contest-overview, .timer-section, .boss-section, .join-section, .faq-section {
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+}
 
 
 
 .hero {
     position: relative;
     background-image: url('<?php echo get_template_directory_uri(); ?>/img/stat.png');
-    background-size: cover;
-    background-position: center;
+    background-size: cover
+    background-position: bottom center;
     padding: 50px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    height: 55em; 
 }
 
 .hero-content {
     max-width: 50%;
+    margin-top: -10em;
+    margin-bottom: 2em;  
+    margin-left: 2em;
 }
 
 .hero-title {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 78px;
+    font-size: 100px;
     font-style: italic;
     font-weight: 900;
-    line-height: 78px;
+    line-height: 100px;
     text-align: left;
     color: #fff;
 }
 
 .hero-description {
-    font-size: 1.2em;
+    font-size: 18px;
+    line-height: 25.2px;
     color: #fff;
     margin: 20px 0;
+    margin-top: -15%;
 }
 
 .hero-button {
     display: inline-block;
     padding: 16px 24px;
-    background: linear-gradient(90.15deg, #0077C2 2.26%, #003D66 99.9%);
+    background: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
     border-radius: 100px;
     font-weight: bold;
     margin-bottom: 20px;
-    margin-left: 5em;
+    
+    margin-top: 30px;
 }
 
 .hero-element {
     display: block;
     max-width: 100%;
     margin-top: 70px;
-    margin-left: 5em;
 }
 
 .hero-logo {
-    max-width: 50%;
+    max-width: 60%;  
     height: auto;
+    position: relative;
+    left: -70px;  
+    top: -70px;  
 }
 
 @media (max-width: 768px) {
@@ -97,6 +122,7 @@ body {
     .hero-content {
         max-width: 100%;
         margin-left: 0;
+        margin-bottom: 2em; /* Ensure spacing below the content */
     }
 
     .hero-title {
@@ -123,11 +149,13 @@ body {
 
     .hero-logo {
         max-width: 80%;
+        left: 0; /* Center for mobile */
+        top: 0; /* Adjust position for mobile */
     }
 }
 
 .continuous-bg {
-    background-image: url('<?php echo get_template_directory_uri(); ?>/img/bg.jpeg');
+    background-image: url('<?php echo get_template_directory_uri(); ?>/img/bg.png');
     background-size: cover;
     background-position: center;
     padding: 100px 20px;
@@ -168,7 +196,7 @@ body {
 
 .prizes-title {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 50px;
+    font-size: 280px;
     font-style: italic;
     font-weight: 900;
     line-height: 78px;
@@ -177,8 +205,11 @@ body {
 }
 
 .prizes-description {
-    font-size: 1.2em;
-    margin-bottom: 80px;
+    font-size: 16px;
+    Line height:22.4px;
+    margin-bottom: 60px;
+    margin-top:-8em;
+    text-align:center;
 }
 
 .prizes-cards {
@@ -192,10 +223,10 @@ body {
     background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     border-radius: 10px;
     padding: 20px;
-    width: 450px;
+    width: 580px;
     text-align: center;
     position: relative;
-    height: 350px;
+    height: 550px;
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(100px);
     opacity: 0;
@@ -212,30 +243,52 @@ body {
 }
 
 .prize-amount {
-    font-size: 2em;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-size: 96px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .prize-star {
     position: absolute;
-    top: 30%;
+    top: 27%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
 }
 
 .prize-place {
-    font-size: 1.2em;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-size: 40px;
     font-weight: bold;
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 .prize-description {
-    font-size: 1em;
-    margin-top: 10px;
+    font-size: 20px;
+ }
+.prizes-apply-button {
+    display: inline-block;
+    padding: 16px 24px;
+    background: rgba(0, 156, 255, 1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid transparent;
 }
+
+.prizes-apply-button:hover {
+    background: #fff;
+    color: #0077C2;
+    border: 2px solid #0077C2;
+}
+
 
 .steps-section {
     padding: 50px 20px;
@@ -248,10 +301,13 @@ body {
     font-size: 50px;
     font-style: italic;
     font-weight: 900;
-    line-height: 78px;
+    line-height: 64px;
     text-align: center;
     color: #fff;
-}
+    text-transform: uppercase;
+    margin-top: -2%;
+
+ }
 
 .steps-description {
     font-size: 1.2em;
@@ -269,10 +325,10 @@ body {
     background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     border-radius: 10px;
     padding: 20px;
-    width: 450px;
+    width: 580px;
     text-align: center;
     position: relative;
-    height: 350px;
+    height: 550px;
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(100px);
     opacity: 0;
@@ -289,15 +345,19 @@ body {
 }
 
 .step-title {
-    font-size: 2em;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 10px;
+    margin-left: -8em;
+    margin-top: 20px;
 }
 
 .step-vector {
     position: absolute;
-    top: 25%;
-    left: 50%;
+    left: 20%;
+    top: 21%;
     transform: translate(-50%, -50%);
     width: 135px;
     height: 35px;
@@ -309,30 +369,41 @@ body {
 }
 
 .step-description {
-    font-size: 1.2em;
+    font-size: 25px;
+    Line height: 33.6px;
     font-weight: bold;
     margin-top: 100px;
 }
 
 .step-text {
-    font-size: 1em;
+    font-size: 25px;
     margin-top: 80px;
+    text-align: left;
+    margin-left:7%;
 }
 
 .step-button {
-    display: none;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-size: 24px;
+     display: none;
     margin-top: 20px;
     padding: 10px 20px;
-    background: linear-gradient(90.15deg, #0077C2 2.26%, #003D66 99.9%);
+    background: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
+    position: absolute;
+    bottom: 40px;  
+    left: 40px;  
+    margin-left: 4%;
 }
 
 .step-card:hover .step-button {
     display: inline-block;
 }
+
 
 .contest-overview {
     padding: 50px 20px;
@@ -358,13 +429,17 @@ body {
     color: #fff;
     margin-bottom: 20px;
     text-align: left;  
-    text-transform: 
+    text-transform: uppercase;
 }
 
 .contest-text p {
-    font-size: 1.2em;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
     margin-bottom: 20px;
-    text-align: center; 
     text-align: left;  
  
 }
@@ -372,12 +447,13 @@ body {
 .contest-text .contest-button {
     display: inline-block;
     padding: 16px 24px;
-    background: linear-gradient(90.15deg, #0077C2 2.26%, #003D66 99.9%);
+    background: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     margin: 0 auto;  
+    margin-left: -30em;
 }
 
 .contest-cards {
@@ -399,13 +475,13 @@ body {
     color: #fff;
     border-radius: 20px;
     padding: 20px;
-    width: 400px; /* Adjust width as needed */
+    width: 400px;
     text-align: left;
     position: relative;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to start */
+    align-items: flex-start;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .contest-card1 {
@@ -506,17 +582,16 @@ body {
 .apply-now-contest {
     display: none;
     position: absolute;
-    bottom: 20px;  
-    left: 30px;  
+    bottom: 20px;
+    left: 30px;
     text-transform: uppercase;
     color: inherit; /* Match text color */
     font-weight: bold;
-    display: flex;
     align-items: center;
     gap: 5px; /* Space between text and icon */
 }
 
-.contest-card:hover .apply-now {
+.contest-card:hover .apply-now-contest {
     display: flex; /* Show on hover */
 }
 
@@ -535,13 +610,11 @@ body {
     margin-bottom: 20px;
     margin-left: 0; /* Adjust margin as needed */
     text-align: center;
-    border: 2px solid #0077C2;
+    border: 1px solid #0077C2;
+    margin-left: -25em;
 }
 
-.contest-overview-button:hover {
-    background: #0077C2;
-    color: #fff;
-}
+ 
 
 @media (max-width: 768px) {
     .contest-overview {
@@ -595,6 +668,23 @@ body {
     .contest-card p {
         margin-left: 0;
     }
+    .contest-overview-button {
+        margin-right:-25em;
+ 
+}
+
+.contest-text .contest-button {
+    display: inline-block;
+    padding: 16px 24px;
+    background: linear-gradient(90.15deg, #0077C2 2.26%, #003D66 99.9%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin: 0 auto;  
+ }
+
+    
 }
 
 .timer-section {
@@ -612,6 +702,7 @@ body {
     transform: translateY(100px);
     opacity: 0;
     border: 0.1px solid rgba(255, 255, 255, 0.3);
+    width: 90%
 }
 
 .timer-card.show {
@@ -624,9 +715,12 @@ body {
 }
 
 .timer-card h2 {
-    font-size: 3em;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-size: 64px;
     margin-bottom: 20px;
     text-transform: uppercase;
+
 }
 
 .timer {
@@ -646,8 +740,9 @@ body {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
     font-style: italic;
     display: block;
-    font-size: em;
+    font-size: 150px;
     text-transform: uppercase;
+    margin-bottom: -15%;
 }
 
 .timer img {
@@ -656,24 +751,28 @@ body {
 }
 
 .apply-now {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    font-size: 1.3em;
+    font-size: 20px;
 }
 
 .apply-now a {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
     color: #fff;
     text-decoration: none;
     margin-left: 10px;
     display: flex;
     align-items: center;
+    font-size: 20px;
+
 }
 
-.apply-now a:hover {
-    text-decoration: underline;
-}
+  
 
 @media (max-width: 768px) {
     .timer-card {
@@ -695,7 +794,7 @@ body {
 
     .apply-now {
         flex-direction: column;
-        font-size: 1em;
+        font-size: 2em;
     }
 
     .apply-now a {
@@ -707,27 +806,37 @@ body {
 .boss-section {
     padding: 50px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the left */
     align-items: center;
     color: #fff;
+    margin: 0;  
 }
 
+.boss-section > * {
+    margin: 0;  
+}
+
+
 .boss-image {
-    flex: 1;
+    flex: 0 0 auto;  
     max-width: 40%;
     border-radius: 10px 0 0 10px;
     overflow: hidden;
+    margin-top: -5em; 
+    margin-left: -2em;
+ 
 }
-
 .boss-card {
-    flex: 2;
-    background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+    flex: 0 0 auto;  
+    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     border-radius: 0 10px 10px 0;
     padding: 30px;
     text-align: left;
-    transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     height: 35em;
- 
+    width: 40%;  
+    margin-top: -5em;  
+    border: 0.1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .boss-card:hover {
@@ -740,46 +849,52 @@ body {
     font-style: italic;
     font-weight: 900;
     line-height: 52.8px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: -1em;
     text-transform: uppercase;
 }
 
 .boss-card h3 {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
     font-style: italic; 
-    font-size: 1.2em;
+    font-size: 48px;
     margin-bottom: 20px;
     font-weight: normal;
 }
 
 .boss-card p {
-    font-size: 1em;
-    line-height: 1.5em;
+    font-family: 'Manrope', sans-serif;
+    margin-top:3em;
+    font-size: 20px;
+    line-height: 28px;
+    weight:600px;
+    letter-spacing: -2%;
 }
 
 @media (max-width: 768px) {
     .boss-section {
         flex-direction: column;
         text-align: center;
+        align-items: center; /* Center align items in mobile view */
     }
 
     .boss-image {
         max-width: 80%;
         margin: 0 auto 20px;
         border-radius: 10px;
-        z-index:100;
+        z-index: 100;
     }
 
     .boss-card {
         padding: 20px;
         border-radius: 10px;
         margin-left: 0;
-        margin-top:-3em;
+        margin-top: -3em;
         border-bottom: 0.1px solid rgba(255, 255, 255, 0.3);
-    border-left: 0.1px solid rgba(255, 255, 255, 0.3);
-    border-right: 0.1px solid rgba(255, 255, 255, 0.3);
+        border-left: 0.1px solid rgba(255, 255, 255, 0.3);
+        border-right: 0.1px solid rgba(255, 255, 255, 0.3);
+        width: 80%; /* Adjust for mobile view */
     }
 }
 
@@ -913,6 +1028,7 @@ body {
 }
 
 .faq-answer {
+    display: none;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
     font-weight: 600;
@@ -920,6 +1036,10 @@ body {
     letter-spacing: -0.02em;
     text-align: left;
     color: #fff;
+}
+
+.faq-card:hover .faq-answer {
+    display: block;
 }
 
 .faq-arrow {
@@ -931,7 +1051,7 @@ body {
 }
 
 .faq-card:hover .faq-arrow {
-    transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(45deg);
 }
 
 @media (max-width: 768px) {
@@ -948,80 +1068,78 @@ body {
 
 <section class="hero">
     <div class="hero-content">
-        <h1 class="hero-title">THE BREAKOUT TRADING CONTEST</h1>
-        <p class="hero-description">Gelber Group is happy to announce THE BREAKOUT – a fully remote, discretionary, simulated Futures & FX trading competition that will take place this September/October 2024</p>
-        <a href="#" class="hero-button">Sign Up Now</a>
+        <h1 class="hero-title">THE BREAKOUT <br>TRADING CONTEST</h1>
+        <p class="hero-description">Gelber Group is happy to announce THE BREAKOUT <br>– a fully remote, discretionary, simulated Futures & FX <br>trading competition that will take place this<br> September/October 2024</p>
+        <a href="#" class="hero-button">JOIN NOW</a>
         <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Element" class="hero-element">
     </div>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Breakout Logo" class="hero-logo">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/hero.svg" alt="Breakout Logo" class="hero-logo">
 </section>
 
-<div class="continuous-bg">
-    <section class="section-bg">
-        <h2 class="section-title">WHAT IS THE BREAKOUT TRADING CONTEST</h2>
-    </section>
+<section class="section-bg">
+    <h2 class="section-title">WHAT IS THE BREAKOUT TRADING CONTEST</h2>
+</section>
 
-    <section class="prizes-section">
-        <h2 class="prizes-title">$35,000 IN CASH PRIZES</h2>
-        <p class="prizes-description">Cash prizes will be strictly for the top three P&L performers:</p>
-        <div class="prizes-cards">
-            <div class="prize-card">
-                <div class="prize-amount">$20,000
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/gold.png" alt="Gold Star" class="prize-star">
-                </div>
-                <p class="prize-place">1ST PLACE</p>
-                <p class="prize-description">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</p>
+<section class="prizes-section">
+    <h2 class="prizes-title">$35,000 IN CASH PRIZES</h2>
+    <p class="prizes-description">Cash prizes will be strictly for the top three P&L performers:</p>
+    <div class="prizes-cards">
+        <div class="prize-card">
+            <div class="prize-amount">$20,000
+                <img src="<?php echo get_template_directory_uri(); ?>/img/gold.png" alt="Gold Star" class="prize-star">
             </div>
-            <div class="prize-card">
-                <div class="prize-amount">$10,000
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/silver.png" alt="Silver Star" class="prize-star">
-                </div>
-                <p class="prize-place">2ND PLACE</p>
-                <p class="prize-description">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</p>
-            </div>
-            <div class="prize-card">
-                <div class="prize-amount">$5,000
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/bronze.png" alt="Bronze Star" class="prize-star">
-                </div>
-                <p class="prize-place">3RD PLACE</p>
-                <p class="prize-description">Define and track your goals, breaking down objectives into achievable tasks to keep your targets in sight.</p>
-            </div>
+            <p class="prize-place">1ST PLACE</p>
+            <p class="prize-description">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</p>
         </div>
-    </section>
-
-    <section class="steps-section">
-        <h2 class="steps-title">Join Gelber Group Trading Contest In 3 Easy Steps</h2>
-        <p class="steps-description">Follow these simple steps to participate in the contest:</p>
-        <div class="steps-cards">
-            <div class="step-card">
-                <div class="step-title">STEP 1</div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-                <p class="step-text">See if you fit the criteria of contestants eligible to participate in the competition.</p>
-                <a href="#" class="step-button">APPLY NOW</a>
+        <div class="prize-card">
+            <div class="prize-amount">$10,000
+                <img src="<?php echo get_template_directory_uri(); ?>/img/silver.png" alt="Silver Star" class="prize-star">
             </div>
-            <div class="step-card">
-                <div class="step-title">STEP 2</div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-                <p class="step-text">Fill the form with as many details as possible.</p>
-                <a href="#" class="step-button">APPLY NOW</a>
-            </div>
-            <div class="step-card">
-                <div class="step-title">STEP 3</div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-                <p class="step-text">If selected, you will be onboarded onto the competition and receive access credentials to your account.</p>
-                <a href="#" class="step-button">APPLY NOW</a>
-            </div>
+            <p class="prize-place">2ND PLACE</p>
+            <p class="prize-description">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</p>
         </div>
-    </section>
+        <div class="prize-card">
+            <div class="prize-amount">$5,000
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bronze.png" alt="Bronze Star" class="prize-star">
+            </div>
+            <p class="prize-place">3RD PLACE</p>
+            <p class="prize-description">Define and track your goals, breaking down objectives into achievable tasks to keep your targets in sight.</p>
+        </div>
+    </div>
+    <a href="#" class="prizes-apply-button">Apply Now</a>
+</section>
 
-    <section class="contest-overview">
+<section class="steps-section">
+    <h2 class="steps-title">Join Gelber Group<br> Trading Contest In 3 Easy Steps</h2>
+     <div class="steps-cards">
+        <div class="step-card">
+            <div class="step-title">STEP 1</div>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
+            <p class="step-text">See if you fit the criteria of contestants eligible to participate in the competition.</p>
+            <a href="#" class="step-button">APPLY NOW</a>
+        </div>
+        <div class="step-card">
+            <div class="step-title">STEP 2</div>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
+            <p class="step-text">Fill the form with as many details as possible.</p>
+            <a href="#" class="step-button">APPLY NOW</a>
+        </div>
+        <div class="step-card">
+            <div class="step-title">STEP 3</div>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
+            <p class="step-text">If selected, you will be onboarded onto the competition and receive access credentials to your account.</p>
+            <a href="#" class="step-button">APPLY NOW</a>
+        </div>
+    </div>
+</section>
+
+<section class="contest-overview">
     <div class="contest-text">
-    <a href="#" class="contest-overview-button">Contest Overview</a>
-    <h2>Are you a profitable Trader?</h2>
-    <p>Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
-    <a href="#" class="contest-button">Apply Now</a>
-</div>
-
+        <a class="contest-overview-button">Contest Overview</a>
+        <h2>Are you a <br>profitable Trader?</h2>
+        <p>Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
+        <a href="#" class="contest-button">Apply Now</a>
+    </div>
     <div class="contest-cards">
         <div class="contest-column">
             <div class="contest-card contest-card1">
@@ -1066,7 +1184,7 @@ body {
     </div>
 </section>
 
-    <section class="timer-section">
+<section class="timer-section">
     <div class="timer-card">
         <h2>Starts In</h2>
         <div class="timer">
@@ -1095,14 +1213,14 @@ body {
             <a href="#">Apply Now <img src="<?php echo get_template_directory_uri(); ?>/img/apply-icon.png" alt="Apply Now Icon"></a>
         </div>
     </div>
-</section> 
+</section>
 
 <section class="boss-section">
     <img src="<?php echo get_template_directory_uri(); ?>/img/boss.png" alt="Boss Image" class="boss-image">
     <div class="boss-card">
         <h2>Brian Gelber</h2>
         <h3>CEO</h3>
-        <p><br><br><br><br><br><br>Are you trading big? Have you made some money today? If not, here’s your chance to shine! The Breakout is a way for everyone to test themselves against the world.</p>
+        <p><br><br><br><br><br><br>Trading is about being yourself. Expressing your market<br> views your way….Trading is challenging and the fun is in<br> the challenge.</p>
     </div>
 </section>
 
@@ -1114,14 +1232,6 @@ body {
     </div>
 </section>
 
-
-
-
-
-
-
-
-
 <section class="faq-section">
     <h2 class="faq-title">Contest FAQ</h2>
     <div class="faq-cards">
@@ -1132,12 +1242,12 @@ body {
         </div>
         <div class="faq-card">
             <h3 class="faq-question">What markets are eligible to trade in the competition?</h3>
-            <p class="faq-answer">All major markets are eligible for trading in the competition.</p>
+            <p class="faq-answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem a, sint eaque optio dolorem hic aperiam, consequatur at deserunt eos voluptatum maxime molestias. Ea dignissimos non fuga repellat vitae molestias.</p>
             <img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" alt="Arrow Icon" class="faq-arrow">
         </div>
         <div class="faq-card">
             <h3 class="faq-question">I only trade single name stocks and options - do I qualify?</h3>
-            <p class="faq-answer">Yes, you qualify as long as you meet the other contest criteria.</p>
+            <p class="faq-answer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt deleniti eos nemo temporibus veniam exercitationem laborum repellat asperiores, adipisci optio, laudantium beatae velit voluptatum. Exercitationem voluptatem ipsa animi natus..</p>
             <img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" alt="Arrow Icon" class="faq-arrow">
         </div>
     </div>
@@ -1157,7 +1267,7 @@ body {
 
 
 
-</div>
+ 
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -1171,10 +1281,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !entry.target.classList.contains('show')) {
                 entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show');
+                observer.unobserve(entry.target); // Unobserve the element after adding the class
             }
         });
     }, observerOptions);

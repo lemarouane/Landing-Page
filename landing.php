@@ -211,6 +211,16 @@ body {
     color: #fff;
 }
 
+
+@media (max-width: 768px) {
+    .prizes-title {
+        font-size: 60px;
+        line-height: 48px;
+        padding: 0 20px;
+        margin-bottom: 45%
+    }
+}
+
 .prizes-description {
     font-size: 16px;
     line-height: 22.4px;
@@ -297,6 +307,9 @@ body {
     border: 2px solid #0077C2;
 }
 
+/* Add this to your CSS file */
+
+/* General styles for the steps section */
 .steps-section {
     padding: 50px 20px;
     text-align: center;
@@ -374,18 +387,11 @@ body {
     display: block;
 }
 
-.step-description {
+.step-text {
     font-size: 25px;
     line-height: 33.6px;
     font-weight: bold;
     margin-top: 100px;
-}
-
-.step-text {
-    font-size: 25px;
-    margin-top: 80px;
-    text-align: left;
-    margin-left: 7%;
 }
 
 .step-button {
@@ -408,6 +414,60 @@ body {
 
 .step-card:hover .step-button {
     display: inline-block;
+}
+
+/* Responsive styles for the steps section */
+@media (max-width: 768px) {
+    .steps-title {
+        font-size: 32px;
+        line-height: 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .steps-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .step-title {
+        text-align: left;
+        font-size: 48px;
+        margin-left: 0;
+        margin-top: 0;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .step-vector {
+        position: absolute;
+        top: 90px; /* Adjust as needed */
+        left: 90px;
+        width: 100px; /* Adjust size as needed */
+        height: auto;
+    }
+
+    .step-text {
+        margin-top: 100px; /* Adjust to provide space for the title and vector */
+        text-align: left;
+        margin-left: 0;
+        font-size: 16px; /* Adjust font size as needed */
+    }
+
+    .step-button {
+        position: static;
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .contest-overview {

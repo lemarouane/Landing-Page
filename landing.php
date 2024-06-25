@@ -53,9 +53,9 @@ body {
 
 .hero {
     position: relative;
-    background-image: url('<?php echo get_template_directory_uri(); ?>/img/stat.png');
+    background-image: url('<?php echo get_template_directory_uri(); ?>/icons/hero.svg');
     background-size: cover;
-    background-position: bottom center;
+    background-position: bottom;
     padding: 50px 20px;
     display: flex;
     justify-content: space-between;
@@ -175,17 +175,19 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: -2%;
 }
 
 .section-title {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 78px;
+    font-size: 100px;
     font-style: italic;
     font-weight: 900;
-    line-height: 78px;
-    text-align: center;
+    line-height: 90px;
     color: #fff;
-}
+    margin-bottom: 0px;
+    margin-top: -3%;
+ }
 
 @media (max-width: 768px) {
     .section-title {
@@ -195,6 +197,7 @@ body {
     }
 }
 
+
 .prizes-section {
     padding: 50px 20px;
     text-align: center;
@@ -203,7 +206,7 @@ body {
 
 .prizes-title {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 280px;
+    font-size: 260px;
     font-style: italic;
     font-weight: 900;
     line-height: 78px;
@@ -318,15 +321,14 @@ body {
 
 .steps-title {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 50px;
+    font-size: 90px;
     font-style: italic;
     font-weight: 900;
-    line-height: 64px;
+    line-height: 100px;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    margin-top: -2%;
-}
+ }
 
 .steps-description {
     font-size: 1.2em;
@@ -392,6 +394,8 @@ body {
     line-height: 33.6px;
     font-weight: bold;
     margin-top: 100px;
+    text-align: left;
+    margin-left: 1em;
 }
 
 .step-button {
@@ -467,6 +471,7 @@ body {
         display: block;
         width: 100%;
         text-align: center;
+        margin-left: 0px;
     }
 }
 
@@ -495,6 +500,8 @@ body {
     margin-bottom: 20px;
     text-align: left;  
     text-transform: uppercase;
+    margin-left: -1em;
+    line-height: 90px;
 }
 
 .contest-text p {
@@ -505,7 +512,8 @@ body {
     letter-spacing: -0.02em;
     text-align: left;
     margin-bottom: 20px;
-    text-align: left;  
+    text-align: left;
+    margin-left: -4em; 
 }
 
 .contest-text .contest-button {
@@ -517,7 +525,9 @@ body {
     border-radius: 50px;
     font-weight: bold;
     margin: 0 auto;  
-    margin-left: -30em;
+    margin-left: -25em;
+    margin-top: 4em;
+    font-size: 20px;
 }
 
 .contest-cards {
@@ -537,7 +547,7 @@ body {
 .contest-card {
     background: rgba(27, 27, 27, 1);
     color: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
     width: 400px;
     text-align: left;
@@ -553,7 +563,8 @@ body {
 .contest-card2,
 .contest-card3,
 .contest-card4 {
-    height: 22em;
+    height: 450px;
+    width: 450px;
 }
 
 .contest-card2 {
@@ -569,16 +580,20 @@ body {
 }
 
 .contest-card h3 {
-    font-size: 1.3em;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-size: 40px;
     margin: 0 0 10px 0;
     white-space: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+    margin-top: 40px;
 }
 
 .contest-card p {
-    font-size: 1em;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
     margin-bottom: 10px;
     white-space: normal;
     overflow-wrap: break-word;
@@ -592,6 +607,8 @@ body {
 }
 
 .apply-now-contest {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
     display: none;
     position: absolute;
     bottom: 20px;
@@ -601,6 +618,7 @@ body {
     font-weight: bold;
     align-items: center;
     gap: 5px;
+    font-size: 30px;
 }
 
 .contest-card:hover .apply-now-contest {
@@ -623,6 +641,8 @@ body {
     margin-bottom: 20px;
     text-align: center;
     border: 1px solid #0077C2;
+    margin-left: -35em;
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -664,10 +684,12 @@ body {
         line-height: 48px;
         padding: 0 20px; 
         text-align: center;
+        margin-left: -14px;
     }
 
     .contest-text p {
         text-align: center;
+        margin-left: 0px;
     }
 
     .contest-card h3 {
@@ -679,7 +701,7 @@ body {
     }
 
     .contest-overview-button {
-        margin-right: 0;
+        margin-left: -20px;
     }
 
     .contest-text .contest-button {
@@ -703,7 +725,8 @@ body {
     transform: translateY(100px);
     opacity: 0;
     border: 0.1px solid rgba(255, 255, 255, 0.3);
-    width: 90%
+    width: 90%;
+    margin-top: -5%;
 }
 
 .timer-card.show {
@@ -864,6 +887,7 @@ body {
     line-height: 28px;
     weight: 600px;
     letter-spacing: -2%;
+    margin-top: revert-layer;
 }
 
 @media (max-width: 768px) {
@@ -892,75 +916,7 @@ body {
     }
 }
 
-.join-section {
-    position: relative;
-    background-image: url('<?php echo get_template_directory_uri(); ?>/img/group.png');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.join-content {
-    padding: 50px;
-    border-radius: 10px;
-    max-width: 800px;
-}
-
-.join-title {
-    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 48px;
-    font-style: italic;
-    font-weight: 900;
-    line-height: 52.8px;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.join-description {
-    font-size: 1.2em;
-    color: #fff;
-    margin-bottom: 40px;
-}
-
-.join-button {
-    display: inline-block;
-    padding: 16px 24px;
-    background: linear-gradient(90.15deg, #0077C2 2.26%, #003D66 99.9%);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .join-section {
-        padding: 50px 20px;
-    }
-
-    .join-title {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .join-description {
-        font-size: 1em;
-        margin-bottom: 20px;
-    }
-
-    .join-button {
-        padding: 12px 18px;
-    }
-}
-
+ 
 .faq-section {
     background-size: cover;
     background-position: center;
@@ -1058,6 +1014,352 @@ body {
         line-height: 48px;
     }
 }
+
+
+
+
+.contest-card svg circle {
+        fill: white;
+        transition: fill 0.3s ease;
+    }
+
+    .contest-card svg path {
+        fill: black;
+        transition: fill 0.3s ease;
+    }
+
+    .contest-card:hover svg circle {
+        fill: black;
+    }
+
+    .contest-card:hover svg path {
+        fill: white;
+    }
+
+
+
+    .section-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.section-title {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-size: 100px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 90px;
+    color: #fff;
+    margin-bottom: 0px;
+    margin-top: -3%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 5em;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 550px;
+    height: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    margin-top: -13%;
+
+}
+
+.card-title {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color:black;
+}
+
+.card-description {
+    font-family: 'Manrope', sans-serif;
+    font-size: 35px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 48px;
+        line-height: 48px;
+        padding: 0 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+        margin-top: -18%;
+    }
+
+    .card-title {
+        font-size: 50px;
+        margin-bottom: 50px;
+        margin-top: 33px;
+        line-height: 50px;    }
+
+    .card-description {
+        font-size: 25px;
+        margin-top: -5%;
+    }
+}
+
+
+
+
+
+.announcement-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 100px;  
+}
+
+.announcement-section::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;  
+    left: 0;
+    right: 0;
+    height: 100px;  
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1; / 
+}
+
+.announcement-logo {
+    max-width: 400px;
+    height: auto;
+}
+
+.announcement-text {
+    flex: 1;
+    margin-left: 20em;
+}
+
+.announcement-text p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #fff;
+}
+
+.announcement-privacy {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.announcement-button {
+    display: inline-block;
+    width: 183px;
+    height: 67px;
+    background-color: rgba(0, 156, 255, 1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 67px; 
+}
+
+@media (max-width: 768px) {
+    .announcement-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .announcement-logo {
+        margin-bottom: 20px;
+    }
+
+    .announcement-text {
+        margin: 0;
+    }
+
+    .announcement-button {
+        margin-top: 20px;
+    }
+}
+
+
+
+/* Custom scrollbar styles */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0077C2; 
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.1); 
+}
+
+body {
+    scrollbar-width: thin;          /* Firefox */
+    scrollbar-color: #0077C2 rgba(0, 0, 0, 0.1);  /* Firefox */
+}
+
+
+
+
+
+
+
+
+
+.carousel-section {
+    position: relative;
+    padding: 0; /* Remove padding to eliminate white areas */
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    position: relative; /* Ensure dots can be positioned within the slide */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%; /* Ensures images cover the entire container */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    vertical-align: middle;
+}
+
+.carousel-prev, .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+}
+
+.carousel-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px; /* Position dots at the bottom of the carousel */
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.carousel-dot.active, .carousel-dot:hover {
+    background-color: #717171;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-prev, .carousel-next {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .carousel-dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
 </style>
 
 <section class="hero">
@@ -1071,8 +1373,26 @@ body {
 </section>
 
 <section class="section-bg">
-    <h2 class="section-title">WHAT IS THE BREAKOUT TRADING CONTEST</h2>
+    <h2 class="section-title">WHAT IS THE BREAKOUT<br> TRADING CONTEST</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/trophy.svg" alt="Trophy Icon" class="card-icon">
+            <h3 class="card-title">THEBREAKOUT</h3>
+            <p class="card-description">Compete for $35k & a Dream Job at Gelber Group</p>
+        </div>
+        <div class="card">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/chart.svg" alt="Chart Icon" class="card-icon">
+            <h3 class="card-title">FUTURES & FX MASTERS</h3>
+            <p class="card-description">Compete, Get Mentored, Win BIG at The Breakout</p>
+        </div>
+        <div class="card">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/skills.svg" alt="Skills Icon" class="card-icon">
+            <h3 class="card-title">DON'T JUST TRADE, BREAKOUT!</h3>
+            <p class="card-description">Showcase Your Skills & Learn From Industry Leaders.</p>
+        </div>
+    </div>
 </section>
+
 
 <section class="prizes-section">
     <h2 class="prizes-title">$35,000 IN CASH PRIZES</h2>
@@ -1100,7 +1420,7 @@ body {
             <p class="prize-description">Define and track your goals, breaking down objectives into achievable tasks to keep your targets in sight.</p>
         </div>
     </div>
-    <a href="#" class="prizes-apply-button">Apply Now</a>
+    <a href="#" class="prizes-apply-button">JOIN NOW</a>
 </section>
 
 <section class="steps-section">
@@ -1130,25 +1450,31 @@ body {
 <section class="contest-overview">
     <div class="contest-text">
         <a class="contest-overview-button">Contest Overview</a>
-        <h2>Are you a <br>profitable Trader?</h2>
-        <p>Are you a profitable Trader? Are you obsessed with winning and enjoy the challenge of navigating today’s complex financial markets? How would you like to compete for $35k in cash prizes AND a chance to work for a top proprietary trading firm?</p>
-        <a href="#" class="contest-button">Apply Now</a>
+        <h2>ARE YOU THE IDEAL<br>CANDIDATE FOR THEBREAKOUT?</h2>
+        <p>TheBreakout winner isn't just about P&L. We value smart analysis and a growth mindset. We want traders who can learn, adapt, and take their careers to the next level with Gelber Group.</p>
+        <a href="#" class="contest-button">Official Contest Rules</a>
     </div>
     <div class="contest-cards">
         <div class="contest-column">
             <div class="contest-card contest-card1">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/card1.png" alt="Card 1">
+                <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25.5" cy="25.5" r="25.5" fill="black"/>
+                    <path d="M36 36H29.7143V15H36V36ZM28.1429 36H21.8571V21.4615H28.1429V36ZM20.2857 36H14V26.3077H20.2857V36Z" fill="white"/>
+                </svg>
                 <h3>SHOWCASE YOUR SKILLS</h3>
-                <p>The prize goes to the winner but the job goes to the best trader based on statistics and analytics.</p>
+                <p>2+ years of profitable experience in Futures & FX markets</p>
                 <div class="apply-now-contest">
                     APPLY NOW
                     <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
                 </div>
             </div>
             <div class="contest-card contest-card3">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/card3.png" alt="Card 3">
+                <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
+                    <path d="M22.4 39C21.68 39 21.2 38.52 21.2 37.8V34.2H16.4C15.08 34.2 14 33.12 14 31.8V17.4C14 16.08 15.08 15 16.4 15H35.6C36.92 15 38 16.08 38 17.4V31.8C38 33.12 36.92 34.2 35.6 34.2H28.28L23.84 38.64C23.6 38.88 23.36 39 23 39H22.4ZM23.6 31.8V35.52L27.32 31.8H35.6V17.4H16.4V31.8H23.6ZM31.16 19.8L29.48 23.4H32V28.2H27.2V23.16L28.76 19.8H31.16ZM23.96 19.8L22.28 23.4H24.8V28.2H20V23.16L21.56 19.8H23.96Z" fill="black"/>
+                </svg>
                 <h3>SECURE DATA ENCRYPTION</h3>
-                <p>Receive daily trading statistics to help you learn, grow and refine your craft.</p>
+                <p>A clear and well-defined trading strategy.</p>
                 <div class="apply-now-contest">
                     APPLY NOW
                     <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
@@ -1157,18 +1483,24 @@ body {
         </div>
         <div class="contest-column">
             <div class="contest-card contest-card2">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/card2.png" alt="Card 2">
+                <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
+                    <path d="M38.9228 16.238C31.1667 13.4941 22.7362 13.2674 14.8425 15.5906C14.5287 15.6654 14.2333 15.8022 13.9739 15.9931C13.7144 16.1839 13.4963 16.4249 13.3325 16.7015C13.1687 16.9781 13.0626 17.2847 13.0205 17.603C12.9784 17.9213 13.0012 18.2448 13.0876 18.5542C13.5196 20.2796 14.1498 22.262 14.9067 24.0594C14.9197 24.1014 14.94 24.0812 14.94 24.0392C14.8303 23.1963 15.4816 22.1319 16.7591 21.7448C22.8981 19.8005 29.5048 19.8876 35.59 21.9929C35.8144 22.0693 36.052 22.1002 36.2886 22.0838C36.5253 22.0674 36.7562 22.004 36.9678 21.8973C37.1795 21.7907 37.3675 21.6429 37.5208 21.4628C37.6741 21.2827 37.7897 21.0738 37.8606 20.8486C38.6175 18.4241 38.9228 16.7778 38.9984 16.3657C39.0114 16.2889 38.9431 16.259 38.9228 16.238ZM20.2097 21.5719C19.2798 21.765 17.9943 22.0689 17.0295 22.3873C15.1007 23.0492 15.1901 25.3848 16.2174 26.1299C16.2929 25.6968 16.7591 25.1076 17.2788 24.9088C19.2043 24.1556 21.2719 23.7054 23.3622 23.5196C22.3 23.0904 21.2638 22.4754 20.2235 21.5711L20.2097 21.5719ZM35.564 26.2479C32.793 24.9523 29.7892 24.2226 26.73 24.1019C23.6708 23.9813 20.6184 24.4722 17.7531 25.5456C16.8346 25.8907 16.2596 27.0027 16.8346 28.0582C17.839 29.8654 18.9789 31.5946 20.2446 33.2313C20.0627 32.6041 20.3843 31.4428 21.6187 31.063C25.0327 30.0188 28.6149 30.4617 30.996 31.421C31.6684 31.6901 32.6201 31.5269 33.1537 30.7316C34.0636 29.3368 34.8912 27.8904 35.6322 26.3999C35.6655 26.3328 35.6322 26.2827 35.564 26.2479ZM30.032 34.6205C29.0333 34.1187 28.1199 33.4639 27.3253 32.6801C26.9574 32.314 26.4157 31.7879 25.8448 31.1608C24.5414 31.1608 23.2761 31.2909 21.9232 31.7208C20.6669 32.112 20.5491 33.5562 21.0989 34.3094C22.0288 35.4626 22.6809 36.0849 23.7212 37.1549C24.2725 37.6931 25.0128 37.9962 25.7851 38C26.5573 38.0037 27.3006 37.7079 27.8572 37.1751C28.6693 36.367 29.1687 35.8279 30.0864 34.7927C30.1408 34.7377 30.1205 34.6415 30.032 34.6205Z" fill="black"/>
+                </svg>
                 <h3>GET FEEDBACK & MENTORSHIP</h3>
-                <p>Get valuable feedback and mentorship from professional veteran Traders with decades of experience in generating 7-figure P&L's.</p>
+                <p>The hunger to take their career to the next level.</p>
                 <div class="apply-now-contest">
                     APPLY NOW
                     <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
                 </div>
             </div>
             <div class="contest-card contest-card4">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/card4.png" alt="Card 4">
+                <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
+                    <path d="M33.1063 18.6866C34.333 19.9328 35.227 21.4615 35.7079 23.1348H39V28.8614H35.7079C35.2276 30.5361 34.3335 32.0661 33.1063 33.3134L34.7552 36.1376L29.7448 39L28.0997 36.1758C26.3939 36.6015 24.608 36.6015 22.9022 36.1758L21.2552 39L16.2448 36.1376L17.8937 33.3134C16.6665 32.0661 15.7724 30.5361 15.2921 28.8614H12V23.1367H15.2921C15.7724 21.462 16.6665 19.932 17.8937 18.6847L16.2429 15.8624L21.2514 13H21.2571L22.9041 15.8204C24.6099 15.3947 26.3959 15.3947 28.1016 15.8204L29.7429 13H29.7467L34.7571 15.8624L33.1082 18.6866H33.1063ZM31.2857 25.999C31.2857 24.4807 30.6762 23.0246 29.5911 21.951C28.5061 20.8774 27.0345 20.2743 25.5 20.2743C23.9655 20.2743 22.4939 20.8774 21.4089 21.951C20.3239 23.0246 19.7143 24.4807 19.7143 25.999C19.7143 27.5173 20.3239 28.9735 21.4089 30.0471C22.4939 31.1207 23.9655 31.7238 25.5 31.7238C27.0345 31.7238 28.5061 31.1207 29.5911 30.0471C30.6762 28.9735 31.2857 27.5173 31.2857 25.999Z" fill="black"/>
+                </svg>
                 <h3>USE THE BEST TOOLS</h3>
-                <p>Trade for free on the world's premier Futures platform, Trading Technologies (TT).</p>
+                <p>A commitment to excellence and a desire to join the Gelber Group team</p>
                 <div class="apply-now-contest">
                     APPLY NOW
                     <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
@@ -1177,7 +1509,6 @@ body {
         </div>
     </div>
 </section>
-
 <section class="timer-section">
     <div class="timer-card">
         <h2>Starts In</h2>
@@ -1218,13 +1549,76 @@ body {
     </div>
 </section>
 
-<section class="join-section">
-    <div class="join-content">
-        <h2 class="join-title">JOIN THE BREAKOUT<br>GELBER GROUP TRADING&nbsp;CONTEST</h2>
-        <p class="join-description">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.</p>
-        <a href="#" class="join-button">LET'S GET STARTED</a>
+ 
+
+
+
+
+
+
+
+
+<section class="carousel-section">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/slider1.png" alt="Slider 1">
+            <div class="carousel-dots">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/slider2.png" alt="Slider 2">
+            <div class="carousel-dots">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/slider3.png" alt="Slider 3">
+            <div class="carousel-dots">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/slider4.png" alt="Slider 4">
+            <div class="carousel-dots">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+            </div>
+        </div>
+        <button class="carousel-prev">&#10094;</button>
+        <button class="carousel-next">&#10095;</button>
     </div>
 </section>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <section class="faq-section">
     <h2 class="faq-title">Contest FAQ</h2>
@@ -1253,6 +1647,15 @@ body {
 
 
 
+<section class="announcement-section">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Logo" class="announcement-logo">
+    <div class="announcement-text">
+        <p>Gelber Group is happy to announce THE BREAKOUT<br>
+        – a fully remote, discretionary, simulated Futures & FX <br>trading competition that will take place this <br>September/October 2024</p>
+        <a href="#" class="announcement-privacy">Privacy Policy</a>
+    </div>
+    <a href="#" class="announcement-button">JOIN NOW</a>
+</section>
 
 
 
@@ -1318,6 +1721,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(updateCountdown, 1000);
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function showSlides(index) {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        if (index >= slides.length) {
+            slideIndex = 0;
+        } else if (index < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        slides.forEach((slide, i) => {
+            slide.style.display = i === slideIndex ? 'block' : 'none';
+        });
+
+        dots.forEach((dot, i) => {
+            dot.className = dot.className.replace(' active', '');
+            if (i === slideIndex) {
+                dot.className += ' active';
+            }
+        });
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', function() {
+        showSlides(--slideIndex);
+    });
+
+    document.querySelector('.carousel-next').addEventListener('click', function() {
+        showSlides(++slideIndex);
+    });
+
+    document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            showSlides(slideIndex = index);
+        });
+    });
+
+     
+});
+
+
 </script>
 
 <?php get_footer(); ?>

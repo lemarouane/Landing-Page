@@ -933,6 +933,7 @@ body {
     text-align: center;
     color: #fff;
     margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
 .faq-cards {
@@ -1259,7 +1260,7 @@ body {
 
 .carousel-section {
     position: relative;
-    padding: 0; /* Remove padding to eliminate white areas */
+    padding: 0;
     background-color: #f8f8f8;
     text-align: center;
 }
@@ -1269,86 +1270,120 @@ body {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
+    height: 900px; /* Fixed height for all slides */
 }
 
 .carousel-slide {
     display: none;
-    position: relative; /* Ensure dots can be positioned within the slide */
+    position: relative;
+    height: 100%;
 }
 
 .carousel-slide img {
     width: 100%;
-    height: 100%; /* Ensures images cover the entire container */
-    object-fit: cover; /* Ensures images cover the area without distortion */
+    height: 100%;
+    object-fit: cover;
     vertical-align: middle;
 }
 
-.carousel-prev, .carousel-next {
+.carousel-prev  {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
+    padding: 0;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
-    background-color: rgba(0, 0, 0, 0.5);
     transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+    margin-left:5px;
 }
+
+.carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+
+
+}
+
 
 .carousel-prev {
     left: 0;
-    border-radius: 3px 0 0 3px;
+    background-image: url('<?php echo get_template_directory_uri(); ?>/img/slider-left.png');
+    
 }
 
 .carousel-next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    background-image: url('<?php echo get_template_directory_uri(); ?>/img/slider-right.png');
 }
 
 .carousel-prev:hover, .carousel-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: transparent;
 }
 
 .carousel-dots {
     position: absolute;
-    bottom: 10px; /* Position dots at the bottom of the carousel */
+    bottom: 10px;
     width: 100%;
     text-align: center;
 }
 
 .carousel-dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 6px;
+    width: 6px;
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease, transform 0.3s ease;
 }
 
 .carousel-dot.active, .carousel-dot:hover {
     background-color: #717171;
+    transform: scale(1.5);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .carousel-container {
+        height: 500px; /* Adjusted height for smaller screens */
+    }
+
     .carousel-prev, .carousel-next {
-        font-size: 12px;
-        padding: 10px;
+        height: 30px;
+        width: 30px;
     }
 
     .carousel-dot {
-        height: 10px;
-        width: 10px;
+        height: 5px;
+        width: 5px;
     }
-}
-
-
+} 
 
 
 
@@ -1557,49 +1592,31 @@ body {
 
 
 
-
 <section class="carousel-section">
     <div class="carousel-container">
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider1.png" alt="Slider 1">
-            <div class="carousel-dots">
-                <span class="carousel-dot active"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-            </div>
         </div>
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider2.png" alt="Slider 2">
-            <div class="carousel-dots">
-                <span class="carousel-dot active"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-            </div>
         </div>
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider3.png" alt="Slider 3">
-            <div class="carousel-dots">
-                <span class="carousel-dot active"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-            </div>
         </div>
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider4.png" alt="Slider 4">
-            <div class="carousel-dots">
-                <span class="carousel-dot active"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-            </div>
         </div>
-        <button class="carousel-prev">&#10094;</button>
-        <button class="carousel-next">&#10095;</button>
+        <button class="carousel-prev"></button>
+        <button class="carousel-next"></button>
+        <div class="carousel-dots">
+            <span class="carousel-dot active"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+        </div>
     </div>
 </section>
+
 
  
 
@@ -1725,7 +1742,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    let slideIndex = 0;
+    let slideIndex = 0; // Start with the first slide
     showSlides(slideIndex);
 
     function showSlides(index) {
@@ -1763,9 +1780,8 @@ document.addEventListener('DOMContentLoaded', function() {
             showSlides(slideIndex = index);
         });
     });
-
-     
 });
+
 
 
 </script>

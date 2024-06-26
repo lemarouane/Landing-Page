@@ -1286,27 +1286,105 @@ body {
     vertical-align: middle;
 }
 
-.carousel-prev  {
-    cursor: pointer;
+.carousel-overlay {
     position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 0;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-    transform: translateY(-50%);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    height: 50px;
-    width: 50px;
-    margin-left:5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
+.carousel-text {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.carousel-text h2 {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 70px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: -2em;
+}
+
+.carousel-text p {
+    font-family: 'Manrope', sans-serif;
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.carousel-button {
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px 28px;
+    background-color: rgba(0, 156, 255, 1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+/* Special styles for the third slider */
+.carousel-overlay-special {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.carousel-text-special {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.carousel-title-special {
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 70px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: -2em;
+}
+
+.carousel-description-special {
+    font-family: 'Manrope', sans-serif;
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.carousel-button-special {
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px 28px;
+    background-color: rgba(0, 156, 255, 1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.carousel-prev,
 .carousel-next {
     cursor: pointer;
     position: absolute;
@@ -1325,15 +1403,12 @@ body {
     border: none;
     height: 50px;
     width: 50px;
-
-
+    margin-left: 5px;
 }
-
 
 .carousel-prev {
     left: 0;
     background-image: url('<?php echo get_template_directory_uri(); ?>/img/slider-left.png');
-    
 }
 
 .carousel-next {
@@ -1341,7 +1416,8 @@ body {
     background-image: url('<?php echo get_template_directory_uri(); ?>/img/slider-right.png');
 }
 
-.carousel-prev:hover, .carousel-next:hover {
+.carousel-prev:hover,
+.carousel-next:hover {
     background-color: transparent;
 }
 
@@ -1363,7 +1439,8 @@ body {
     transition: background-color 0.6s ease, transform 0.3s ease;
 }
 
-.carousel-dot.active, .carousel-dot:hover {
+.carousel-dot.active,
+.carousel-dot:hover {
     background-color: #717171;
     transform: scale(1.5);
 }
@@ -1374,7 +1451,8 @@ body {
         height: 500px; /* Adjusted height for smaller screens */
     }
 
-    .carousel-prev, .carousel-next {
+    .carousel-prev,
+    .carousel-next {
         height: 30px;
         width: 30px;
     }
@@ -1383,9 +1461,24 @@ body {
         height: 5px;
         width: 5px;
     }
-} 
 
+    .carousel-text {
+        max-width: 90%;
+    }
 
+    .carousel-text h2 {
+        font-size: 24px;
+    }
+
+    .carousel-text p {
+        font-size: 16px;
+    }
+
+    .carousel-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
 
 
 
@@ -1590,21 +1683,46 @@ body {
 
 
 
-
-
 <section class="carousel-section">
     <div class="carousel-container">
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider1.png" alt="Slider 1">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                    <h2>Join THE BREAKOUT <br>Gelber Group Trading Contest </h2>
+                    <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
+                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
+                </div>
+            </div>
         </div>
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider2.png" alt="Slider 2">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                <h2>Join THE BREAKOUT <br>Gelber Group Trading Contest </h2>
+                    <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
+                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
+                </div>
+            </div>
         </div>
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider3.png" alt="Slider 3">
+            <div class="carousel-overlay carousel-overlay-special">
+                <div class="carousel-text carousel-text-special">
+                    <h2 class="carousel-title-special">LOCATIONS</h2>
+                    <p class="carousel-description-special">This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
+                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>                </div>
+            </div>
         </div>
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider4.png" alt="Slider 4">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                <h2>Join THE BREAKOUT <br>Gelber Group Trading Contest </h2>
+                    <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
+                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
+                </div>
+            </div>
         </div>
         <button class="carousel-prev"></button>
         <button class="carousel-next"></button>
@@ -1616,9 +1734,6 @@ body {
         </div>
     </div>
 </section>
-
-
- 
 
 
 

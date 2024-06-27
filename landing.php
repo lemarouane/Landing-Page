@@ -113,6 +113,9 @@ body {
     color: #fff;
 }
 
+
+
+
 .hero {
     position: relative;
     background-image: url('<?php echo get_template_directory_uri(); ?>/icons/hero.svg');
@@ -122,15 +125,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    height: 55em; 
+    flex-wrap: nowrap; /* Change from wrap to nowrap */
+    height: 55em;
+    box-sizing: border-box; /* Add this for consistent sizing */
 }
+
 
 .hero-content {
     max-width: 50%;
     margin-top: -10em;
-    margin-bottom: 2em;  
+    margin-bottom: -5em;
     margin-left: 2em;
+    flex-shrink: 0;
 }
 
 .hero-title {
@@ -144,8 +150,8 @@ body {
 }
 
 .hero-description {
-    font-size: 20px;
-    line-height: 27.2px;
+    font-size: 25px;
+    line-height: 30.2px;
     color: #fff;
     margin: 17px 0;
     margin-top: -3%;
@@ -172,18 +178,20 @@ body {
 }
 
 .hero-logo {
-    max-width: 65%;
+    max-width: 80%;
     height: auto;
     position: relative;
-    left: -118px;
-    top: -70px;
+    left: -40px;
+    top: -26px;
+    flex-shrink: 0; 
 }
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
         padding: 20px;
-        height: auto; 
+        height: auto;
+        flex-wrap: wrap; /* Add this back for responsive design */
     }
 
     .hero-content {
@@ -198,15 +206,16 @@ body {
         font-size: 66px;
         line-height: 90%;
         text-align: center;
-        margin-top: -5%;     }
+        margin-top: -5%;
+    }
 
     .hero-description {
         font-size: 16px;
         margin-left: 0;
         text-align: center;
         line-height: 1.4;
-        margin-top: -10%
-     }
+        margin-top: -10%;
+    }
 
     .hero-button {
         padding: 12px 18px;
@@ -216,8 +225,8 @@ body {
     }
 
     .hero-element {
-        margin-top:0em;
-      }
+        margin-top: 0em;
+    }
 
     .hero-logo {
         max-width: 86%;
@@ -226,7 +235,6 @@ body {
         order: 1;
         top: -2em;
         margin-bottom: -40px;
-
     }
 }
 
@@ -241,7 +249,9 @@ body {
     align-items: center;
     text-align: center;
     margin-bottom: -2%;
+    box-sizing: border-box; /* Add this for consistent sizing */
 }
+
 
 .section-title {
     font-family: 'Satoshi', sans-serif;
@@ -297,10 +307,10 @@ body {
     background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     border-radius: 10px;
     padding: 20px;
-    width: 560px;
+    width: 580px;
     text-align: center;
     position: relative;
-    height: 420px;
+    height: 440px;
     transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform: translateY(100px);
     opacity: 0;
@@ -312,9 +322,7 @@ body {
     opacity: 1;
 }
 
-.prize-card:hover {
-    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
-}
+
 
 .prize-amount {
     font-family: 'Satoshi', sans-serif;
@@ -446,10 +454,10 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-size: 80px;
     font-style: normal;
-    font-weight: 900;
     line-height: 80px;
     text-align: center;
     color: #fff;
+    margin-bottom: 7%;
   }
 
 .steps-description {
@@ -483,9 +491,7 @@ body {
     opacity: 1;
 }
 
-.step-card:hover {
-    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
-}
+ 
 
 .step-title {
     font-family: 'Satoshi', sans-serif;
@@ -619,8 +625,7 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-size: 67px;
     font-style: normal;
-    font-weight: 900;
-    line-height: 78px;
+     line-height: 78px;
     color: #fff;
     margin-bottom: 20px;
     text-align: left;
@@ -634,7 +639,7 @@ body {
     font-family: 'Manrope';
     font-size: 20px;
     font-weight: 600;
-    line-height: 22.4px;
+    line-height: 30.4px;
     letter-spacing: -0.02em;
     text-align: left;
     margin-bottom: 20px;
@@ -772,6 +777,7 @@ body {
     border: 1px solid #0077C2;
     margin-left: -35em;
     font-size: 16px;
+    margin-bottom: -12px;
 }
 
 @media (max-width: 768px) {
@@ -837,6 +843,7 @@ body {
 
     .contest-overview-button {
         margin-left: -20px;
+        margin-bottom: 2em;
     }
 
     .contest-text .contest-button {
@@ -1181,10 +1188,7 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
-
-.faq-card:hover {
-    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
-}
+ 
 
 .faq-question {
     font-family: 'Satoshi', sans-serif;
@@ -1216,16 +1220,22 @@ body {
 
 .faq-arrow {
     position: absolute;
-    right: 20px; /* Position the arrow to the right */
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
+    margin-top: 0; /* Ensure it stays vertically centered */
 }
 
 .faq-card.active .faq-arrow {
-    transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg); /* Adjust rotation as needed */
+    margin-top: 0; /* Ensure it stays vertically centered */
 }
 
+.faq-card:hover, .faq-card.active {
+    transform: translateY(-10px);
+    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+}
 @media (max-width: 768px) {
     .faq-card {
         width: 100%;
@@ -1286,7 +1296,6 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-size: 80px;
     font-style: normal;
-    font-weight: 900;
     line-height: 80px;
     color: #fff;
     margin-bottom: 0px;
@@ -1306,7 +1315,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    width: 570px;
+    width: 585px;
     height: 430px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1319,8 +1328,8 @@ body {
 }
 
 .card-icon {
-    width: 100px;
-    height: 100px;
+    width: 139px;
+    height: 135px;
     margin-top: -13%;
 
 }
@@ -1471,24 +1480,28 @@ body {
 
 
 
-/* Custom scrollbar styles */
-body::-webkit-scrollbar {
-    width: 12px;
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
 }
 
-body::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1); 
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(27, 27, 27, 1); 
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-body::-webkit-scrollbar-thumb {
-    background-color: #0077C2; 
-    border-radius: 10px;
-    border: 3px solid rgba(0, 0, 0, 0.1); 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #0077C2, #00d4ff); 
+  border-radius: 10px;
+  border: 3px solid rgba(27, 27, 27, 1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-body {
-    scrollbar-width: thin;          /* Firefox */
-    scrollbar-color: #0077C2 rgba(0, 0, 0, 0.1);  /* Firefox */
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #00d4ff, #0077C2);
 }
 
 
@@ -1725,7 +1738,21 @@ body {
 
 
 
- 
+ /* Add smooth transition for hover effects */
+.prize-card,
+.step-card,
+.faq-card,
+.carousel-slide {
+    transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+.prize-card:hover,
+.step-card:hover,
+.faq-card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+}
+
 
  
 
@@ -2160,6 +2187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {

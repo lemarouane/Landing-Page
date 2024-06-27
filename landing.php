@@ -105,7 +105,7 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
-.section-bg, .prizes-section, .steps-section, .contest-overview, .timer-section, .boss-section, .join-section, .faq-section {
+.section-bg, .prizes-section, .steps-section, .contest-overview, .timer-section, .boss-section, .join-section, .faq-section, .X-section {
     background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
     background-size: cover;
     padding: 100px 20px;
@@ -137,8 +137,7 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-size: 96px;
     font-style: normal;
-    font-weight: 900;
-    line-height: 84px;
+     line-height: 84px;
     text-align: left;
     color: #fff;
     margin-top: 22%;
@@ -196,7 +195,7 @@ body {
     }
 
     .hero-title {
-        font-size: 70px;
+        font-size: 66px;
         line-height: 90%;
         text-align: center;
         margin-top: -5%;     }
@@ -217,15 +216,16 @@ body {
     }
 
     .hero-element {
-        margin-top:-1em;
+        margin-top:0em;
       }
 
     .hero-logo {
-        max-width: 80%;
-        left: 0; 
-        top: 0; 
-        order: 1; /* Move the logo to the top */
-        top:-2em;
+        max-width: 86%;
+        left: 7px;
+        top: 0;
+        order: 1;
+        top: -2em;
+        margin-bottom: -40px;
 
     }
 }
@@ -376,12 +376,13 @@ body {
     }
 
     .prizes-title {
-        font-size: 80px;
+        font-size: 70px;
         line-height: 80px;
         margin-left: 0;
         padding: 0 20px;
         margin-bottom: 29px;
         margin-top: 2em;
+        line-height: 70px;
     }
 
     .prizes-description {
@@ -409,20 +410,21 @@ body {
     }
 
     .prize-amount {
-        font-size: 100px;
+        font-size: 57px;
         margin-bottom: 10px;
     }
 
     .prize-star {
-        width: 120px;
-        height: 120px;
+        width: 170px;
+        height: 117px;
+        margin-top: 4%;
     }
 
     .prize-place {
-        font-size: 50px;
-        margin-top: 105px;
+        font-size: 32px;
+        margin-top: 125px;
         margin-bottom: -2px;
-    }
+        }
 
     .prizes-apply-button {
         font-size: 20px;
@@ -432,8 +434,7 @@ body {
     }
 }
 
-/* Add this to your CSS file */
-
+ 
 /* General styles for the steps section */
 .steps-section {
     text-align: center;
@@ -492,17 +493,17 @@ body {
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 10px;
-    margin-left: -8em;
+    margin-left: -7em;
     margin-top: 20px;
 }
 
 .step-vector {
     position: absolute;
-    left: 20%;
-    top: 21%;
+    left: 26%;
+    top: 26%;
     transform: translate(-50%, -50%);
-    width: 135px;
-    height: 35px;
+    width: 181px;
+    height: 45px;
     display: none;
 }
 
@@ -511,12 +512,13 @@ body {
 }
 
 .step-text {
-    font-size: 25px;
+    font-size: 30px;
     line-height: 33.6px;
     font-weight: bold;
     margin-top: 100px;
     text-align: left;
-    margin-left: 1em;
+    margin-left: 18px;
+    margin-right: 11px;
 }
 
 .step-button {
@@ -525,7 +527,7 @@ body {
     font-size: 24px;
     display: none;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 16px 24px 16px 24px;
     background: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
@@ -534,7 +536,7 @@ body {
     position: absolute;
     bottom: 40px;  
     left: 40px;  
-    margin-left: 4%;
+    margin-left: 1%;
 }
 
 .step-card:hover .step-button {
@@ -544,8 +546,8 @@ body {
 /* Responsive styles for the steps section */
 @media (max-width: 768px) {
     .steps-title {
-        font-size: 61px;
-        line-height: 64px;
+        font-size: 57px;
+        line-height: 62px;
         padding: 0 20px;
         text-align: center;
         margin-top: 2em;
@@ -574,27 +576,28 @@ body {
 
     .step-vector {
         position: absolute;
-        top: 90px; /* Adjust as needed */
-        left: 90px;
-        width: 100px; /* Adjust size as needed */
+        top: 104px;
+        left: 114px;
+        width: 140px;
         height: auto;
     }
 
     .step-text {
-        margin-top: 100px; /* Adjust to provide space for the title and vector */
+        margin-top: 113px;
         text-align: left;
         margin-left: 0;
-        font-size: 16px; /* Adjust font size as needed */
-    }
+        font-size: 20px;
+     }
 
     .step-button {
         position: static;
-        margin-top: 20px;
-        display: block;
-        width: 100%;
+        margin-top: 30px;
+        width: 62%;
         text-align: center;
-        margin-left: 0px;
+        margin-left: -6px;
+        font-size: 16px;
     }
+    
 }
 
 .contest-overview {
@@ -623,7 +626,7 @@ body {
     text-align: left;
     /* text-transform: uppercase; */
     margin-left: -1em;
-    line-height: 90px;
+    line-height: 75px;
 
 }
 
@@ -713,6 +716,7 @@ body {
     word-wrap: break-word;
     hyphens: auto;
     margin-top: 26px;
+    text-transform: uppercase;
 }
 
 .contest-card p {
@@ -774,13 +778,14 @@ body {
     .contest-overview {
         flex-direction: column;
         text-align: center;
+        margin-top: -1px;
     }
 
     .contest-text {
         max-width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
-        margin-top: -18%;
+        margin-top: -13%;
     }
 
     .contest-cards {
@@ -807,20 +812,23 @@ body {
     }
 
     .contest-text h2 {
-        font-size: 48px;
+        font-size: 44px;
         line-height: 48px;
-        padding: 0 20px; 
+        padding: 0 20px;
         text-align: center;
         margin-left: -14px;
+        margin-top: 0%;
     }
 
     .contest-text p {
         text-align: center;
         margin-left: 0px;
+        font-size: 20px;
+        line-height: 28px;
     }
 
     .contest-card h3 {
-        margin: 10px 0;
+        margin: 17px 0;
     }
 
     .contest-card p {
@@ -854,6 +862,7 @@ body {
 
 .timer-section {
     color: #fff;
+    margin-top: -1px;
 }
 
 .timer-card {
@@ -887,7 +896,7 @@ body {
     font-size: 74px;
     margin-bottom: 20px;
     text-transform: uppercase;
-    margin-top: 12px;
+    margin-top: 7px;
 }
 
 .timer {
@@ -895,6 +904,7 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-top: 3%;
 }
 
 .timer div {
@@ -920,7 +930,7 @@ body {
 }
 
 .timer img {
-    height: 250px;
+    height: 350px;
     margin: 0 30px;
 }
 
@@ -930,7 +940,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 70px;
     font-size: 45px;
 }
 
@@ -954,7 +964,7 @@ body {
     }
 
     .timer-card h2 {
-        font-size: 100px;
+        font-size: 57px;
         margin-bottom: -10px;
         margin-top: 10px;
     }
@@ -964,12 +974,13 @@ body {
     }
 
     .timer div span:first-child {
-        font-size: 80px;
+        font-size: 90px;
     }
 
     .timer div span:last-child {
-        font-size: 77px;
-    }
+        font-size: 66px;
+        margin-top: 6px;
+        }
 
     .timer img {
         display: none;
@@ -977,7 +988,7 @@ body {
 
     .apply-now {
         flex-direction: column;
-        font-size: 47px;
+        font-size: 31px;
     }
 
     .apply-now a {
@@ -1028,8 +1039,7 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-size: 58px;
     font-style: normal;
-    font-weight: 900;
-    line-height: 52.8px;
+     line-height: 52.8px;
     letter-spacing: -2%;
     text-align: left;
     margin-bottom: -1em;
@@ -1091,17 +1101,17 @@ body {
     }
 
     .boss-card h3 {
-        font-size: 45px;
+        font-size: 40px;
         margin-left: 0;
         margin-top: 1.5em;
         text-align: center;
     }
 
     .boss-card p {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 28px;
         margin-left: 0;
-        margin-top: 1em;
+        margin-top: -3em;
         text-align: center;
     }
 }
@@ -1115,6 +1125,25 @@ body {
     text-align: center;
     margin-top: -4em;
 }
+.X-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    margin-top: -4em;
+    min-height: 400px; /* Ensure it has enough height to center properly */
+}
+
+.tweet {
+ 
+    margin: 10px 0; /* Add some margin between tweets for better spacing */
+ 
+}
+
+
 
 .faq-title {
     font-family: 'Satoshi', sans-serif;
@@ -1204,8 +1233,16 @@ body {
         text-align: left;
     }
 
-    .faq-question, .faq-answer {
-        width: 100%;
+    .faq-question  {
+        width: 80%;
+        font-size: 25px;
+        line-height: 28px;
+    }
+    .faq-answer {
+        width: 81%;
+        font-size: 16px;
+        line-height: 22px;
+  
     }
 
     .faq-arrow {
@@ -1295,7 +1332,7 @@ body {
     font-weight: 700;
     margin-bottom: 10px;
     color: black;
-    line-height: 37.5px;
+    line-height: 47.5px;
 }
 
 .card-description {
@@ -1316,8 +1353,9 @@ body {
     }
 
     .card {
-        width: 100%;
+        width: 98%;
         margin-bottom: 20px;
+        height: 25em;
     }
 
     .card-icon {
@@ -1329,11 +1367,13 @@ body {
 
     .card-title {
         font-family: 'Satoshi', sans-serif;
-    font-style: normal;
-    font-size: 65px;
-     margin-bottom: 10px;
-    color: black;
-    font-weight: bold;
+        font-style: normal;
+        font-size: 44px;
+        margin-bottom: 48px;
+        color: black;
+        font-weight: bold;
+        margin-top: 7px;
+        line-height: 45px;
    }
 
     .card-description {
@@ -1555,7 +1595,7 @@ body {
     max-width: 80%;
 }
 
-.carousel-title-special {
+.carousel-title-special h2 {
     font-family: 'Satoshi', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -1648,7 +1688,7 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-container {
-        height: 500px; /* Adjusted height for smaller screens */
+        height: 600px; 
     }
 
     .carousel-prev,
@@ -1667,7 +1707,8 @@ body {
     }
 
     .carousel-text h2 {
-        font-size: 24px;
+        font-size: 30px;
+        line-height: 30px;
     }
 
     .carousel-text p {
@@ -1684,6 +1725,9 @@ body {
 
 
 
+ 
+
+ 
 
  
 
@@ -1754,19 +1798,19 @@ body {
         <div class="step-card">
             <div class="step-title">STEP 1</div>
             <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-            <p class="step-text">See if you fit the criteria of contestants eligible to participate in the competition.</p>
+            <p class="step-text">See if you fit the criteria <br>of contestants eligible to <br>participate in the competition.</p>
             <a href="#" class="step-button">APPLY NOW</a>
         </div>
         <div class="step-card">
             <div class="step-title">STEP 2</div>
             <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-            <p class="step-text">Fill the form with as many details as possible.</p>
+            <p class="step-text">Fill the form with as many <br>details as possible.</p>
             <a href="#" class="step-button">APPLY NOW</a>
         </div>
         <div class="step-card">
             <div class="step-title">STEP 3</div>
             <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-            <p class="step-text">If selected, you will be onboarded onto the competition and receive access credentials to your account.</p>
+            <p class="step-text">If selected, you will be onboarded<br> onto the competition and receive<br> access credentials to your<br> account.</p>
             <a href="#" class="step-button">APPLY NOW</a>
         </div>
     </div>
@@ -1887,7 +1931,7 @@ body {
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider1.png" alt="Slider 1">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                    <h2>Join TheBreakout <br>Gelber Group Trading<br> Contest </h2>
+                    <h2>Join TheBreakout <br>Gelber Group Trading Contest </h2>
                     <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
                     <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
                 </div>
@@ -1897,7 +1941,7 @@ body {
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider2.png" alt="Slider 2">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                <h2>Join THE BREAKOUT <br>Gelber Group Trading Contest </h2>
+                <h2>Join TheBreakout <br>Gelber Group Trading Contest </h2>
                     <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
                     <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
                 </div>
@@ -1916,7 +1960,7 @@ body {
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider4.png" alt="Slider 4">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                <h2>Join THE BREAKOUT <br>Gelber Group Trading Contest </h2>
+                <h2>Join TheBreakout <br>Gelber Group Trading Contest </h2>
                     <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
                     <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
                 </div>
@@ -1977,6 +2021,56 @@ body {
 
 
 
+
+ 
+
+<section class="X-section">
+<div class="tweet" id="1806090628083724791"></div>
+  <div class="tweet" id="1806112676562849922"></div>
+
+  <div class="tweet" id="1806100290313040267"></div>
+  </section>
+
+
+
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+    integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI="
+    crossorigin="anonymous"></script>
+  <script src="http://platform.twitter.com/widgets.js"></script>
+  <script>
+    var tweets = $(".tweet");
+    
+    $(tweets).each(function(t, tweet) { 
+      var id = $(this).attr('id');
+   
+      twttr.widgets.createTweet(
+        id, tweet, 
+        {
+          conversation: 'none',    // or all
+          cards: 'visible',         // or visible 
+          linkColor: '#cc0000',    // default is blue
+          theme: 'dark'           // or dark
+        });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="announcement-section">
     <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Logo" class="announcement-logo">
     <div class="announcement-text">
@@ -2010,7 +2104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting && !entry.target.classList.contains('show')) {
                 entry.target.classList.add('show');
-                observer.unobserve(entry.target); // Unobserve the element after adding the class
+                observer.unobserve(entry.target);  
             }
         });
     }, observerOptions);
@@ -2109,6 +2203,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+ 
 
 
 </script>

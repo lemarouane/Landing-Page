@@ -1,15 +1,15 @@
 <?php
 /**
- * Template Name: Privacy Page
- * Description: A template that displays the privacy page
+ * Template Name: Rules Page
+ * Description: A template that displays the rules page
  */
 
-function enqueue_privacy_page_styles() {
-    if (is_page_template('privacy.php')) {
-        wp_enqueue_style('privacy-page-css', get_template_directory_uri() . '/style/style.css');
+function enqueue_rules_page_styles() {
+    if (is_page_template('rules.php')) {
+        wp_enqueue_style('rules-page-css', get_template_directory_uri() . '/style/style.css');
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_privacy_page_styles');
+add_action('wp_enqueue_scripts', 'enqueue_rules_page_styles');
 
 get_header(); ?>
 
@@ -247,17 +247,17 @@ get_header(); ?>
                     line-height: 36px;
                     text-align: left;
                     margin-left: -10%;
-                    margin-top: 40px;">
-            Privacy Policy
+                    margin-top: 102px;">
+           CONTEST RULES
         </h1>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
     </div>
     <div class="container">
-        <h1>General Provisions</h1>
+        <h1>REGISTRATION AND TRADING PERIOD</h1>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
     </div>
     <div class="container">
-    <h1>The Internet Resources That Are Under This Privacy Policy</h1>
+    <h1>TERMS AND CONDITIONS</h1>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.</p>
     <ul>
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
@@ -267,7 +267,7 @@ get_header(); ?>
 </div>
 
 <div class="container">
-    <h1>The Internet Resources That Are Under This Privacy Policy</h1>
+    <h1>ACCOUNT INFORMATION</h1>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.</p>
     <ul>
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
@@ -278,11 +278,11 @@ get_header(); ?>
 
 </div>
     <div class="container">
-        <h1>Links to Internet Resources of Third Parties</h1>
+        <h1>PRICES AND VOLUME REQUIREMENTS</h1>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
     </div>
     <div class="container">
-        <h1>Statement Regarding Under Age Persons</h1>
+        <h1>withdrawal information</h1>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
     </div>
 

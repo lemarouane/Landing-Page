@@ -92,7 +92,6 @@ get_header(); ?>
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'Manrope ExtraLight';
     src: url('<?php echo get_template_directory_uri(); ?>/fonts/manrope-extralight.ttf') format('truetype');
@@ -105,7 +104,7 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
-.section-bg, .prizes-section, .steps-section, .contest-overview, .timer-section, .boss-section, .join-section, .faq-section, .X-section {
+.section-bg, .prizes-section, .steps-section, .contest-overview, .timer-section, .boss-section, .join-section, .faq-section, .X-section, .tweets-section {
     background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
     background-size: cover;
     padding: 100px 20px;
@@ -113,8 +112,46 @@ body {
     color: #fff;
 }
 
+.tweets-section {
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+}
 
+.tweet-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    line-height: 80px;
+    color: #fff;
+    margin-bottom: 50px;
+    margin-top: -4%;
+}
 
+.tweet-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tweet {
+    margin: 20px 0;
+}
+@media (max-width: 768px) {
+    .tweet-title {
+        font-family: 'Satoshi', sans-serif;
+        font-size: 54px;
+        font-style: normal;
+        line-height: 80px;
+        color: #fff;
+        margin-bottom: 50px;
+        margin-top: -4%;
+        line-height: 58px;
+    }
+}
 
 .hero {
     position: relative;
@@ -125,11 +162,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Change from wrap to nowrap */
+    flex-wrap: nowrap;
     height: 55em;
-    box-sizing: border-box; /* Add this for consistent sizing */
+    box-sizing: border-box;
 }
-
 
 .hero-content {
     max-width: 50%;
@@ -143,7 +179,7 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-size: 96px;
     font-style: normal;
-     line-height: 84px;
+    line-height: 84px;
     text-align: left;
     color: #fff;
     margin-top: 22%;
@@ -174,16 +210,16 @@ body {
     display: block;
     max-width: 100%;
     margin-top: 70px;
-
 }
 
 .hero-logo {
-    max-width: 80%;
+    max-width: 91%;
     height: auto;
     position: relative;
-    left: -40px;
+    left: -65px;
     top: -26px;
-    flex-shrink: 0; 
+    flex-shrink: 0;
+    width: 65em;
 }
 @media (max-width: 768px) {
     .hero {
@@ -191,15 +227,15 @@ body {
         text-align: center;
         padding: 20px;
         height: auto;
-        flex-wrap: wrap; /* Add this back for responsive design */
+        flex-wrap: wrap;
     }
 
     .hero-content {
         max-width: 100%;
         margin-left: 0;
-        margin-bottom: 2em; 
+        margin-bottom: 2em;
         margin-top: 2em;
-        order: 2; /* Move the content after the logo */
+        order: 2;
     }
 
     .hero-title {
@@ -221,7 +257,7 @@ body {
         padding: 12px 18px;
         margin-left: 0;
         margin-bottom: 20px;
-        order: 3; /* Move the button after the title */
+        order: 3;
     }
 
     .hero-element {
@@ -238,10 +274,6 @@ body {
     }
 }
 
-
-
-
-
 .section-bg {
     padding: 100px 20px;
     display: flex;
@@ -249,9 +281,8 @@ body {
     align-items: center;
     text-align: center;
     margin-bottom: -2%;
-    box-sizing: border-box; /* Add this for consistent sizing */
+    box-sizing: border-box;
 }
-
 
 .section-title {
     font-family: 'Satoshi', sans-serif;
@@ -264,13 +295,10 @@ body {
     margin-top: 3%;
 }
 
- 
-
 .prizes-section {
     text-align: center;
     color: #fff;
     margin-top: -9em;
-
 }
 
 .prizes-title {
@@ -282,11 +310,7 @@ body {
     text-align: center;
     color: #fff;
     margin-left: -35px;
-
 }
-
-
- 
 
 .prizes-description {
     font-size: 20px;
@@ -321,8 +345,6 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
-
-
 
 .prize-amount {
     font-family: 'Satoshi', sans-serif;
@@ -373,8 +395,6 @@ body {
     color: #0077C2;
     border: 2px solid #0077C2;
 }
-
-
 
 @media (max-width: 1024px) {
     .prizes-section {
@@ -432,7 +452,7 @@ body {
         font-size: 32px;
         margin-top: 125px;
         margin-bottom: -2px;
-        }
+    }
 
     .prizes-apply-button {
         font-size: 20px;
@@ -442,7 +462,6 @@ body {
     }
 }
 
- 
 /* General styles for the steps section */
 .steps-section {
     text-align: center;
@@ -458,7 +477,7 @@ body {
     text-align: center;
     color: #fff;
     margin-bottom: 7%;
-  }
+}
 
 .steps-description {
     font-size: 1.2em;
@@ -490,8 +509,6 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
-
- 
 
 .step-title {
     font-family: 'Satoshi', sans-serif;
@@ -593,7 +610,7 @@ body {
         text-align: left;
         margin-left: 0;
         font-size: 20px;
-     }
+    }
 
     .step-button {
         position: static;
@@ -603,7 +620,6 @@ body {
         margin-left: -6px;
         font-size: 16px;
     }
-    
 }
 
 .contest-overview {
@@ -625,14 +641,12 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-size: 67px;
     font-style: normal;
-     line-height: 78px;
+    line-height: 78px;
     color: #fff;
     margin-bottom: 20px;
     text-align: left;
-    /* text-transform: uppercase; */
     margin-left: -1em;
     line-height: 75px;
-
 }
 
 .contest-text p {
@@ -643,7 +657,6 @@ body {
     letter-spacing: -0.02em;
     text-align: left;
     margin-bottom: 20px;
-    text-align: left;
     margin-left: -3em;
 }
 
@@ -657,9 +670,10 @@ body {
     font-weight: 900;
     margin: 0 auto;
     margin-left: -19em;
-    margin-top: 4em;
+    margin-top: 1em;
     font-size: 22px;
     text-transform: uppercase;
+    margin-bottom: 12%;
 }
 
 .contest-cards {
@@ -850,13 +864,14 @@ body {
         background: rgba(0, 156, 255, 1);
         margin: 0 auto;
         font-size: 13px;
-        padding: 18px; 
+        padding: 18px;
     }
 }
+
 .contest-card svg {
     width: 75px;   
     height: 75px;  
- }
+}
 
 .contest-card1 svg,
 .contest-card2 svg,
@@ -865,7 +880,6 @@ body {
     width: 75px;   
     height: 75px;  
 }
-
 
 .timer-section {
     color: #fff;
@@ -912,6 +926,7 @@ body {
     align-items: center;
     width: 100%;
     margin-top: 3%;
+    font-size: 15em;
 }
 
 .timer div {
@@ -987,7 +1002,7 @@ body {
     .timer div span:last-child {
         font-size: 66px;
         margin-top: 6px;
-        }
+    }
 
     .timer img {
         display: none;
@@ -1004,37 +1019,38 @@ body {
         font-size: 38px;
     }
 }
+
 .boss-section {
     padding: 50px 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     color: #fff;
-    margin: 0;  
+    margin: 0;
 }
 
 .boss-section > * {
-    margin: 0;  
+    margin: 0;
 }
 
 .boss-image {
-    flex: 0 0 auto;  
+    flex: 0 0 auto;
     width: 43%;
     border-radius: 10px 0 0 10px;
     overflow: hidden;
-    margin-top: -5em; 
+    margin-top: -5em;
     margin-left: -2em;
 }
 
 .boss-card {
-    flex: 0 0 auto;  
+    flex: 0 0 auto;
     background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     border-radius: 0 10px 10px 0;
     padding: 30px;
     text-align: left;
     height: 48em;
-    width: 50%;  
-    margin-top: -5em;  
+    width: 50%;
+    margin-top: -5em;
     border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -1046,7 +1062,7 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-size: 58px;
     font-style: normal;
-     line-height: 52.8px;
+    line-height: 52.8px;
     letter-spacing: -2%;
     text-align: left;
     margin-bottom: -1em;
@@ -1067,11 +1083,11 @@ body {
 .boss-card p {
     font-family: 'Manrope', sans-serif;
     margin-top: 3em;
-    font-size: 45px;
+    font-size: 41px;
     line-height: 55px;
     weight: 600px;
     letter-spacing: -2%;
-    margin-top: -4em;
+    margin-top: -5em;
     margin-left: 1em;
 }
 
@@ -1086,7 +1102,8 @@ body {
         width: 100%;
         margin: 0 auto 20px;
         border-radius: 10px;
-        z-index: 100;    }
+        z-index: 100;
+    }
 
     .boss-card {
         padding: 20px;
@@ -1123,8 +1140,6 @@ body {
     }
 }
 
-
- 
 /* Adjust the styles for FAQ cards */
 .faq-section {
     background-size: cover;
@@ -1132,6 +1147,7 @@ body {
     text-align: center;
     margin-top: -4em;
 }
+
 .X-section {
     display: flex;
     justify-content: center;
@@ -1141,16 +1157,12 @@ body {
     background-size: cover;
     background-position: center;
     margin-top: -4em;
-    min-height: 400px; /* Ensure it has enough height to center properly */
+    min-height: 400px;
 }
 
 .tweet {
- 
-    margin: 10px 0; /* Add some margin between tweets for better spacing */
- 
+    margin: 10px 0;
 }
-
-
 
 .faq-title {
     font-family: 'Satoshi', sans-serif;
@@ -1160,7 +1172,7 @@ body {
     text-align: center;
     color: #fff;
     margin-bottom: 50px;
- }
+}
 
 .faq-cards {
     display: flex;
@@ -1181,14 +1193,13 @@ body {
     opacity: 0;
     border: 0.1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
-    overflow: hidden; /* Ensure smooth animation */
+    overflow: hidden;
 }
 
 .faq-card.show {
     transform: translateY(0);
     opacity: 1;
 }
- 
 
 .faq-question {
     font-family: 'Satoshi', sans-serif;
@@ -1198,7 +1209,8 @@ body {
     letter-spacing: 0.1px;
     text-align: left;
     color: #fff;
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+}
 
 .faq-answer {
     max-height: 0;
@@ -1211,11 +1223,11 @@ body {
     text-align: left;
     color: #fff;
     transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
- }
+}
 
 .faq-card.active .faq-answer {
-    max-height: 100px; /* Adjust as needed */
-    padding-top: 10px; /* Add padding when active */
+    max-height: 100px;
+    padding-top: 10px;
 }
 
 .faq-arrow {
@@ -1224,18 +1236,19 @@ body {
     top: 50%;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
-    margin-top: 0; /* Ensure it stays vertically centered */
+    margin-top: 0;
 }
 
 .faq-card.active .faq-arrow {
-    transform: translateY(-50%) rotate(45deg); /* Adjust rotation as needed */
-    margin-top: 0; /* Ensure it stays vertically centered */
+    transform: translateY(-50%) rotate(45deg);
+    margin-top: 0;
 }
 
 .faq-card:hover, .faq-card.active {
     transform: translateY(-10px);
     background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
 }
+
 @media (max-width: 768px) {
     .faq-card {
         width: 100%;
@@ -1248,11 +1261,11 @@ body {
         font-size: 25px;
         line-height: 28px;
     }
+
     .faq-answer {
         width: 81%;
         font-size: 16px;
         line-height: 22px;
-  
     }
 
     .faq-arrow {
@@ -1260,30 +1273,25 @@ body {
     }
 }
 
-
-
-
 .contest-card svg circle {
-        fill: white;
-        transition: fill 0.3s ease;
-    }
+    fill: white;
+    transition: fill 0.3s ease;
+}
 
-    .contest-card svg path {
-        fill: black;
-        transition: fill 0.3s ease;
-    }
+.contest-card svg path {
+    fill: black;
+    transition: fill 0.3s ease;
+}
 
-    .contest-card:hover svg circle {
-        fill: black;
-    }
+.contest-card:hover svg circle {
+    fill: black;
+}
 
-    .contest-card:hover svg path {
-        fill: white;
-    }
+.contest-card:hover svg path {
+    fill: white;
+}
 
-
-
-    .section-bg {
+.section-bg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1331,7 +1339,6 @@ body {
     width: 139px;
     height: 135px;
     margin-top: -13%;
-
 }
 
 .card-title {
@@ -1383,17 +1390,13 @@ body {
         font-weight: bold;
         margin-top: 7px;
         line-height: 45px;
-   }
+    }
 
     .card-description {
         font-size: 25px;
         margin-top: -5%;
     }
 }
-
-
-
-
 
 .announcement-section {
     position: relative;
@@ -1405,19 +1408,19 @@ body {
     background-size: cover;
     color: #fff;
     text-align: left;
-    margin-bottom: 100px;  
+    margin-bottom: 100px;
 }
 
 .announcement-section::after {
     content: "";
     position: absolute;
-    bottom: -100px;  
+    bottom: -100px;
     left: 0;
     right: 0;
-    height: 100px;  
+    height: 100px;
     background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
     background-size: cover;
-    z-index: -1; / 
+    z-index: -1;
 }
 
 .announcement-logo {
@@ -1455,7 +1458,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    line-height: 67px; 
+    line-height: 67px;
 }
 
 @media (max-width: 768px) {
@@ -1478,39 +1481,28 @@ body {
     }
 }
 
-
-
 /* width */
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 12px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(27, 27, 27, 1); 
-   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  border: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #0077C2, #00d4ff); 
   border-radius: 10px;
-  border: 3px solid rgba(27, 27, 27, 1);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  border: none;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #00d4ff, #0077C2);
 }
-
-
-
-
-
-
-
-
 
 .carousel-section {
     position: relative;
@@ -1524,7 +1516,7 @@ body {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    height: 900px; /* Fixed height for all slides */
+    height: 900px;
 }
 
 .carousel-slide {
@@ -1567,7 +1559,7 @@ body {
     font-size: 70px;
     line-height: 70px;
     margin-bottom: 10px;
-     margin-top: -2em;
+    margin-top: -2em;
 }
 
 .carousel-text p {
@@ -1588,14 +1580,13 @@ body {
     font-weight: bold;
 }
 
-/* Special styles for the third slider */
 .carousel-overlay-special {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -1698,10 +1689,9 @@ body {
     transform: scale(1.5);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-container {
-        height: 600px; 
+        height: 600px;
     }
 
     .carousel-prev,
@@ -1734,11 +1724,7 @@ body {
     }
 }
 
-
-
-
-
- /* Add smooth transition for hover effects */
+/* Add smooth transition for hover effects */
 .prize-card,
 .step-card,
 .faq-card,
@@ -1752,13 +1738,6 @@ body {
     transform: translateY(-10px);
     background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
 }
-
-
- 
-
- 
-
- 
 </style>
 
 <section class="hero">
@@ -1792,7 +1771,6 @@ body {
     </div>
 </section>
 
-
 <section class="prizes-section">
     <h2 class="prizes-title">$35,000 IN CASH PRIZES</h2>
     <p class="prizes-description">Cash prizes will be strictly for the top three P&L performers:</p>
@@ -1802,26 +1780,26 @@ body {
                 <img src="<?php echo get_template_directory_uri(); ?>/img/gold.png" alt="Gold Star" class="prize-star">
             </div>
             <p class="prize-place">1ST PLACE</p>
-         </div>
+        </div>
         <div class="prize-card">
             <div class="prize-amount">$10,000
                 <img src="<?php echo get_template_directory_uri(); ?>/img/silver.png" alt="Silver Star" class="prize-star">
             </div>
             <p class="prize-place">2ND PLACE</p>
-         </div>
+        </div>
         <div class="prize-card">
             <div class="prize-amount">$5,000
                 <img src="<?php echo get_template_directory_uri(); ?>/img/bronze.png" alt="Bronze Star" class="prize-star">
             </div>
             <p class="prize-place">3RD PLACE</p>
-         </div>
+        </div>
     </div>
     <a href="#" class="prizes-apply-button">SIGN UP TODAY</a>
 </section>
 
 <section class="steps-section">
     <h2 class="steps-title">Join Gelber Group<br> Trading Contest In 3 Easy Steps</h2>
-     <div class="steps-cards">
+    <div class="steps-cards">
         <div class="step-card">
             <div class="step-title">STEP 1</div>
             <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
@@ -1946,12 +1924,6 @@ body {
     </div>
 </section>
 
- 
-
-
-
-
-
 <section class="carousel-section">
     <div class="carousel-container">
         <div class="carousel-slide">
@@ -2004,23 +1976,6 @@ body {
     </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <section class="faq-section">
     <h2 class="faq-title">Contest FAQ</h2>
     <div class="faq-cards">
@@ -2042,61 +1997,12 @@ body {
     </div>
 </section>
 
-
-
-
-
-
-
-
- 
-
-<section class="X-section">
-<div class="tweet" id="1806090628083724791"></div>
-  <div class="tweet" id="1806112676562849922"></div>
-
-  <div class="tweet" id="1806100290313040267"></div>
-  </section>
-
-
-
-
-
-  <script
-    src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
-    integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI="
-    crossorigin="anonymous"></script>
-  <script src="http://platform.twitter.com/widgets.js"></script>
-  <script>
-    var tweets = $(".tweet");
-    
-    $(tweets).each(function(t, tweet) { 
-      var id = $(this).attr('id');
-   
-      twttr.widgets.createTweet(
-        id, tweet, 
-        {
-          conversation: 'none',    // or all
-          cards: 'visible',         // or visible 
-          linkColor: '#cc0000',    // default is blue
-          theme: 'dark'           // or dark
-        });
-    });
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<section class="tweets-section">
+    <h2 class="tweet-title">Competition updates</h2>
+    <div class="tweet-content">
+        <?php echo do_shortcode('[custom-twitter-feeds feed=1]'); ?>
+    </div>
+</section>
 
 <section class="announcement-section">
     <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Logo" class="announcement-logo">
@@ -2107,15 +2013,6 @@ body {
     </div>
     <a href="#" class="announcement-button">JOIN NOW</a>
 </section>
-
-
-
- 
-
-
-
-
- 
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -2131,7 +2028,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting && !entry.target.classList.contains('show')) {
                 entry.target.classList.add('show');
-                observer.unobserve(entry.target);  
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -2151,7 +2048,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(timerCard);
 
     function updateCountdown() {
-        const deadline = new Date('June 30, 2024 00:00:00').getTime();
+        const deadline = new Date('July 6, 2024 00:00:00').getTime();
         const now = new Date().getTime();
         const timeRemaining = deadline - now;
 
@@ -2188,10 +2085,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    let slideIndex = 0; // Start with the first slide
+    let slideIndex = 0;  
     showSlides(slideIndex);
 
     function showSlides(index) {
@@ -2230,10 +2125,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
- 
-
-
 </script>
 
 <?php get_footer(); ?>

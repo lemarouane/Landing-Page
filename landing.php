@@ -110,11 +110,10 @@ body {
     padding: 100px 20px;
     text-align: center;
     color: #fff;
+    background-attachment: fixed;
 }
 
 .tweets-section {
-    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
-    background-size: cover;
     padding: 100px 20px;
     text-align: center;
     color: #fff;
@@ -869,16 +868,16 @@ body {
 }
 
 .contest-card svg {
-    width: 75px;   
-    height: 75px;  
+    width: 50px;   
+    height: 50px;  
 }
 
 .contest-card1 svg,
 .contest-card2 svg,
 .contest-card3 svg,
 .contest-card4 svg {
-    width: 75px;   
-    height: 75px;  
+    width: 50px;   
+    height: 50px;  
 }
 
 .timer-section {
@@ -1520,10 +1519,23 @@ body {
 }
 
 .carousel-slide {
-    display: none;
-    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
 }
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+
 
 .carousel-slide img {
     width: 100%;
@@ -1544,6 +1556,17 @@ body {
     align-items: center;
     color: #fff;
 }
+.carousel-overlay-locations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
 
 .carousel-text {
     text-align: center;
@@ -1559,17 +1582,47 @@ body {
     font-size: 70px;
     line-height: 70px;
     margin-bottom: 10px;
+    margin-top: -14%;
+}
+.carousel-text h3 {
+    font-family: 'Satoshi', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 70px;
+    margin-bottom: 10px;
     margin-top: -2em;
+    margin-left: 10em;
 }
 
 .carousel-text p {
     font-family: 'Manrope', sans-serif;
     line-height: 25px;
+    font-size: 21px;
+    margin-bottom: 20px;
+    margin-top: 5%;
+}
+.carousel-text h4 {
+    font-family: 'Manrope', sans-serif;
+    line-height: 25px;
     font-size: 18px;
     margin-bottom: 20px;
+    margin-left: 38em;
 }
 
 .carousel-button {
+    font-size: 20px;
+    display: inline-block;
+    padding: 25px 36px;
+    background-color: rgba(0, 156, 255, 1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1%;
+}
+.carousel-button-locations {
     font-size: 20px;
     display: inline-block;
     padding: 20px 28px;
@@ -1578,20 +1631,12 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
+    margin-left: 35em;
+    text-transform: uppercase;
+    
 }
 
-.carousel-overlay-special {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
+ 
 .carousel-text-special {
     text-align: center;
     padding: 20px;
@@ -1626,6 +1671,8 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
+    margin-left: 35em;
+    text-transform: uppercase;
 }
 
 .carousel-prev,
@@ -1738,12 +1785,6 @@ body {
     transform: translateY(-10px);
     background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
 }
-
-
-
-
-
-
 </style>
 
 <section class="hero">
@@ -1932,11 +1973,11 @@ body {
 
 <section class="carousel-section">
     <div class="carousel-container">
-        <div class="carousel-slide">
+        <div class="carousel-slide active">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider1.png" alt="Slider 1">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                    <h2>Join TheBreakout <br>Gelber Group Trading Contest </h2>
+                    <h2>Join TheBreakout <br>Gelber Group Trading<br> Contest </h2>
                     <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
                     <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
                 </div>
@@ -1946,7 +1987,7 @@ body {
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider2.png" alt="Slider 2">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                <h2>Join TheBreakout <br>Gelber Group Trading Contest </h2>
+                    <h2>Join TheBreakout <br>Gelber Group Trading<br> Contest </h2>
                     <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
                     <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
                 </div>
@@ -1954,18 +1995,19 @@ body {
         </div>
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider3.png" alt="Slider 3">
-            <div class="carousel-overlay carousel-overlay-special">
+            <div class="carousel-overlay-locations">
                 <div class="carousel-text carousel-text-special">
-                    <h2 class="carousel-title-special">LOCATIONS</h2>
-                    <p class="carousel-description-special">This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
-                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>                </div>
+                    <h3 class="carousel-title-special">Locations</h3>
+                    <h4 class="carousel-description-special">This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</h4>
+                    <a href="#" class="carousel-button-locations">Apply Now & Launch Your Trading Career!</a>                
+                </div>
             </div>
         </div>
         <div class="carousel-slide">
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider4.png" alt="Slider 4">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                <h2>Join TheBreakout <br>Gelber Group Trading Contest </h2>
+                    <h2>Join TheBreakout <br>Gelber Group Trading<br> Contest </h2>
                     <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
                     <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
                 </div>
@@ -1981,6 +2023,9 @@ body {
         </div>
     </div>
 </section>
+
+
+
 
 <section class="faq-section">
     <h2 class="faq-title">Contest FAQ</h2>
@@ -2095,45 +2140,77 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    let slideIndex = 0;  
-    showSlides(slideIndex);
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const intervalTime = 5000;  
+    let slideInterval;
 
     function showSlides(index) {
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-
-        if (index >= slides.length) {
-            slideIndex = 0;
-        } else if (index < 0) {
-            slideIndex = slides.length - 1;
-        }
-
         slides.forEach((slide, i) => {
-            slide.style.display = i === slideIndex ? 'block' : 'none';
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+                loadImage(slide);
+            }
         });
 
         dots.forEach((dot, i) => {
-            dot.className = dot.className.replace(' active', '');
-            if (i === slideIndex) {
-                dot.className += ' active';
+            dot.classList.remove('active');
+            if (i === index) {
+                dot.classList.add('active');
             }
         });
     }
 
+    function loadImage(slide) {
+        const img = slide.querySelector('img');
+        const src = img.getAttribute('src');
+        const tempImg = new Image();
+        tempImg.onload = function() {
+            img.src = src;
+            img.style.visibility = 'visible';
+        };
+        tempImg.src = src;
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlides(slideIndex);
+    }
+
+    function prevSlide() {
+        slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+        showSlides(slideIndex);
+    }
+
     document.querySelector('.carousel-prev').addEventListener('click', function() {
-        showSlides(--slideIndex);
+        prevSlide();
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, intervalTime);
     });
 
     document.querySelector('.carousel-next').addEventListener('click', function() {
-        showSlides(++slideIndex);
+        nextSlide();
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, intervalTime);
     });
 
-    document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+    dots.forEach((dot, index) => {
         dot.addEventListener('click', function() {
-            showSlides(slideIndex = index);
+            showSlides(index);
+            slideIndex = index;
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, intervalTime);
         });
     });
+
+    slides.forEach(slide => loadImage(slide));
+    slideInterval = setInterval(nextSlide, intervalTime);
 });
+
+
+
 </script>
 
 <?php get_footer(); ?>

@@ -1738,6 +1738,12 @@ body {
     transform: translateY(-10px);
     background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
 }
+
+
+
+
+
+
 </style>
 
 <section class="hero">
@@ -2000,9 +2006,12 @@ body {
 <section class="tweets-section">
     <h2 class="tweet-title">Competition updates</h2>
     <div class="tweet-content">
-        <?php echo do_shortcode('[custom-twitter-feeds feed=1]'); ?>
+        <!-- Embed Elfsight Twitter Timeline -->
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-f7d306d7-e8b8-4f1f-b2a1-d9e536a2e927" data-elfsight-app-lazy></div>
     </div>
 </section>
+
 
 <section class="announcement-section">
     <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Logo" class="announcement-logo">

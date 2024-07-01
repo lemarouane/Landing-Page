@@ -30,9 +30,6 @@ get_header(); ?>
     font-style: normal;
 }
 
-body {
-    background: #f4f4f4; /* Default body background */
-}
 
 .privacy-header {
     background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;

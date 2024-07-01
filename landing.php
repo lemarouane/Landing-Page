@@ -6,10 +6,8 @@
 
 function enqueue_landing_page_styles() {
     if (is_page_template('landing.php')) {
-        wp_enqueue_style('landing-page-css', get_template_directory_uri() . '/style/style.css');
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_landing_page_styles');
 
 get_header(); ?>
 
@@ -104,7 +102,7 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
-.section-bg, .prizes-section, .steps-section, .contest-overview, .timer-section, .boss-section, .join-section, .faq-section, .X-section, .tweets-section {
+.section-bg, .prizes-section, .steps-section, .contest-overview, .timer-section, .boss-section, .faq-section, .tweets-section, .announcement-section {
     background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
     background-size: cover;
     padding: 100px 20px;
@@ -127,6 +125,30 @@ body {
     color: #fff;
     margin-bottom: 50px;
     margin-top: -4%;
+}
+.tweet-p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: unset;
+    line-height: 80px;
+    color: #fff;
+    margin-bottom: 50px;
+    text-decoration-line: underline;
+    margin-top: -2em;
+}
+.tweet-sign-button {
+    display: inline-block;
+    padding: 24PX 60PX;
+    background: rgba(0, 156, 255, 1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid transparent;
+    margin-top: -2em;
+    font-size: 18px;
 }
 
 .tweet-content {
@@ -185,6 +207,7 @@ body {
 }
 
 .hero-description {
+    
     font-size: 25px;
     line-height: 30.2px;
     color: #fff;
@@ -194,7 +217,7 @@ body {
 
 .hero-button {
     display: inline-block;
-    padding: 20px 28px;
+    padding: 24px 50px;
     background: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
@@ -202,7 +225,7 @@ body {
     font-weight: normal;
     margin-bottom: 20px;
     margin-top: 30px;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 .hero-element {
@@ -376,7 +399,7 @@ body {
 
 .prizes-apply-button {
     display: inline-block;
-    padding: 26px;
+    padding: 24px 55px;
     background: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
@@ -386,7 +409,7 @@ body {
     text-align: center;
     border: 2px solid transparent;
     margin-top: 3em;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .prizes-apply-button:hover {
@@ -661,16 +684,16 @@ body {
 
 .contest-text .contest-button {
     display: inline-block;
-    padding: 30px;
+    padding: 24px 40px;
     background: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 900;
     margin: 0 auto;
-    margin-left: -19em;
+    margin-left: -23em;
     margin-top: 1em;
-    font-size: 22px;
+    font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 12%;
 }
@@ -708,8 +731,8 @@ body {
 .contest-card2,
 .contest-card3,
 .contest-card4 {
-    height: 420px;
-    width: 420px;
+    height: 430px;
+    width: 430px;
 }
 
 .contest-card2 {
@@ -1095,6 +1118,7 @@ body {
         flex-direction: column;
         text-align: center;
         align-items: center;
+        margin-top: -1%;
     }
 
     .boss-image {
@@ -1611,9 +1635,9 @@ body {
 }
 
 .carousel-button {
-    font-size: 20px;
+    font-size: 18px;
     display: inline-block;
-    padding: 25px 36px;
+    padding: 25px 50px;
     background-color: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
@@ -1623,9 +1647,9 @@ body {
     margin-top: 1%;
 }
 .carousel-button-locations {
-    font-size: 20px;
+    font-size: 18px;
     display: inline-block;
-    padding: 20px 28px;
+    padding: 25px 55px;
     background-color: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
@@ -2024,9 +2048,6 @@ body {
     </div>
 </section>
 
-
-
-
 <section class="faq-section">
     <h2 class="faq-title">Contest FAQ</h2>
     <div class="faq-cards">
@@ -2055,8 +2076,10 @@ body {
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
         <div class="elfsight-app-f7d306d7-e8b8-4f1f-b2a1-d9e536a2e927" data-elfsight-app-lazy></div>
     </div>
-</section>
+    <p class="tweet-p">Load more</p>
+    <a href="#" class="tweet-sign-button">VISIT X</a>
 
+</section>
 
 <section class="announcement-section">
     <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Logo" class="announcement-logo">

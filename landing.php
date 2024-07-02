@@ -20,6 +20,14 @@ get_header(); ?>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
 
 <style>
+    @font-face {
+    font-family: 'Acumin Pro ExtraCondensed';
+    src: url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.woff2') format('woff2'),
+         url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.woff') format('woff'),
+         url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Satoshi';
     src: url('<?php echo get_template_directory_uri(); ?>/fonts/Satoshi-Regular.otf') format('opentype');
@@ -134,7 +142,7 @@ body {
     color: #fff;
     margin-bottom: 50px;
     text-decoration-line: underline;
-    margin-top: -2em;
+    margin-top: 0em;
 }
 .tweet-sign-button {
     display: inline-block;
@@ -567,21 +575,22 @@ body {
 }
 
 .step-button {
-    font-family: 'Satoshi', sans-serif;
-    font-style: normal;
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
     font-size: 24px;
     display: none;
     margin-top: 20px;
-    padding: 16px 24px 16px 24px;
+    padding: 16px 40px;
     background: rgba(0, 156, 255, 1);
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     position: absolute;
-    bottom: 40px;  
-    left: 40px;  
+    bottom: 40px;
+    left: 40px;
     margin-left: 1%;
+    letter-spacing: 1px;
 }
 
 .step-card:hover .step-button {
@@ -2232,6 +2241,57 @@ document.addEventListener('DOMContentLoaded', function() {
     slideInterval = setInterval(nextSlide, intervalTime);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+            function injectStyles() {
+                var targetElement = document.querySelector('a[href="https://elfsight.com/twitter-feed-widget/?utm_source=websites&utm_medium=clients&utm_content=eapps-twitter-feed&utm_term=localhost&utm_campaign=free-widget"]');
+                if (targetElement) {
+                    targetElement.style.animation = 'none';
+                    targetElement.style.backgroundColor = 'rgba(238,238,238,0.9)';
+                    targetElement.style.border = 'none';
+                    targetElement.style.bottom = 'auto';
+                    targetElement.style.color = 'rgba(0,0,0,.5)';
+                    targetElement.style.display = 'none';
+                    targetElement.style.alignItems = 'center';
+                    targetElement.style.gap = '6px';
+                    targetElement.style.float = 'none';
+                    targetElement.style.height = '28px';
+                    targetElement.style.left = '50%';
+                    targetElement.style.margin = '8px auto';
+                    targetElement.style.opacity = '1';
+                    targetElement.style.padding = '6px';
+                    targetElement.style.position = 'relative';
+                    targetElement.style.right = 'auto';
+                    targetElement.style.top = 'auto';
+                    targetElement.style.transform = 'translateX(-50%)';
+                    targetElement.style.zoom = '1';
+                    targetElement.style.visibility = 'visible';
+                    targetElement.style.boxSizing = 'border-box';
+                    targetElement.style.borderRadius = '6px';
+                    targetElement.style.fontFamily = 'Roboto, Arial, Sans-serif';
+                    targetElement.style.fontSize = '12px';
+                    targetElement.style.fontWeight = '700';
+                    targetElement.style.lineHeight = '16px';
+                    targetElement.style.textAlign = 'left';
+                    targetElement.style.textDecoration = 'none';
+                    targetElement.style.maxWidth = '240px';
+                    targetElement.style.textIndent = '0';
+                    targetElement.style.zIndex = '99999';
+                    targetElement.style.marginTop = '20px';
+                }
+            }
+
+             injectStyles();
+
+             var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length || mutation.removedNodes.length) {
+                        injectStyles();
+                    }
+                });
+            });
+
+            observer.observe(document.body, { childList: true, subtree: true });
+        });
 
 
 </script>

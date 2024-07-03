@@ -35,64 +35,84 @@ body {
     padding: 0;
     font-family: 'Manrope', sans-serif;
     box-sizing: border-box;
-}
-
-.privacy-header, .content-container, .breakout-section {
-    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
-    background-size: cover;
     color: white;
 }
 
-.privacy-header {
-    padding: 50px;
-    text-align: left;
+.wrapper {
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background: transparent;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 75rem; 
     margin: 0 auto;
-    padding: 15px;
+    padding: 1rem; 
+    flex: 1;
 }
 
-.privacy-header h1, .content-container h2 {
+.privacy-header {
+    padding: 3.125rem 0; 
+}
+
+.privacy-content, .content-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1, h2 {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 90px;
     font-style: italic;
     font-weight: 900;
     line-height: 1.1;
     text-transform: uppercase;
-    margin: 0 0 20px 0;
+    margin: 0 0 1rem 0;
 }
 
-.content-container h2 {
-    font-size: 50px;
-    margin-top: 20px;
+h1 {
+    font-size: 5.625rem; 
 }
 
-.privacy-header p, .content-container p, .content-container ul {
-    font-size: 23px;
+h2 {
+    font-size: 2.5rem; 
+}
+
+p, ul {
+    font-size: 1.4375rem; 
     font-weight: 500;
     line-height: 1.4;
-    margin: 20px 0 0 0;
+    margin: 1rem 0 0 0; 
 }
 
 ul {
     list-style-type: disc;
-    padding-left: 40px;
+    padding-left: 2.5rem; 
 }
 
 .breakout-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 120px 34px;
+    padding: 7.5rem 2.125rem; 
     position: relative;
-
 }
 
 .breakout-section img {
     position: absolute;
-    bottom: 46px;
+    bottom: 2.875rem; 
     left: 0;
     width: 18vw;
     height: auto;
@@ -100,115 +120,128 @@ ul {
 
 .breakout-section .breakout-text {
     position: absolute;
-    bottom: 34px;
+    bottom: 2.125rem; 
     left: 57%;
     transform: translateX(-50%);
-    font-size: 20px;
+    font-size: 1.25rem; 
     text-align: center;
 }
 
 .breakout-section .breakout-button {
     position: absolute;
-    bottom: 47px;
+    bottom: 2.9375rem; 
     right: 0;
     background-color: #1E90FF;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 28px;
+    padding: 0.625rem 1.25rem;  
+    font-size: 1.75rem; 
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 1.5625rem;  
 }
 
-@media (max-width: 1200px) {
-    .privacy-header h1 {
-        font-size: 60px;
+@media (max-width: 75rem) { 
+    h1 {
+        font-size: 4.375rem;  
     }
 
-    .content-container h2 {
-        font-size: 30px;
+    h2 {
+        font-size: 1.875rem;  
     }
 
-    .privacy-header p, .content-container p, .content-container ul {
-        font-size: 18px;
+    p, ul {
+        font-size: 1.125rem;  
     }
 
     .breakout-section .breakout-text {
-        font-size: 16px;
+        font-size: 1rem; 
     }
 
     .breakout-section .breakout-button {
-        font-size: 16px;
-        padding: 8px 16px;
+        font-size: 1rem;  
+        padding: 0.5rem 1rem;  
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {  
     .privacy-header {
-        text-align: center;
-        padding: 50px 15px;
-    }
+        padding: 3.125rem 1rem;
+        margin-bottom: -1rem;    }
 
     .privacy-header h1 {
-        font-size: 45px;
+        font-size: 3.4375rem;  
     }
 
-    .content-container h2 {
-        font-size: 25px;
+    h2 {
+        font-size: 1.5625rem;  
     }
 
-    .privacy-header p, .content-container p, .content-container ul {
-        font-size: 16px;
+    p, ul {
+        font-size: 1rem;  
     }
 
     .breakout-section img {
-        width: 100px;
+        width: 6.25rem;  
     }
 
     .breakout-section .breakout-text {
-        font-size: 14px;
+        font-size: 0.875rem;  
     }
 
     .breakout-section .breakout-button {
-        font-size: 14px;
-        padding: 6px 12px;
+        font-size: 0.875rem; 
+        padding: 0.375rem 0.75rem;  
+    }
+
+    .privacy-content {
+        margin-left: 1rem; 
     }
 }
 
-@media (max-width: 480px) {
-    .privacy-header h1 {
-        font-size: 30px;
+@media (max-width: 30rem) {  
+    h1 {
+        font-size: 2.5rem; 
     }
 
-    .content-container h2 {
-        font-size: 20px;
+    h2 {
+        font-size: 2.25rem;
+        letter-spacing: 0.1rem;
     }
 
-    .privacy-header p, .content-container p, .content-container ul {
-        font-size: 14px;
+    p, ul {
+        font-size: 0.875rem;  
     }
 
     .breakout-section img {
-        width: 80px;
+        width: 8rem;
     }
 
     .breakout-section .breakout-text {
-        font-size: 12px;
+        font-size: 0.75rem;
+        margin-left: -0.2rem;
     }
 
     .breakout-section .breakout-button {
-        font-size: 12px;
-        padding: 4px 8px;
+        font-size: 0.9rem;
+        margin-right: 0.2rem;
     }
+
+    .privacy-content {
+        margin-left: -1rem;    }
 }
 </style>
 
-<section class="privacy-header">
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-    </div>
-</section>
+
+<div class="wrapper">
+    <main>
+        <section class="privacy-header">
+            <div class="container">
+                <div class="privacy-content">
+                    <h1>Privacy Policy</h1>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                </div>
+            </div>
+        </section>
 
 <section class="content-container">
     <div class="container">
@@ -243,6 +276,7 @@ ul {
     </div>
 </section>
 
+
 <section class="breakout-section">
     <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout">
     <div class="breakout-text">
@@ -250,5 +284,5 @@ ul {
     </div>
     <button class="breakout-button">Join Now</button>
 </section>
-
+</div>
 <?php get_footer(); ?>

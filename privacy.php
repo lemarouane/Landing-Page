@@ -30,240 +30,148 @@ get_header(); ?>
     font-style: normal;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+}
 
-.privacy-header {
+.privacy-header, .content-container, .breakout-section {
     background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
     background-size: cover;
-    padding: 100px 0;
     color: white;
-    text-align: left;
-    background-blend-mode: overlay;
 }
 
-.privacy-header .container {
+.privacy-header {
+    padding: 50px;
+    text-align: left;
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 15px;
 }
 
-.privacy-header h1 {
+.privacy-header h1, .content-container h2 {
     font-family: 'Acumin Pro ExtraCondensed', sans-serif;
     font-size: 90px;
     font-style: italic;
     font-weight: 900;
-    line-height: 78px;
-    text-align: left;
+    line-height: 1.1;
     text-transform: uppercase;
-    margin-left: -10%;
-    letter-spacing: 1px;
+    margin: 0 0 20px 0;
 }
 
-.privacy-header h2 {
-    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 69px;
-    font-style: italic;
-    font-weight: 900;
-    line-height: 78px;
-    text-align: left;
-    text-transform: uppercase;
-    margin-left: -10%;
-    letter-spacing: 1px;
+.content-container h2 {
+    font-size: 50px;
+    margin-top: 20px;
 }
 
-.privacy-page-title {
-    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 200px;
-    font-style: italic;
-    font-weight: 900;
-    line-height: 78px;
-    text-align: left;
-}
-
-.unique-privacy-title {
-    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 120px;
-    font-style: italic;
-    font-weight: 900;
-    line-height: 36px;
-    text-align: left;
-    margin-left: -10%;
-    margin-top: 40px;
-}
-
-.privacy-header p {
-    font-family: 'Manrope', sans-serif;
+.privacy-header p, .content-container p, .content-container ul {
     font-size: 23px;
     font-weight: 500;
-    line-height: 32.2px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    margin-left: -10%;
-    margin-top: -2%;
+    line-height: 1.4;
+    margin: 20px 0 0 0;
 }
 
-.container {
-    font-family: 'Manrope', sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 32.2px;
-    letter-spacing: -0.02em;
-    text-align: left;
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
 }
 
-.container ul {
-    margin-left: -7%;
-    margin-top: 0%;
-    padding-left: 1em;
-    margin-bottom: 52px;
-}
-
-.container li {
-    margin-bottom: 0.5em; /* Adjust spacing between list items */
-}
-
-.announcement-section {
-    position: relative;
+.breakout-section {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 20px 50px;
-    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    text-align: left;
-    margin-bottom: 100px;
-    margin-top: -2%;
+    align-items: flex-end;
+    padding: 120px 34px;
+    position: relative;
+
 }
 
-.announcement-section::after {
-    content: "";
+.breakout-section img {
     position: absolute;
-    bottom: -100px;
+    bottom: 46px;
     left: 0;
-    right: 0;
-    height: 100px;
-    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1;
-}
-
-.announcement-logo {
-    max-width: 400px;
+    width: 18vw;
     height: auto;
 }
 
-.announcement-text {
-    flex: 1;
-    margin-left: 20em;
-    margin-top: 3%;
-}
-
-.announcement-text p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 22px;
-    color: #fff;
-    margin-top: 16%;
-}
-
-.announcement-privacy {
-    display: block;
-    margin-top: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-}
-
-.announcement-button {
-    display: inline-block;
-    width: 183px;
-    height: 67px;
-    background-color: rgba(0, 156, 255, 1);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
+.breakout-section .breakout-text {
+    position: absolute;
+    bottom: 34px;
+    left: 57%;
+    transform: translateX(-50%);
+    font-size: 20px;
     text-align: center;
-    line-height: 67px;
+}
+
+.breakout-section .breakout-button {
+    position: absolute;
+    bottom: 47px;
+    right: 0;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 25px;
 }
 
 @media (max-width: 1200px) {
-    .privacy-header h1, .privacy-header h2, .privacy-page-title, .unique-privacy-title, .privacy-header p, .container, .announcement-section, .announcement-logo, .announcement-text, .announcement-button {
-        margin-left: 0;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
     .privacy-header h1 {
         font-size: 60px;
     }
 
-    .privacy-header h2 {
-        font-size: 50px;
+    .content-container h2 {
+        font-size: 30px;
     }
 
-    .unique-privacy-title {
-        font-size: 80px;
-    }
-
-    .privacy-header p {
+    .privacy-header p, .content-container p, .content-container ul {
         font-size: 18px;
     }
 
-    .announcement-text {
-        margin-left: 0;
+    .breakout-section .breakout-text {
+        font-size: 16px;
+    }
+
+    .breakout-section .breakout-button {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }
 
 @media (max-width: 768px) {
-    .announcement-section {
-        flex-direction: column;
+    .privacy-header {
         text-align: center;
-        padding: 20px;
-    }
-
-    .announcement-logo {
-        margin-bottom: 20px;
-    }
-
-    .announcement-text {
-        margin: 0;
-    }
-
-    .announcement-button {
-        margin-top: 27px;
+        padding: 50px 15px;
     }
 
     .privacy-header h1 {
         font-size: 45px;
     }
 
-    .privacy-header h2 {
-        font-size: 35px;
+    .content-container h2 {
+        font-size: 25px;
     }
 
-    .unique-privacy-title {
-        font-size: 60px;
-    }
-
-    .privacy-header p {
+    .privacy-header p, .content-container p, .content-container ul {
         font-size: 16px;
     }
 
-    .container {
-        font-size: 18px;
+    .breakout-section img {
+        width: 100px;
     }
 
-    .announcement-text p {
-        font-size: 18px;
+    .breakout-section .breakout-text {
+        font-size: 14px;
     }
 
-    .announcement-button {
-        width: 150px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 16px;
+    .breakout-section .breakout-button {
+        font-size: 14px;
+        padding: 6px 12px;
     }
 }
 
@@ -272,86 +180,27 @@ get_header(); ?>
         font-size: 30px;
     }
 
-    .privacy-header h2 {
-        font-size: 25px;
+    .content-container h2 {
+        font-size: 20px;
     }
 
-    .unique-privacy-title {
-        font-size: 40px;
-    }
-
-    .privacy-header p {
+    .privacy-header p, .content-container p, .content-container ul {
         font-size: 14px;
     }
 
-    .container {
-        font-size: 16px;
+    .breakout-section img {
+        width: 80px;
     }
 
-    .announcement-text p {
-        font-size: 16px;
+    .breakout-section .breakout-text {
+        font-size: 12px;
     }
 
-    .announcement-button {
-        width: 120px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 14px;
+    .breakout-section .breakout-button {
+        font-size: 12px;
+        padding: 4px 8px;
     }
 }
-
-.content-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    color: white;
-}
-
-.content-section h2 {
-    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
-    font-size: 36px;
-    font-style: italic;
-    font-weight: 900;
-    line-height: 36px;
-    background-image: url('<?php echo get_template_directory_uri(); ?>/img/bg.png');
-    text-align: left;
-    margin-top: 40px;
-}
-
-.content-section p {
-    font-family: 'Manrope', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.2px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.content-section ul {
-    margin-bottom: 20px;
-    list-style: none;
-    padding: 0;
-}
-
-.content-section ul li {
-    font-family: 'Manrope', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.2px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    position: relative;
-    padding-left: 20px;
-}
-
-.content-section ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #00ccff;
-}
-
 </style>
 
 <section class="privacy-header">
@@ -359,10 +208,16 @@ get_header(); ?>
         <h1>Privacy Policy</h1>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
     </div>
+</section>
+
+<section class="content-container">
     <div class="container">
         <h2>General Provisions</h2>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
     </div>
+</section>
+
+<section class="content-container">
     <div class="container">
         <h2>The Internet Resources That Are Under This Privacy Policy</h2>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.</p>
@@ -372,34 +227,28 @@ get_header(); ?>
             <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur xcepteur sint.</li>
         </ul>
     </div>
-    <div class="container">
-        <h2>The Internet Resources That Are Under This Privacy Policy</h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.</p>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur xcepteur sint.</li>
-        </ul>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.</p>
-    </div>
+</section>
+
+<section class="content-container">
     <div class="container">
         <h2>Links to Internet Resources of Third Parties</h2>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
     </div>
+</section>
+
+<section class="content-container">
     <div class="container">
         <h2>Statement Regarding Under Age Persons</h2>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
     </div>
 </section>
 
-<section class="announcement-section">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout Logo" class="announcement-logo">
-    <div class="announcement-text">
-        <p>Gelber Group is happy to announce THE BREAKOUT<br>
-        – a fully remote, discretionary, simulated Futures & FX <br>trading competition that will take place this <br>September/October 2024</p>
-        <a href="#" class="announcement-privacy"><br><br><br>Privacy Policy</a>
+<section class="breakout-section">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout">
+    <div class="breakout-text">
+        Gelber Group is happy to announce theBreakout – a fully remote, discretionary, simulated Futures & FX trading competition that will take place this September/October 2024.
     </div>
-    <a href="#" class="announcement-button">JOIN NOW</a>
+    <button class="breakout-button">Join Now</button>
 </section>
 
 <?php get_footer(); ?>

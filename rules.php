@@ -83,11 +83,13 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 5.625rem; 
+    font-size: 5.8rem;
+    letter-spacing: 0.3rem;
 }
 
 h2 {
-    font-size: 2.5rem; 
+    font-size: 4.5rem;
+    letter-spacing: 0.2rem;
 }
 
 p, ul {
@@ -106,101 +108,105 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 7.5rem 2.125rem; 
+    margin: 7rem 0;
+    padding: 7.5rem 2.125rem;
     position: relative;
 }
 
 .breakout-section img {
     position: absolute;
-    bottom: 2.875rem; 
-    left: 0;
-    width: 18vw;
+    bottom: 2.875rem;
+    left: 30px;
+    width: 26vw;
     height: auto;
 }
 
 .breakout-section .breakout-text {
     position: absolute;
-    bottom: 2.125rem; 
-    left: 57%;
+    bottom: -2.875rem;
+    left: 54%;
     transform: translateX(-50%);
-    font-size: 1.25rem; 
-    text-align: center;
+    font-size: 1.25rem;
+    text-align: left;
 }
 
 .breakout-section .breakout-button {
     position: absolute;
-    bottom: 2.9375rem; 
-    right: 0;
+    bottom: 4.9375rem;
+    right: 66px;
     background-color: #1E90FF;
     color: white;
     border: none;
-    padding: 0.625rem 1.25rem;  
-    font-size: 1.75rem; 
+    padding: 20px 50px;
+    font-size: 1rem;
     cursor: pointer;
-    border-radius: 1.5625rem;  
+    border-radius: 8.5625rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-@media (max-width: 75rem) { 
+@media (max-width: 75rem) {
     h1 {
-        font-size: 4.375rem;  
+        font-size: 4.375rem;
     }
 
     h2 {
-        font-size: 1.875rem;  
+        font-size: 1.875rem;
     }
 
     p, ul {
-        font-size: 1.125rem;  
+        font-size: 1.125rem;
     }
 
     .breakout-section .breakout-text {
-        font-size: 1rem; 
+        font-size: 1rem;
     }
 
     .breakout-section .breakout-button {
-        font-size: 1rem;  
-        padding: 0.5rem 1rem;  
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 }
 
-@media (max-width: 48rem) {  
+@media (max-width: 48rem) {
     .privacy-header {
         padding: 3.125rem 1rem;
-        margin-bottom: -1rem;    }
+        margin-bottom: -1rem;
+    }
 
     .privacy-header h1 {
-        font-size: 3.4375rem;  
+        font-size: 3.4375rem;
     }
 
     h2 {
-        font-size: 1.5625rem;  
+        font-size: 1.5625rem;
     }
 
     p, ul {
-        font-size: 1rem;  
+        font-size: 1rem;
     }
 
     .breakout-section img {
-        width: 6.25rem;  
+        width: 6.25rem;
     }
 
     .breakout-section .breakout-text {
-        font-size: 0.875rem;  
+        font-size: 0.875rem;
     }
 
     .breakout-section .breakout-button {
-        font-size: 0.875rem; 
-        padding: 0.375rem 0.75rem;  
+        font-size: 0.875rem;
+        padding: 0.375rem 0.75rem;
     }
 
     .privacy-content {
-        margin-left: 1rem; 
+        margin-left: 1rem;
     }
 }
 
-@media (max-width: 30rem) {  
+@media (max-width: 30rem) {
     h1 {
-        font-size: 2.5rem; 
+        font-size: 2.5rem;
     }
 
     h2 {
@@ -209,28 +215,34 @@ ul {
     }
 
     p, ul {
-        font-size: 0.875rem;  
+        font-size: 0.875rem;
     }
 
     .breakout-section img {
-        width: 8rem;
+        width: 20rem;
+        top: -3rem;
+        left: 2rem;
     }
 
     .breakout-section .breakout-text {
-        font-size: 0.75rem;
-        margin-left: -0.2rem;
+        font-size: 90%;
+        margin-left: -1rem;
+        bottom: -9px;
+        text-align: center;
     }
 
     .breakout-section .breakout-button {
-        font-size: 0.9rem;
-        margin-right: 0.2rem;
+        font-size: 1.5rem;
+        margin-right: 2.2rem;
+        bottom: -4em;
+        padding: 18px 30px;
     }
 
     .privacy-content {
-        margin-left: -1rem;    }
+        margin-left: -1rem;
+    }
 }
 </style>
-
 
 <div class="wrapper">
     <main>
@@ -298,10 +310,12 @@ ul {
 </section>
 
 <section class="breakout-section">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/br.png" alt="Breakout">
+    <img src="<?php echo get_template_directory_uri(); ?>/icons/br.svg" alt="Breakout">
     <div class="breakout-text">
-        Gelber Group is happy to announce theBreakout – a fully remote, discretionary, simulated Futures & FX trading competition that will take place this September/October 2024.
+        Gelber Group is happy to announce theBREAKOUT<br> – a fully remote, discretionary, simulated Futures & FX<br> trading competition that will take place this <br>September/October 2024.
+        <br><br><br><a href="/privacy-policy" style="color: white;">Privacy Policy</a>
     </div>
+    
     <button class="breakout-button">Join Now</button>
 </section>
 </div>

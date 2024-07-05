@@ -95,7 +95,10 @@ get_header(); ?>
         font-style: normal;
     }
 
-
+    body {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+    }
 
     .section-bg, .prizes-section, .steps-section, .contest-overview, .timer-section, .boss-section, .faq-section, .tweets-section, .announcement-section {
         background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
@@ -108,8 +111,9 @@ get_header(); ?>
 
     .tweets-section {
         padding: 100px 20px;
-        text-align: center;
-        color: #fff;
+    text-align: center;
+    color: #fff;
+    margin-top: -1%;
     }
 
     .tweet-title {
@@ -121,10 +125,6 @@ get_header(); ?>
         margin-bottom: 50px;
         margin-top: -4%;
     }
-
-
-
-
     .tweet-p {
         font-family: 'Manrope', sans-serif;
         font-size: 20px;
@@ -160,6 +160,11 @@ get_header(); ?>
     .tweet {
         margin: 20px 0;
     }
+
+    #mobile-access ul li {
+    line-height: 1.75;
+    font-size: 3rem !important;
+}
     @media (max-width: 768px) {
         .tweet-title {
             font-family: 'Satoshi', sans-serif;
@@ -356,7 +361,7 @@ font-size: 1.5vw;
     .prizes-cards {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        
         gap: 20px;
     }
 
@@ -421,14 +426,20 @@ font-size: 1.5vw;
         border: 2px solid transparent;
         margin-top: 3em;
         font-size: 18px;
+        transition: 0.3s;
     }
 
     .prizes-apply-button:hover {
-        background: #fff;
-        color: #0077C2;
-        border: 2px solid #0077C2;
+        transform: translateY(-5px);
     }
 
+    @media (max-width: 1224px) {
+
+        .prize-amount{
+        font-size: 60px;
+    }
+}
+    
     @media (max-width: 1024px) {
         .prizes-section {
             padding: 30px 10px;
@@ -520,7 +531,7 @@ font-size: 1.5vw;
     .steps-cards {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+      
         gap: 20px;
     }
 
@@ -549,7 +560,7 @@ font-size: 1.5vw;
         font-size: 48px;
         font-weight: bold;
         margin-bottom: 10px;
-        margin-left: -7em;
+        text-align: left;
         margin-top: 20px;
     }
 
@@ -921,6 +932,7 @@ font-size: 1.5vw;
     }
 
     .timer-section {
+     
         color: #fff;
         margin-top: -1px;
     }
@@ -1094,7 +1106,7 @@ font-size: 1.5vw;
     border-radius: 0 10px 10px 0;
     padding: 30px;
     text-align: left;
-    height: 48em;
+  
     width: 50%;
     margin-top: -5em;
     border: 0.1px solid rgba(255, 255, 255, 0.3);
@@ -1107,11 +1119,8 @@ font-size: 1.5vw;
 
 .boss-card h2 {
     font-family: 'Satoshi', sans-serif;
-    font-size: 58px;
+    font-size: 38px;
     font-style: normal;
-    line-height: 52.8px;
-    letter-spacing: -2%;
-    text-align: left;
     margin-bottom: -1em;
     text-transform: uppercase;
     margin-left: 1em;
@@ -1120,7 +1129,7 @@ font-size: 1.5vw;
 .boss-card h3 {
     font-family: 'Satoshi', sans-serif;
     font-style: normal;
-    font-size: 55px;
+    font-size: 38px;
     margin-bottom: 20px;
     font-weight: normal;
     margin-left: 1em;
@@ -1129,16 +1138,14 @@ font-size: 1.5vw;
 
 .boss-card p {
     font-family: 'Manrope', sans-serif;
-    font-size: 41px;
-    line-height: 55px;
-    weight: 600px;
-    letter-spacing: -2%;
+    font-size: 35px;
+
     margin-top: -6em;
     margin-left: 1em;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .boss-section {
         flex-direction: column;
         text-align: center;
@@ -1168,14 +1175,14 @@ font-size: 1.5vw;
     .boss-card h2 {
         font-size: 55px;
         margin-left: 0;
-        margin-top: 1em;
+        margin-bottom: 10px;
         text-align: center;
     }
 
     .boss-card h3 {
         font-size: 40px;
         margin-left: 0;
-        margin-top: 1.5em;
+
         text-align: center;
     }
 
@@ -1183,7 +1190,7 @@ font-size: 1.5vw;
         font-size: 24px;
         line-height: 28px;
         margin-left: 0;
-        margin-top: 1em; /* Adjusted margin to prevent overflow */
+      /* Adjusted margin to prevent overflow */
         text-align: center;
     }
 }
@@ -1349,20 +1356,21 @@ font-size: 1.5vw;
 
     .faq-question {
         font-family: 'Satoshi', sans-serif;
-        font-size: 40px;
+        font-size: 32px;
         font-style: normal;
-        line-height: 40px;
+        
         letter-spacing: 0.1px;
         text-align: left;
         color: #fff;
         margin-bottom: 10px;
+        width: 90%;
     }
 
     .faq-answer {
         max-height: 0;
         overflow: hidden;
         font-family: 'Manrope', sans-serif;
-        font-size: 22px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 22.4px;
         letter-spacing: -0.02em;
@@ -1444,6 +1452,7 @@ font-size: 1.5vw;
         align-items: center;
         text-align: center;
         padding: 100px 20px;
+        height: 90vh;
     }
 
     .section-title {
@@ -1460,26 +1469,25 @@ font-size: 1.5vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
+        gap: 4rem;
+        width: 100%;
         margin-top: 7em;
+        height: 75%;
     }
 
     .card {
+        
         background-color: #fff;
         border-radius: 10px;
         padding: 20px;
-        width: 585px;
-        height: 430px;
+        width: 32%;
+        height: 100%;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+   
 
     .card-icon {
         width: 139px;
@@ -1490,20 +1498,38 @@ font-size: 1.5vw;
     .card-title {
         font-family: 'Satoshi', sans-serif;
         font-style: normal;
-        font-size: 45px;
+        
+        font-size: 34px;
         font-weight: 700;
         margin-bottom: 10px;
         color: black;
-        line-height: 47.5px;
+        
     }
 
     .card-description {
         font-family: 'Manrope', sans-serif;
-        font-size: 35px;
+        font-size: 22px;
         color: #000;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
+        .card-title {
+            font-size: 26px;  
+     }
+
+    .card-description {
+       
+        font-size: 16px;
+        
+    }
+    }
+
+    @media (max-width: 800px) {
+
+        .section-bg {
+        
+        height: auto;
+    }
         .section-title {
             font-size: 48px;
             line-height: 48px;
@@ -1512,12 +1538,13 @@ font-size: 1.5vw;
 
         .card-container {
             flex-direction: column;
+            height: auto;
         }
 
         .card {
             width: 98%;
             margin-bottom: 20px;
-            height: 25em;
+            height: 100%;
         }
 
         .card-icon {
@@ -1893,6 +1920,228 @@ font-size: 1.5vw;
 }
 
 
+/*candivate section*/
+
+#candidate {
+  height: 100vh;
+  width: 100%;
+  background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+  background-size: cover
+}
+
+
+#candidate .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 4rem;
+}
+
+#candidate .left {
+ height: 70%;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ justify-content: center;
+ align-items: flex-start;
+width: 40%;
+color:white;
+}
+
+#candidate .right {
+ 
+  display: flex;
+
+  gap: 1rem;
+  justify-content: center;
+   width: 51%;
+   height: 90%;
+   
+ }
+
+ #candidate .left-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+ }
+
+ #candidate .right-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-end;
+ }
+
+ #candidate .card {
+  background-color: #1B1B1B;
+  height: 45%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #1B1B1B;
+  width: 100%;
+  text-align:left;
+ 
+}
+
+#candidate .card:hover {
+  background-color: white;
+  color: black;
+}
+
+#candidate .card a {
+  color: black;
+  text-decoration: none;
+  opacity: 0;
+  display:flex;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#candidate .card:hover a {
+  opacity: 1;
+}
+
+
+#candidate .card:hover .logo svg {
+  filter: invert(1);
+}
+
+#candidate .card h1{
+  font-size: 28px;
+  font-weight: 700;
+ 
+   }
+  
+   #candidate .content h2{
+    margin: 0;
+   }
+
+  #candidate .card p{
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  #candidate .transaprent-button{
+    background: transparent;
+    
+    border: 1px solid #0173BC;
+    border-radius: 126px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 16px 24px 16px 24px;
+    color: white;
+    
+  }
+
+  #candidate .bg-blue {
+    
+padding: 16px 24px 16px 24px;
+color: white;
+border-radius: 126px;
+background: #009CFF;
+font-weight: 700;
+font-size: 16px;
+border: none;
+transition:0.3s;
+cursor: pointer;
+  }
+
+  #candidate .bg-blue:hover {
+    
+    transform:translateY(-5px);
+      }
+
+  #candidate .left h1{
+
+font-size: 48px;
+font-weight: 700;
+margin:0;
+width: 80%;
+
+  }
+
+  #candidate .left p{
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 1200px) {
+    #candidate .left h1 {
+        font-size: 38px;
+        width: 90%;
+    }
+
+    #candidate  {
+ height: auto;
+}
+    #candidate .container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        margin-top: -1%;
+}
+
+#candidate .left {
+ width: 100%;
+}
+
+#candidate .right {
+
+   width: 100%; 
+ }
+
+ #candidate .card {
+
+height: 50%;
+}
+
+#candidate .left-card {
+    width: 50%;
+}
+
+#candidate .right-card {
+    width: 50%;
+}
+  }
+
+  @media screen and (max-width: 600px) {
+
+
+    #candidate .left h1 {
+        font-size: 36px;
+        width: 100%;
+    }
+
+    #candidate .left p {
+        font-size: 16px;
+    }
+    #candidate .right {
+
+        flex-direction: column;
+}
+
+#candidate .card {
+
+height: 100%;
+}
+
+#candidate .left-card {
+    flex-direction: column;
+ width: 100%;
+}
+
+#candidate .right-card {
+    flex-direction: column;
+ width: 100%;
+}
+  }
+
 /* Modal styles */
 .modal {
     display: none;
@@ -2032,6 +2281,704 @@ body.modal-open #content {
         margin-left: 18%;    }
 }
 
+#ceo{
+  width: 100%;
+  height: 90vh;
+  background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;  
+  background-size: cover;
+  color: white;
+ 
+}
+
+#ceo .container{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-bottom:2rem;
+}
+
+#ceo .left{
+  height: 90%;
+  border-radius: 10px;
+  width: 45%;
+}
+
+#ceo .left img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+#ceo .right{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+  border: 0.5px solid #FFFFFF4D;
+  border-radius: 0 10px 10px 0;
+  padding: 2rem;
+  width: 45%;
+}
+
+#ceo .right h1{
+ 
+font-size: 38px;
+font-weight: 700;
+line-height: 41.8px;
+letter-spacing: -0.02em;
+text-align: left;
+margin-bottom: 0;
+
+}
+
+#ceo .right h2{
+ 
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0;
+  
+  
+  }
+
+#ceo .right p{
+ 
+ 
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 45.5px;
+  
+  
+  }
+
+  @media (max-width: 1100px) {
+    #ceo .right h1{
+ 
+      font-size: 30px;
+      font-weight: 700;
+      margin:0
+      
+      }
+      
+      #ceo .right h2{
+       
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        
+        }
+      
+      #ceo .right p{
+       
+       
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 45.5px;
+        
+        
+        }
+
+        #ceo .right{
+         
+         width: 50%;
+       }
+
+        #ceo .left{
+         
+          width: 45%;
+        }
+  }
+
+  @media (max-width: 800px) {
+    #ceo{
+      width: 100%;
+      height: auto;
+      
+    }
+    
+    #ceo .container{
+        flex-direction: column;
+        margin-top: -1%;
+    }
+
+    #ceo .left{
+     
+      width: 90%;
+    }
+    
+  
+    
+    #ceo .right{
+        border-top:none;
+      width: 80%;
+      border-radius: 0px 0px 10px 10px;
+    }
+
+    
+    
+  }
+
+#gelbertgroup {
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+  width: 100%;
+  height: 90vh;
+  color: white; 
+  position: relative;
+}
+
+#gelbertgroup .title{
+  height: 10%;
+ }
+
+#gelbertgroup .title h1{
+ font-size: 64px;
+ text-align: center;
+ font-weight: 700;
+margin: 0;
+}
+
+#gelbertgroup .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+  padding: 2rem;
+  gap: 2rem;
+ 
+}
+
+#gelbertgroup .card{
+  color: white;
+  background: linear-gradient(0deg, rgba(36, 35, 52, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+  width: 100%;
+  height: 70%;
+ border: 1px #FFFFFF4D solid;
+ border-radius: 10px;
+ padding: 2rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ text-align:left;
+ 
+}
+
+#gelbertgroup .content h1{
+  margin-top:0;
+  font-size: 32px;
+  font-weight: 700;
+ 
+  
+}
+
+#gelbertgroup .content p{
+ 
+  font-size: 24px;
+  font-weight: 600;
+ 
+  
+}
+
+#gelbertgroup .button button{
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    align-self: flex-end;
+    font-style: italic;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    padding: 16px 24px;
+    background: #009CFF;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+#gelbertgroup .card:hover{
+  background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+
+}
+
+
+#gelbertgroup .card img, .check{
+  opacity: 0;
+transition: 0.4s;
+}
+
+#gelbertgroup .card:hover img{
+  opacity: 1;
+
+}
+
+
+#gelbertgroup .card:hover .check{
+  opacity: 1;
+
+}
+
+@keyframes grow {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+
+#gelbertgroup .criteria {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+  z-index: 444;
+  border-radius: 10px;
+
+  display: none;
+}
+
+#gelbertgroup .criteria.show {
+  display: block;
+}
+
+
+
+
+
+
+#gelbertgroup .overlay{
+  display: flex;
+  position: relative;
+  width: 80%;
+  flex-direction: column;
+  align-content: center;
+  padding: 2rem;
+  background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+  border-radius: 10px;
+  border: 1px #FFFFFF solid;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1rem;
+  z-index: 444;
+  animation: grow 0.5s forwards;
+}
+
+#gelbertgroup .overlay.show {
+  display: block;
+  animation: grow 0.5s forwards;
+}
+
+#gelbertgroup .header h1{
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+  font-size: 78px;
+  font-weight: 900;
+  margin: 0;
+  
+}
+
+#gelbertgroup .header p{
+  font-size: 18px;
+  font-weight: 500;
+  
+}
+
+
+#gelbertgroup .requirement h1{
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    font-style: italic;
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+  
+}
+
+
+#gelbertgroup .requirement p{
+  font-size: 18px;
+  font-weight: 500;
+  
+}
+
+
+#gelbertgroup .close{
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  padding: 1rem;
+  cursor: pointer;
+  transition:0.3s;
+}
+
+
+
+
+#gelbertgroup .close svg{
+   transition:0.3s;
+}
+
+#gelbertgroup .close svg:hover{
+    transform: rotate(90deg) scale(1.1);
+}
+
+#gelbertgroup .button button{
+    font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+    align-self: flex-end;
+    font-style: italic;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    padding: 16px 24px;
+    background: #009CFF;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#gelbertgroup .button button:hover{
+
+transform: translateY(-5px);
+}
+
+#gelbertgroup .list p{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+  #gelbertgroup .container {
+   gap: 0.5rem;
+   padding: 1rem;
+   
+  }
+
+  #gelbertgroup .title h1{
+    font-size: 50px;
+  }
+
+  #gelbertgroup .requirement h1{
+    font-size: 30px;
+   margin: 0;
+    
+  }
+  
+  
+  #gelbertgroup .requirement p{
+    font-size: 16px;
+   
+    
+  }
+
+  #gelbertgroup .header h1{
+    font-size: 38px;
+    
+  }
+  #gelbertgroup .content p{
+    font-size: 18px;
+    
+  }
+
+  
+
+ 
+}
+
+
+@media screen and (max-width: 900px) {
+
+  #gelbertgroup {
+    height: auto;
+    
+  }
+
+ 
+
+
+  #gelbertgroup .title h1{
+    font-size: 36px;
+  }
+
+  #gelbertgroup .container {
+    flex-direction: column;
+    padding: 1rem;
+   
+  }
+
+
+  #gelbertgroup .card{
+   
+    width: 90%;
+    
+ 
+   
+  }
+
+  #gelbertgroup .card button{
+    margin-top: 5rem;
+  }
+
+}
+
+#timer{
+  width: 100%;
+  height: 80vh;
+  background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+  
+  background-size: cover;
+  color: white;
+  padding-bottom:2rem ;
+}
+
+#timer .container{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 0.5px solid #FFFFFF4D;
+  background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
+  
+
+}
+#timer .header h1{
+
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52.8px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  
+  }
+
+#timer .content{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+
+#timer .time{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  justify-content: space-evenly;
+  
+}
+  
+#timer .clock{
+  display: flex;
+  flex-direction: column;
+  border-right: 3px solid #009CFF;
+  width: 50%;
+}
+
+#timer .border-none {
+  border: none;
+}
+
+#timer .clock h1{
+  
+  font-size: 132px;
+  font-weight: 900;
+  line-height: 145.2px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0;
+}
+
+#timer .clock p{
+
+font-size: 60px;
+font-weight: 700;
+line-height: 66px;
+letter-spacing: -0.02em;
+text-align: center;
+margin-top:2rem ;
+
+}
+
+#timer .footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+
+}
+
+#timer .footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+
+}
+
+#timer .cursor{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#timer .cursor svg{
+    margin-left: 10px;
+    cursor: pointer;
+    transition:0.3s;
+
+}
+
+#timer .cursor:hover svg{
+    transform: rotate(45deg) scale(1.1);
+}
+
+@media (max-width: 1200px) {
+
+#timer .clock h1{
+  
+  font-size: 100px;
+  font-weight: 900;
+  
+  margin: 0;
+}
+
+#timer .clock p{
+
+font-size: 36px;
+font-weight: 700;
+
+margin: 0;
+}
+
+}
+
+@media (max-width: 700px) {
+
+  #timer{
+    height: auto;
+    margin-top: -1%;
+  }
+
+  #timer .content{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+  }
+
+  #timer .bottom-border{
+    border-bottom: 2px solid #009CFF;
+  }
+
+  #timer .time{
+    width: 100%;
+  }
+  
+
+  #timer .none{
+    border-right: none;
+  }
+
+  
+  
+  }
+
+
+  #miniFooter{
+  height: 100%;
+  width: 100%;
+  background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+      background-size: cover;
+  color: white;
+}
+
+#miniFooter .container{
+  display: flex;
+  
+padding: 3rem;
+ 
+  justify-content: space-between;
+ 
+}
+
+#miniFooter .content{
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+  gap: 1rem;
+}
+
+
+
+#miniFooter button{
+  
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+background-color: #009CFF;
+padding: 16px 24px 16px 24px;
+border-radius: 128px;
+border: none;
+color: white;
+cursor: pointer;
+transition: 0.3s;
+
+}
+
+
+#miniFooter button:hover{
+  
+  font-size: 16px;
+  
+background-color: white;
+
+color: #009CFF;
+
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+  #miniFooter .container{
+    flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        margin-top: -1%;
+  }
+
+  #miniFooter .content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  #miniFooter .content p{
+    margin-bottom: 10px;
+  }
+}
+
 
 </style>
 
@@ -2052,17 +2999,17 @@ body.modal-open #content {
         <div class="card">
             <img src="<?php echo get_template_directory_uri(); ?>/icons/trophy.svg" alt="Trophy Icon" class="card-icon">
             <h3 class="card-title">theBreakout</h3>
-            <p class="card-description">Compete for $35k & a Dream Job at Gelber Group</p>
+            <p class="card-description">Compete for $35k & a Dream Job <br/> at Gelber Group</p>
         </div>
         <div class="card">
             <img src="<?php echo get_template_directory_uri(); ?>/icons/chart.svg" alt="Chart Icon" class="card-icon">
             <h3 class="card-title">Futures & FX Masters</h3>
-            <p class="card-description">Compete, Get Mentored, Win BIG at theBreakout</p>
+            <p class="card-description">Compete, Get Mentored, Win <br/> BIG at theBreakout</p>
         </div>
         <div class="card">
             <img src="<?php echo get_template_directory_uri(); ?>/icons/skills.svg" alt="Skills Icon" class="card-icon">
-            <h3 class="card-title">Don't just trade, Breakout!</h3>
-            <p class="card-description">Showcase Your Skills & Learn From Industry Leaders.</p>
+            <h3 class="card-title">Don't just trade,<br/> Breakout!</h3>
+            <p class="card-description">Showcase Your Skills & Learn <br/> From Industry Leaders.</p>
         </div>
     </div>
 </section>
@@ -2093,137 +3040,237 @@ body.modal-open #content {
     <a href="#" class="prizes-apply-button">SIGN UP TODAY</a>
 </section>
 
-<section class="steps-section">
-    <h2 class="steps-title">Join Gelber Group<br> Trading Contest In 3 Easy Steps</h2>
-    <div class="steps-cards">
-        <div class="step-card">
-            <div class="step-title">STEP 1</div>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-            <p class="step-text">See if you fit the criteria <br>of contestants eligible to <br>participate in the competition.</p>
-            <a href="#" class="step-button" id="check-now-button">CHECK NOW</a>
+<section id="gelbertgroup">
+        <div class="title">
+            <h1>Join Gelber Group <br/>Trading Contest In 3 Easy Steps</h1>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <h1>Step 1</h1>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/curve.svg" alt="">
+                    <p>See if you fit the criteria of contestants eligible to participate in the competition.</p>
+                </div>
+                <div class="button">
+                    <button class="check">CHECK NOW</button>
+                </div>
             </div>
-        <div class="step-card">
-            <div class="step-title">STEP 2</div>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-            <p class="step-text">Fill the form with as many <br>details as possible.</p>
-            <a href="#" class="step-button">APPLY NOW</a>
+            <div class="card">
+                <div class="content">
+                    <h1>Step 2</h1>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/curve.svg" alt="">
+                    <p>Fill the form with as many details as possible.</p>
+                </div>
+                <div class="button">
+                    <button class="check">APPLY NOW</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h1>Step 3</h1>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/curve.svg" alt="">
+                    <p>If selected, you will be onboarded onto the competition and receive access ceredentials to your account.</p>
+                </div>
+                <div class="button">
+                    <button class="check">APPLY NOW</button>
+                </div>
+            </div>
         </div>
-        <div class="step-card">
-            <div class="step-title">STEP 3</div>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/vector.png" alt="Step Vector" class="step-vector">
-            <p class="step-text">If selected, you will be onboarded<br> onto the competition and receive<br> access credentials to your<br> account.</p>
-            <a href="#" class="step-button">APPLY NOW</a>
+
+        <div class="criteria">
+            <div class="overlay">
+                <div class="close">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.4 30.875L8.125 28.6L17.225 19.5L8.125 10.4L10.4 8.125L19.5 17.225L28.6 8.125L30.875 10.4L21.775 19.5L30.875 28.6L28.6 30.875L19.5 21.775L10.4 30.875Z" fill="#E8EAED"/>
+                    </svg>
+                </div>
+                <div class="header">
+                    <h1>SEE IF YOU FIT CRITERIA</h1>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
+                </div>
+                <div class="requirement">
+                    <h1>REQUIREMENTS</h1>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia </p>
+                </div>
+                <div class="list">
+                    <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
+                    </svg></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
+                    </svg></span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
+                    </svg></span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur xcepteur sint.</p>
+                </div>
+
+                <div class="button">
+                    <button>APPLY NOW</button>
+                </div>
+            </div>
         </div>
-    </div>
 </section>
 
-<section class="contest-overview">
-    <div class="contest-text">
-        <a class="contest-overview-button">Contest Overview</a>
-        <h2>Are you the ideal candidate for theBreakout?</h2>
-        <p>theBreakout winner isn't just about P&L. We value smart analysis and a growth mindset. We want traders who can learn, adapt, and take their careers to the next level with Gelber Group.</p>
-        <a href="#" class="contest-button">Official Contest Rules</a>
-    </div>
-    <div class="contest-cards">
-        <div class="contest-column">
-            <div class="contest-card contest-card1">
-                <svg width="100" height="100" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25.5" cy="25.5" r="25.5" fill="black"/>
-                    <path d="M36 36H29.7143V15H36V36ZM28.1429 36H21.8571V21.4615H28.1429V36ZM20.2857 36H14V26.3077H20.2857V36Z" fill="white"/>
-                </svg>
-                <h3>SHOWCASE YOUR SKILLS</h3>
-                <p>2+ years of profitable experience in Futures & FX markets</p>
-                <div class="apply-now-contest">
-                    APPLY NOW
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
-                </div>
+<section id="candidate">
+        <div class="container">
+            <div class="left">
+                <button class="transaprent-button">Contest Overview</button>
+                
+                <h1>Are you the ideal candidate for theBreakout?</h1>
+                <p>
+                theBreakout winner isn't just about P&L. We value smart analysis and a growth mindset. We want traders who can learn, adapt, and take their careers to the next level with Gelber Group.
+                </p>
+                <button class="bg-blue">Official Contest Rules</button>
             </div>
-            <div class="contest-card contest-card3">
-                <svg width="100" height="100" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
-                    <path d="M22.4 39C21.68 39 21.2 38.52 21.2 37.8V34.2H16.4C15.08 34.2 14 33.12 14 31.8V17.4C14 16.08 15.08 15 16.4 15H35.6C36.92 15 38 16.08 38 17.4V31.8C38 33.12 36.92 34.2 35.6 34.2H28.28L23.84 38.64C23.6 38.88 23.36 39 23 39H22.4ZM23.6 31.8V35.52L27.32 31.8H35.6V17.4H16.4V31.8H23.6ZM31.16 19.8L29.48 23.4H32V28.2H27.2V23.16L28.76 19.8H31.16ZM23.96 19.8L22.28 23.4H24.8V28.2H20V23.16L21.56 19.8H23.96Z" fill="black"/>
-                </svg>
-                <h3>Get Feedback & Mentorship</h3>
-                <p>The hunger to take their career to the next level.</p>
-                <div class="apply-now-contest">
-                    APPLY NOW
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
+            <div class="right">
+                <div class="left-card">
+                    <div class="card">
+                        <div class="logo">
+                            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
+                                <path d="M36 36H29.7143V15H36V36ZM28.1429 36H21.8571V21.4615H28.1429V36ZM20.2857 36H14V26.3077H20.2857V36Z" fill="black"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="content">
+                            <h2>Showcase Your Skills</h2>
+                            <p>2+ years of profitable experience in Futures & FX markets</p>
+                        </div>
+                        
+                        <a href="">APPLY NOW  <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="21.5" width="29.1778" height="29.1778" rx="14.5889" transform="rotate(-45 0 21.5)" fill="black"/>
+<path d="M25.1282 26.0562L24.2927 26.0562L24.2927 17.8387L16.0752 17.8387L16.0752 17.0031L25.1282 17.0031L25.1282 26.0562Z" fill="white"/>
+<path d="M16.1826 25.3555L16.7734 25.9463L25.0052 17.7145L24.4144 17.1237L16.1826 25.3555Z" fill="white"/>
+</svg>
+</a> 
+                    </div>
+                    <div class="card">
+                        <div class="logo">
+                            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
+                                <path d="M22.4 39C21.68 39 21.2 38.52 21.2 37.8V34.2H16.4C15.08 34.2 14 33.12 14 31.8V17.4C14 16.08 15.08 15 16.4 15H35.6C36.92 15 38 16.08 38 17.4C38 17.4 38 30.48 38 31.8C38 33.12 36.92 34.2 35.6 34.2H28.28L23.84 38.64C23.6 38.88 23.36 39 23 39H22.4ZM23.6 31.8V35.52L27.32 31.8H35.6V17.4H16.4V31.8H23.6ZM31.16 19.8L29.48 23.4H32V28.2H27.2V23.16L28.76 19.8H31.16ZM23.96 19.8L22.28 23.4H24.8V28.2H20V23.16L21.56 19.8H23.96Z" fill="black"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="content">
+                            <h2>Showcase Your Skills</h2>
+                            <p>2+ years of profitable experience in Futures & FX markets</p>
+                        </div>
+                        
+                        <a href="">APPLY NOW  <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="21.5" width="29.1778" height="29.1778" rx="14.5889" transform="rotate(-45 0 21.5)" fill="black"/>
+<path d="M25.1282 26.0562L24.2927 26.0562L24.2927 17.8387L16.0752 17.8387L16.0752 17.0031L25.1282 17.0031L25.1282 26.0562Z" fill="white"/>
+<path d="M16.1826 25.3555L16.7734 25.9463L25.0052 17.7145L24.4144 17.1237L16.1826 25.3555Z" fill="white"/>
+</svg>
+</a> 
+                    </div>
+                </div>
+                <div class="right-card">
+                    <div class="card">
+                        <div class="logo">
+                            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
+                                <path d="M38.9228 16.238C31.1667 13.4941 22.7362 13.2674 14.8425 15.5906C14.5287 15.6654 14.2333 15.8022 13.9739 15.9931C13.7144 16.1839 13.4963 16.4249 13.3325 16.7015C13.1687 16.9781 13.0626 17.2847 13.0205 17.603C12.9784 17.9213 13.0012 18.2448 13.0876 18.5542C13.5196 20.2796 14.1498 22.262 14.9067 24.0594C14.9197 24.1014 14.94 24.0812 14.94 24.0392C14.8303 23.1963 15.4816 22.1319 16.7591 21.7448C22.8981 19.8005 29.5048 19.8876 35.59 21.9929C35.8144 22.0693 36.052 22.1002 36.2886 22.0838C36.5253 22.0674 36.7562 22.004 36.9678 21.8973C37.1795 21.7907 37.3675 21.6429 37.5208 21.4628C37.6741 21.2827 37.7897 21.0738 37.8606 20.8486C38.6175 18.4241 38.9228 16.7778 38.9984 16.3657C39.0114 16.2889 38.9431 16.259 38.9228 16.238ZM20.2097 21.5719C19.2798 21.765 17.9943 22.0689 17.0295 22.3873C15.1007 23.0492 15.1901 25.3848 16.2174 26.1299C16.2929 25.6968 16.7591 25.1076 17.2788 24.9088C19.2043 24.1556 21.2719 23.7054 23.3622 23.5196C22.3 23.0904 21.2638 22.4754 20.2235 21.5711L20.2097 21.5719ZM35.564 26.2479C32.793 24.9523 29.7892 24.2226 26.73 24.1019C23.6708 23.9813 20.6184 24.4722 17.7531 25.5456C16.8346 25.8907 16.2596 27.0027 16.8346 28.0582C17.839 29.8654 18.9789 31.5946 20.2446 33.2313C20.0627 32.6041 20.3843 31.4428 21.6187 31.063C25.0327 30.0188 28.6149 30.4617 30.996 31.421C31.6684 31.6901 32.6201 31.5269 33.1537 30.7316C34.0636 29.3368 34.8912 27.8904 35.6322 26.3999C35.6655 26.3328 35.6322 26.2827 35.564 26.2479ZM30.032 34.6205C29.0333 34.1187 28.1199 33.4639 27.3253 32.6801C26.9574 32.314 26.4157 31.7879 25.8448 31.1608C24.5414 31.1608 23.2761 31.2909 21.9232 31.7208C20.6669 32.112 20.5491 33.5562 21.0989 34.3094C22.0288 35.4626 22.6809 36.0849 23.7212 37.1549C24.2725 37.6931 25.0128 37.9962 25.7851 38C26.5573 38.0037 27.3006 37.7079 27.8572 37.1751C28.6693 36.367 29.1687 35.8279 30.0864 34.7927C30.1408 34.7377 30.1205 34.6415 30.032 34.6205Z" fill="black"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="content">
+                            <h2>Showcase Your Skills</h2>
+                            <p>2+ years of profitable experience in Futures & FX markets</p>
+                        </div>
+                        
+                        <a href="">APPLY NOW  <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="21.5" width="29.1778" height="29.1778" rx="14.5889" transform="rotate(-45 0 21.5)" fill="black"/>
+<path d="M25.1282 26.0562L24.2927 26.0562L24.2927 17.8387L16.0752 17.8387L16.0752 17.0031L25.1282 17.0031L25.1282 26.0562Z" fill="white"/>
+<path d="M16.1826 25.3555L16.7734 25.9463L25.0052 17.7145L24.4144 17.1237L16.1826 25.3555Z" fill="white"/>
+</svg>
+</a> 
+                    </div>
+                    <div class="card">
+                        <div class="logo">
+                            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
+                                <path d="M33.1063 18.6866C34.333 19.9328 35.227 21.4615 35.7079 23.1348H39V28.8614H35.7079C35.2276 30.5361 34.3335 32.0661 33.1063 33.3134L34.7552 36.1376L29.7448 39L28.0997 36.1758C26.3939 36.6015 24.608 36.6015 22.9022 36.1758L21.2552 39L16.2448 36.1376L17.8937 33.3134C16.6665 32.0661 15.7724 30.5361 15.2921 28.8614H12V23.1367H15.2921C15.7724 21.462 16.6665 19.932 17.8937 18.6847L16.2429 15.8624L21.2514 13H21.2571L22.9041 15.8204C24.6099 15.3947 26.3959 15.3947 28.1016 15.8204L29.7429 13H29.7467L34.7571 15.8624L33.1082 18.6866H33.1063ZM31.2857 25.999C31.2857 24.4807 30.6762 23.0246 29.5911 21.951C28.5061 20.8774 27.0345 20.2743 25.5 20.2743C23.9655 20.2743 22.4939 20.8774 21.4089 21.951C20.3239 23.0246 19.7143 24.4807 19.7143 25.999C19.7143 27.5173 20.3239 28.9735 21.4089 30.0471C22.4939 31.1207 23.9655 31.7238 25.5 31.7238C27.0345 31.7238 28.5061 31.1207 29.5911 30.0471C30.6762 28.9735 31.2857 27.5173 31.2857 25.999Z" fill="black"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="content">
+                            <h2>Showcase Your Skills</h2>
+                            <p>2+ years of profitable experience in Futures & FX markets</p>
+                        </div>
+                        
+                        <a href="">APPLY NOW <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="21.5" width="29.1778" height="29.1778" rx="14.5889" transform="rotate(-45 0 21.5)" fill="black"/>
+<path d="M25.1282 26.0562L24.2927 26.0562L24.2927 17.8387L16.0752 17.8387L16.0752 17.0031L25.1282 17.0031L25.1282 26.0562Z" fill="white"/>
+<path d="M16.1826 25.3555L16.7734 25.9463L25.0052 17.7145L24.4144 17.1237L16.1826 25.3555Z" fill="white"/>
+</svg>
+</a> 
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="contest-column">
-            <div class="contest-card contest-card2">
-                <svg width="100" height="100" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
-                    <path d="M38.9228 16.238C31.1667 13.4941 22.7362 13.2674 14.8425 15.5906C14.5287 15.6654 14.2333 15.8022 13.9739 15.9931C13.7144 16.1839 13.4963 16.4249 13.3325 16.7015C13.1687 16.9781 13.0626 17.2847 13.0205 17.603C12.9784 17.9213 13.0012 18.2448 13.0876 18.5542C13.5196 20.2796 14.1498 22.262 14.9067 24.0594C14.9197 24.1014 14.94 24.0812 14.94 24.0392C14.8303 23.1963 15.4816 22.1319 16.7591 21.7448C22.8981 19.8005 29.5048 19.8876 35.59 21.9929C35.8144 22.0693 36.052 22.1002 36.2886 22.0838C36.5253 22.0674 36.7562 22.004 36.9678 21.8973C37.1795 21.7907 37.3675 21.6429 37.5208 21.4628C37.6741 21.2827 37.7897 21.0738 37.8606 20.8486C38.6175 18.4241 38.9228 16.7778 38.9984 16.3657C39.0114 16.2889 38.9431 16.259 38.9228 16.238ZM20.2097 21.5719C19.2798 21.765 17.9943 22.0689 17.0295 22.3873C15.1007 23.0492 15.1901 25.3848 16.2174 26.1299C16.2929 25.6968 16.7591 25.1076 17.2788 24.9088C19.2043 24.1556 21.2719 23.7054 23.3622 23.5196C22.3 23.0904 21.2638 22.4754 20.2235 21.5711L20.2097 21.5719ZM35.564 26.2479C32.793 24.9523 29.7892 24.2226 26.73 24.1019C23.6708 23.9813 20.6184 24.4722 17.7531 25.5456C16.8346 25.8907 16.2596 27.0027 16.8346 28.0582C17.839 29.8654 18.9789 31.5946 20.2446 33.2313C20.0627 32.6041 20.3843 31.4428 21.6187 31.063C25.0327 30.0188 28.6149 30.4617 30.996 31.421C31.6684 31.6901 32.6201 31.5269 33.1537 30.7316C34.0636 29.3368 34.8912 27.8904 35.6322 26.3999C35.6655 26.3328 35.6322 26.2827 35.564 26.2479ZM30.032 34.6205C29.0333 34.1187 28.1199 33.4639 27.3253 32.6801C26.9574 32.314 26.4157 31.7879 25.8448 31.1608C24.5414 31.1608 23.2761 31.2909 21.9232 31.7208C20.6669 32.112 20.5491 33.5562 21.0989 34.3094C22.0288 35.4626 22.6809 36.0849 23.7212 37.1549C24.2725 37.6931 25.0128 37.9962 25.7851 38C26.5573 38.0037 27.3006 37.7079 27.8572 37.1751C28.6693 36.367 29.1687 35.8279 30.0864 34.7927C30.1408 34.7377 30.1205 34.6415 30.032 34.6205Z" fill="black"/>
-                </svg>
-                <h3>SECURE DATA ENCRYPTION</h3>
-                <p>A clear and well-defined trading strategy.</p>
-                <div class="apply-now-contest">
-                    APPLY NOW
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
-                </div>
-            </div>
-            <div class="contest-card contest-card4">
-                <svg width="100" height="100" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25.5" cy="25.5" r="25.5" fill="white"/>
-                    <path d="M33.1063 18.6866C34.333 19.9328 35.227 21.4615 35.7079 23.1348H39V28.8614H35.7079C35.2276 30.5361 34.3335 32.0661 33.1063 33.3134L34.7552 36.1376L29.7448 39L28.0997 36.1758C26.3939 36.6015 24.608 36.6015 22.9022 36.1758L21.2552 39L16.2448 36.1376L17.8937 33.3134C16.6665 32.0661 15.7724 30.5361 15.2921 28.8614H12V23.1367H15.2921C15.7724 21.462 16.6665 19.932 17.8937 18.6847L16.2429 15.8624L21.2514 13H21.2571L22.9041 15.8204C24.6099 15.3947 26.3959 15.3947 28.1016 15.8204L29.7429 13H29.7467L34.7571 15.8624L33.1082 18.6866H33.1063ZM31.2857 25.999C31.2857 24.4807 30.6762 23.0246 29.5911 21.951C28.5061 20.8774 27.0345 20.2743 25.5 20.2743C23.9655 20.2743 22.4939 20.8774 21.4089 21.951C20.3239 23.0246 19.7143 24.4807 19.7143 25.999C19.7143 27.5173 20.3239 28.9735 21.4089 30.0471C22.4939 31.1207 23.9655 31.7238 25.5 31.7238C27.0345 31.7238 28.5061 31.1207 29.5911 30.0471C30.6762 28.9735 31.2857 27.5173 31.2857 25.999Z" fill="black"/>
-                </svg>
-                <h3>USE THE BEST TOOLS</h3>
-                <p>A commitment to excellence and a desire to join the Gelber Group team</p>
-                <div class="apply-now-contest">
-                    APPLY NOW
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/contest_arrow.png" alt="Apply Now Arrow" class="contest-arrow">
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
 
-<section class="timer-section">
-    <div class="timer-card">
-        <h2>Starts In</h2>
-        <div class="timer">
-            <div>
-                <span id="days"></span>
-                <span>Days</span>
+<section id="timer">
+        <div class="container">
+            <div class="header">
+                <h1>STARTS IN</h1>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="Line">
-            <div>
-                <span id="hours"></span>
-                <span>Hours</span>
+            <div class="content">
+                <div class="time bottom-border">
+                    <div class="clock">
+                        <h1 id="days"></h1>
+                        <p>DAYS</p>
+                    </div>
+                    <div class="clock none">
+                        <h1 id="hours"></h1>
+                        <p>HOURS</p>
+                    </div>
+                </div>
+                <div class="time ">
+                    <div class="clock">
+                        <h1 id="minutes"></h1>
+                        <p>MINS</p>
+                    </div>
+                    <div class="clock border-none">
+                        <h1 id="seconds"></h1>
+                        <p>SECS</p>
+                    </div>
+                </div>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="Line">
-            <div>
-                <span id="minutes"></span>
-                <span>Mins</span>
-            </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="Line">
-            <div>
-                <span id="seconds"></span>
-                <span>Secs</span>
-            </div>
-        </div>
-        <div class="apply-now">
-            <span>Don't wait! </span>
-            <a href="#">Apply Now <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow-timer.svg" alt="Apply Now Icon"></a>
-        </div>
-    </div>
-</section>
 
-<section class="boss-section">
-    <img src="<?php echo get_template_directory_uri(); ?>/icons/boss.svg" alt="Boss Image" class="boss-image">
-    <div class="boss-card">
-        <h2>Brian Gelber</h2>
-        <h3>CEO</h3>
-        <p><br><br><br><br><br><br>"Trading is about expressing <br>your market views authentically,<br> in your own unique way.<br>It’s challenging and the fun is<br> in the challenge."</p>
-    </div>
+            <div class="footer">
+                <p>DON’T WAIT!</p> <p class="cursor">APPLY NOW <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="21" width="29.1778" height="29.1778" rx="14.5889" transform="rotate(-45 0 21)" fill="#009CFF"/>
+<path d="M25.1282 25.5566L24.2927 25.5566L24.2927 17.3391L16.0752 17.3391L16.0752 16.5036L25.1282 16.5036L25.1282 25.5566Z" fill="white"/>
+<path d="M16.1826 24.8555L16.7734 25.4463L25.0052 17.2145L24.4144 16.6237L16.1826 24.8555Z" fill="white"/>
+</svg></p> 
+
+            </div>
+        </div>
+    </section>
+
+<section id="ceo">
+        <div class="container">
+            <div class="left">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/GELBER.png" alt="">
+            </div>
+            <div class="right">
+                <div class="header">
+                <h1>BRIAN GELBER</h1>
+                <h2>ceo</h2>
+            </div>
+            <div class="content">
+                <p>"Trading is about expressing your market views authentically, in your own unique way.It’s challenging and the fun is in the challenge."</p>
+            </div>
+            </div>
+        </div>
 </section>
 
 <section class="carousel-section">
     <div class="carousel-container">
         <div class="carousel-slide active">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/slider1.png" alt="Slider 1">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/slider1.svg" alt="Slider 1">
             <div class="carousel-overlay">
                 <div class="carousel-text">
                     <h2>Join theBreakout <br>Gelber Group Trading<br> Contest </h2>
@@ -2233,7 +3280,7 @@ body.modal-open #content {
             </div>
         </div>
         <div class="carousel-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/slider2.png" alt="Slider 2">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/slider2.svg" alt="Slider 2">
             <div class="carousel-overlay">
                 <div class="carousel-text">
                     <h2>Join theBreakout <br>Gelber Group Trading<br> Contest </h2>
@@ -2243,7 +3290,7 @@ body.modal-open #content {
             </div>
         </div>
         <div class="carousel-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/slider3.png" alt="Slider 3">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/slider3.svg" alt="Slider 3">
             <div class="carousel-overlay-locations">
                 <div class="carousel-text carousel-text-special">
                     <h3 class="carousel-title-special">Locations</h3>
@@ -2253,7 +3300,7 @@ body.modal-open #content {
             </div>
         </div>
         <div class="carousel-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/slider4.png" alt="Slider 4">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/slider4.svg" alt="Slider 4">
             <div class="carousel-overlay">
                 <div class="carousel-text">
                     <h2>Join theBreakout <br>Gelber Group Trading<br> Contest </h2>
@@ -2279,17 +3326,17 @@ body.modal-open #content {
         <div class="faq-card">
             <h3 class="faq-question">Who can participate in theBreakout contest?</h3>
             <p class="faq-answer">theBreakout contest is open to legal residents of the 50 United States and the District of Columbia who are 21 years of age or older.</p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" alt="Arrow Icon" class="faq-arrow">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow.svg" alt="Arrow Icon" class="faq-arrow">
         </div>
         <div class="faq-card">
             <h3 class="faq-question">What markets are eligible to trade in the competition?</h3>
             <p class="faq-answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem a, sint eaque optio dolorem hic aperiam, consequatur at deserunt eos voluptatum maxime molestias. Ea dignissimos non fuga repellat vitae molestias.</p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" alt="Arrow Icon" class="faq-arrow">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow.svg" alt="Arrow Icon" class="faq-arrow">
         </div>
         <div class="faq-card">
             <h3 class="faq-question">I only trade single name stocks and options -- do I qualify?</h3>
             <p class="faq-answer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt deleniti eos nemo temporibus veniam exercitationem laborum repellat asperiores, adipisci optio, laudantium beatae velit voluptatum. Exercitationem voluptatem ipsa animi natus..</p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" alt="Arrow Icon" class="faq-arrow">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow.svg" alt="Arrow Icon" class="faq-arrow">
         </div>
     </div>
 </section>
@@ -2304,6 +3351,17 @@ body.modal-open #content {
     <p class="tweet-p">Load more</p>
     <a href="#" class="tweet-sign-button">VISIT X</a>
 
+</section>
+
+<section id="miniFooter">
+        <div class="container">
+            <div class="logo"><img src="<?php echo get_template_directory_uri(); ?>/icons/br.svg" alt=""></div>
+            <div class="content">
+                <p>Gelber Group is happy to announce THE BREAKOUT – a fully remote, discretionary, simulated Futures & FX trading competition that will take  place this September/October 2024</p>
+                <p>Privacy Policy</p>
+            </div>
+            <div class="button"><button>JOIN NOW</button></div>
+        </div>
 </section>
 
 <div id="criteria-modal" class="modal">
@@ -2394,6 +3452,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// gelbertgroup
+
+
+document.querySelectorAll('.check').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('#gelbertgroup .criteria').classList.add('show');
+                document.querySelector('#gelbertgroup .dark-overlay').classList.add('show');
+            });
+        });
+
+        document.querySelector('#gelbertgroup .close').addEventListener('click', () => {
+            document.querySelector('#gelbertgroup .criteria').classList.remove('show');
+            document.querySelector('#gelbertgroup .dark-overlay').classList.remove('show');
+        });
+
+// gelbertgroup
+
+
+// timer 
+function updateTimer() {
+            const targetDate = new Date('August 23, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference < 0) {
+                document.getElementById("days").innerText = "0";
+                document.getElementById("hours").innerText = "0";
+                document.getElementById("minutes").innerText = "0";
+                document.getElementById("seconds").innerText = "0";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+
+       
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        //timer
 
 document.addEventListener('DOMContentLoaded', function() {
     let slideIndex = 0;

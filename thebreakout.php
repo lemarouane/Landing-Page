@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Gelber theBreakout Page
- * Description: A template that displays the Gelber thebreakout page
+ * Template Name: thebreakout
+ * Description: A template that displays the thebreakout
  */
 
 function enqueue_thebreakout_page_styles() {

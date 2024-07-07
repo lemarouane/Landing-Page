@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Official-Rules Page
- * Description: A template that displays the official-rules page
+ * Template Name: Official-Rules
+ * Description: A template that displays the official-rules
  */
 
 function enqueue_privacy_page_styles() {

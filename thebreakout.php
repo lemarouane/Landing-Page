@@ -2282,36 +2282,35 @@ body.modal-open #content {
         margin-left: 18%;    }
 }
 
-#ceo{
+#ceo {
   width: 100%;
   height: 90vh;
   background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
   background-size: cover;
   color: white;
- 
 }
 
-#ceo .container{
+#ceo .container {
   display: flex;
   align-items: center;
   height: 100%;
-  padding-bottom:2rem;
+  padding-bottom: 2rem;
 }
 
-#ceo .left{
+#ceo .left {
   height: 90%;
   border-radius: 10px;
   width: 45%;
 }
 
-#ceo .left img{
+#ceo .left img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-#ceo .right{
+#ceo .right {
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -2323,103 +2322,76 @@ body.modal-open #content {
   width: 45%;
 }
 
-#ceo .right h1{
- 
-font-size: 38px;
-font-weight: 700;
-line-height: 41.8px;
-letter-spacing: -0.02em;
-text-align: left;
-margin: 0;
-
+#ceo .right h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 41.8px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin: 0;
 }
 
-#ceo .right h2{
- 
+#ceo .right h2 {
   font-size: 38px;
   font-weight: 700;
   margin: 0;
-  
-  
-  }
+}
 
-#ceo .right p{
- 
- 
+#ceo .right p {
   font-size: 35px;
   font-weight: 600;
   line-height: 45.5px;
   margin: 0;
+}
 
-  
-  
+@media (max-width: 1200px) {
+  #ceo .right h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
   }
 
-  @media (max-width: 1200px) {
-    #ceo .right h1{
- 
-      font-size: 30px;
-      font-weight: 700;
-      margin:0
-      
-      }
-      
-      #ceo .right h2{
-       
-        font-size: 30px;
-        font-weight: 700;
-        margin-bottom: 2rem;
-        
-        }
-      
-      #ceo .right p{
-       
-       
-        font-size: 26px;
-        font-weight: 600;
-        line-height: 45.5px;
-        
-        
-        }
-
-        #ceo .right{
-         
-         width: 50%;
-       }
-
-        #ceo .left{
-         
-          width: 45%;
-        }
+  #ceo .right h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 2rem;
   }
 
-  @media (max-width: 800px) {
-    #ceo{
-      width: 100%;
-      height: auto;
-      
-    }
-    
-    #ceo .container{
-      flex-direction: column;
-    }
-
-    #ceo .left{
-     
-      width: 90%;
-    }
-    
-  
-    
-    #ceo .right{
-        border-top:none;
-      width: 80%;
-      border-radius: 0px 0px 10px 10px;
-    }
-
-    
-    
+  #ceo .right p {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 45.5px;
   }
+
+  #ceo .right {
+    width: 50%;
+  }
+
+  #ceo .left {
+    width: 45%;
+  }
+}
+
+@media (max-width: 800px) {
+  #ceo {
+    width: 100%;
+    height: auto;
+  }
+
+  #ceo .container {
+    flex-direction: column;
+  }
+
+  #ceo .left {
+    width: 90%;
+  }
+
+  #ceo .right {
+    border-top: none;
+    width: 80%;
+    border-radius: 0px 0px 10px 10px;
+  }
+}
 
 #gelbertgroup {
     background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
@@ -3349,13 +3321,13 @@ planning a more vast competition. Follow us on Twitter (@GelberBreakout) and Lin
 THE BREAKOUT COMPETITION
 ABBREVIATED RULES
 Dates: September 9, 2024– October 31, 2024 </center></br>
-                    Abbreviated Rules. NO PURCHASE OR PAYMENT NECESSARY. To participate, you must (a) be a legal resident of the 50 United States or the District of Columbia, (b) be 21 years of age or older, (c) be selected by Sponsor to participate in the Competition, and (d) complete all required prerequisite actions mandated by Sponsor (including certain training courses) prior to the Competition Period. The Competition begins on begins September 9, 2024 and ends on October 31, 2024. For complete details, see Official Rules available at www.gelbergroup.com/thebreakout. Sponsor: Gelber Group, LLC.
+                    Abbreviated Rules. NO PURCHASE OR PAYMENT NECESSARY. To participate, you must (a) be a legal resident of the 50 United States or the District of Columbia, (b) be 21 years of age or older, (c) be selected by Sponsor to participate in the Competition, and (d) complete all required prerequisite actions mandated by Sponsor (including certain training courses) prior to the Competition Period. The Competition begins on September 9, 2024 and ends on October 31, 2024. For complete details, see Official Rules available at www.gelbergroup.com/thebreakout. Sponsor: Gelber Group, LLC.
 VOID WHERE PROHIBITED OR RESTRICTED BY LAW OR WHERE BONDING, REGISTRATION,OR OTHER REQUIREMENTS WOULD BE REQUIRED BUT HAVE NOT BEEN MET.
 2024 Gelber Group, LLC. All rights reserved.</p>
 
 
             </div>
-            <div class="button" onclick="window.location.href='https://www.gelbergroup.com/thebreakout/official-rules/';"><button>Official Contest Rules</button></div>
+            <div class="button" onclick="window.location.href='https://www.gelbergroup.com/thebreakout/official-rules/';"><button>Official Rules</button></div>
         </div>
 </section>
 

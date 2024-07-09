@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: thebreakout
- * Description: A template that displays the thebreakout
+ * Template Name: thebreakout - v1
+ * Description: A template that displays the thebreakoutv1
  */
 
 function enqueue_thebreakout_page_styles() {

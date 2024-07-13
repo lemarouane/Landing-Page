@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: thebreakout
- * Description: A template that displays the thebreakout
+ * Template Name: theBreakout Page
+ * Description: A template that displays the landing page
  */
 
 function enqueue_thebreakout_page_styles() {
@@ -95,8 +95,7 @@ get_header(); ?>
         font-style: normal;
     }
 
-    body {
-        margin: 0;
+    section{
         font-family: 'Manrope', sans-serif;
     }
 
@@ -111,8 +110,12 @@ get_header(); ?>
 
     .tweets-section {
         padding: 100px 20px;
-        text-align: center;
-        color: #fff;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
     }
 
     .tweet-title {
@@ -130,7 +133,7 @@ get_header(); ?>
         font-style: unset;
         line-height: 80px;
         color: #fff;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
         text-decoration-line: underline;
         margin-top: 0em;
     }
@@ -171,7 +174,7 @@ get_header(); ?>
             font-style: normal;
             line-height: 80px;
             color: #fff;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
             margin-top: -4%;
             line-height: 58px;
         }
@@ -186,16 +189,25 @@ get_header(); ?>
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    min-height: 100vh;
+    
+    
     box-sizing: border-box;
     overflow: hidden;
 }
 
+.button-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 .hero-content {
-    flex: 1 1 auto;
-    margin: 1em;
+    margin: 0;
     text-align: left;
+    width: 50%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .hero-title {
@@ -207,9 +219,9 @@ get_header(); ?>
 
 .hero-description {
 font-size: 1.5vw;
-    line-height: 1.2;
+line-height: 28px;
     color: #fff;
-    margin-top: -5%;
+  
 }
 
 .hero-button {
@@ -221,13 +233,22 @@ font-size: 1.5vw;
     border-radius: 2em;
     font-weight: normal;
     font-size: 1vw;
-    margin: 1em 0;
+    margin:0;
+    transition:0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-5px);
 }
 
 .hero-element {
     display: block;
-    max-width: 100%;
-    margin-top: 2em;
+    width: 80%;
+    margin-top: 2rem;
+}
+
+.hero-element-updated{
+    max-width: 60%;
 }
 
 .hero-logo {
@@ -238,6 +259,8 @@ font-size: 1.5vw;
     margin: 1em;
 }
 
+
+
 @media (max-width: 1200px) {
     .hero {
         padding: 30px 15px;
@@ -247,20 +270,28 @@ font-size: 1.5vw;
         font-size: 5vw;
     }
 
-    .hero-description {
-        font-size: 2vw;
-    }
+   
 
     .hero-button {
-        font-size: 1.5vw;
+        font-size: 16px;
     }
 
     .hero-logo {
         max-width: 50%;
     }
+   
+}
+@media (max-width: 1050px) {
+.hero-description {
+
+line-height: 22px;
+  
+  
+}
 }
 
 @media (max-width: 768px) {
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -268,14 +299,13 @@ font-size: 1.5vw;
         height: auto;
         flex-wrap: wrap;
     }
-
     .hero-content {
-        max-width: 100%;
-        margin-left: 0;
-        margin-bottom: 2em;
-        margin-top: 2em;
-        order: 2;
-    }
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+}
 
     .hero-title {
         font-size: 66px;
@@ -289,16 +319,10 @@ font-size: 1.5vw;
         margin-left: 0;
         text-align: center;
         line-height: 1.4;
-        margin-top: 0%;
+        margin-top: 0;
     }
 
-    .hero-button {
-        padding: 12px 18px;
-        margin-left: 7em;
-        margin-bottom: 20px;
-        margin-top: 3em;
-        order: 3;
-    }
+    
 
     .hero-element {
         margin-top: 0em;
@@ -310,7 +334,7 @@ font-size: 1.5vw;
         top: 0;
         order: 1;
         top: -2em;
-        margin-bottom: -40px;
+        margin:0;
     }
 }
 
@@ -1381,7 +1405,11 @@ font-size: 1.5vw;
     .faq-card.active .faq-answer {
         max-height: fit-content;
         padding-top: 10px;
+        width: 80%;
     }
+
+   
+
     .faq-list{
         margin-bottom: 10px;
     }
@@ -1414,7 +1442,7 @@ font-size: 1.5vw;
 
         .faq-question  {
             width: 80%;
-            font-size: 25px;
+            font-size: 18px;
             line-height: 28px;
         }
 
@@ -1471,7 +1499,7 @@ font-size: 1.5vw;
         display: flex;
         justify-content: center;
         align-items: stretch;
-        gap: 2rem;
+        gap: 3rem;
         width: 100%;
         margin-top: 7em;
         height: 75%;
@@ -1568,7 +1596,7 @@ font-size: 1.5vw;
         }
 
         .card-description {
-            font-size: 25px;
+            font-size: 20px;
             margin-top: -5%;
         }
     }
@@ -1647,6 +1675,7 @@ font-size: 1.5vw;
         justify-content: center;
         align-items: center;
         color: #fff;
+      
     }
 
     .justify-end {
@@ -1671,6 +1700,11 @@ font-size: 1.5vw;
         padding: 20px;
         border-radius: 10px;
         max-width: 80%;
+        z-index: 445;
+       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
 
     .carousel-text h2 {
@@ -1698,8 +1732,10 @@ font-size: 1.5vw;
         font-family: 'Manrope', sans-serif;
         line-height: 25px;
         font-size: 21px;
-        margin-bottom: 20px;
-        margin-top: 5%;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        color:white;
+        width: 60%;
     }
 
     .carousel-text h4 {
@@ -1721,6 +1757,13 @@ font-size: 1.5vw;
         font-weight: bold;
         text-transform: uppercase;
         margin-top: 1%;
+        z-index: 444;
+        cursor: pointer;
+        transition:0.3s;
+    }
+
+    .carousel-button:hover{
+        transform: translateY(-5px);
     }
 
     .carousel-button-locations {
@@ -1871,6 +1914,23 @@ font-size: 1.5vw;
         }
     }
 
+    @media (max-width: 500px) {
+
+    .carousel-text p {
+       
+        width: 100%;
+    }
+
+    .carousel-container {
+            height: 350px;
+        }
+
+        .carousel-button {
+            padding: 12px 16px;
+            font-size: 13px;
+        }
+    }
+
     /* Add smooth transition for hover effects */
     .prize-card,
     .step-card,
@@ -1886,6 +1946,7 @@ font-size: 1.5vw;
         background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
     }
 
+    
 
 
 /* Add animation for the modal */
@@ -1933,7 +1994,8 @@ font-size: 1.5vw;
  
   width: 100%;
   background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
-  background-size: cover
+  
+    background-size: cover
 }
 
 #candidate .container {
@@ -2331,15 +2393,16 @@ body.modal-open #content {
   
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   background: linear-gradient(0deg, rgba(10, 3, 109, 0.7) 0%, rgba(36, 35, 52, 0) 100%);
   border: 0.5px solid #FFFFFF4D;
   border-radius: 0 10px 10px 0;
   padding: 2rem;
   width: 45%;
-  margin-top: auto;
-    gap: 8rem;
-    margin-bottom: auto;
+    gap:2rem;
+    
+    height: auto;
+   
 }
 
 #ceo .right h1{
@@ -2623,12 +2686,12 @@ transition: 0.4s;
   top: 0;
   left: 0;
   width: 100%;
-  
+  height: 100%;
   background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
-  background-size: cover;
+    background-size: cover;
   z-index: 444;
   border-radius: 10px;
-
+padding: 3rem;
   display: none;
 }
 
@@ -2695,8 +2758,8 @@ transition: 0.4s;
 
 #gelbertgroup .close{
   position: absolute;
-  top: 2%;
-  right: 1%;
+  top: 0;
+  right: 0;
   padding: 1rem;
   cursor: pointer;
   transition:0.3s;
@@ -2736,6 +2799,12 @@ transform: translateY(-5px);
   align-items: center;
   gap: 1rem;
 }
+
+#gelbertgroup a{
+  color:white;
+  text-decoration: none;
+}
+
 
 @media screen and (max-width: 1300px) {
   #gelbertgroup .container {
@@ -2804,6 +2873,19 @@ transform: translateY(-5px);
   }
 
 }
+
+
+
+@media screen and (max-width: 700px) {
+
+    #gelbertgroup .criteria {
+    padding: 0rem;
+}
+
+#gelbertgroup .overlay{
+    width: 90%;
+}
+}
 @media screen and (max-width: 450px) {
 
     #gelbertgroup .card img, .check{
@@ -2813,8 +2895,10 @@ transform: translateY(-5px);
   
 #gelbertgroup .card{
     gap:0;
-    pointer-events: none;
+    pointer-events: visible!important;
+   
 }
+
 }
 
 
@@ -2922,11 +3006,30 @@ margin-top:2rem ;
 
 }
 
+#timer .cursor svg {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+
+}
+
+#timer .cursor:hover svg {
+  transform: rotate(45deg) scale(1.1);
+
+}
+
 #timer .cursor{
     display: flex;
     align-items: center;
     cursor: pointer;
 }
+
+#timer a{
+    color:white;
+    text-decoration: none;
+}
+
 #timer .cursor svg{
     margin-left: 10px;
     cursor: pointer;
@@ -3001,37 +3104,131 @@ margin: 0;
   
   }
 
+  #miniFooter{
+  height: 100%;
+  width: 100%;
+  background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+      background-size: cover;
+  color: white;
+}
+
+#miniFooter a{
+text-decoration: none;
+color:white;
+}
+
+#miniFooter .container{
+  display: flex;
+  
+padding: 3rem;
+ align-items: center;
+  justify-content: center;
+ 
+}
+
+#miniFooter .content{
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+  gap: 1rem;
+}
+
+
+
+#miniFooter .button a{
+  
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+background-color: #009CFF;
+padding: 16px 24px 16px 24px;
+border-radius: 128px;
+border: none;
+color: white;
+cursor: pointer;
+transition: 0.3s;
+
+}
+
+
+#miniFooter .button a:hover{
+  
+  transform: translateY(-5px);
+
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+  #miniFooter .container{
+    flex-direction: column;
+    gap: 2rem;
+   padding: 2rem;
+  }
+
+  #miniFooter .content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  #miniFooter .content p{
+    margin-bottom: 10px;
+  }
+}
+
+
+#tweeter .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+ color:white;
+    background: url('<?php echo get_template_directory_uri(); ?>/img/bg.png') no-repeat center center fixed;
+   
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
 
 </style>
 
 
 <section class="hero">
     <div class="hero-content">
-        <h1 class="hero-title">theBreakout<br>trading contest</h1>
-        <p class="hero-description">Gelber Group is happy to announce THE BREAKOUT <br>– a fully remote, discretionary, simulated Futures & FX <br>trading competition that will take place this<br> September/October 2024</p>
-        <a href="#" class="hero-button">JOIN NOW</a>
-        <img src="<?php echo get_template_directory_uri(); ?>/icons/br.svg" alt="Breakout Element" class="hero-element">
+    <img src="<?php echo get_template_directory_uri(); ?>/icons/br.svg" alt="Breakout Element" class="hero-element">
+        <p class="hero-description">Gelber Group is excited to announce theBreakout <br>– a fully remote, discretionary, simulated Futures & FX trading competition running this September 9th -October 31st! Traders will compete for $35,000 in cash prizes as well as the opportunity to be hired by one of Gelber’s trading teams.  See below for more details!</p>
+        <div class="button-container">
+        <a target="_blank" id="applynow" class="hero-button">APPLY NOW</a>
+        <a href="https://www.gelbergroup.com/thebreakout/official-rules/" target="_blank"  class="hero-button">OFFICIAL RULES</a>
+        </div>
     </div>
     <img src="<?php echo get_template_directory_uri(); ?>/img/hero.svg" alt="Breakout Logo" class="hero-logo">
 </section>
 
 <section class="section-bg">
-    <h2 class="section-title">What is theBreakout<br> trading contest</h2>
+    <h2 class="section-title">What is theBreakout?</h2>
     <div class="card-container">
         <div class="card">
             <img src="<?php echo get_template_directory_uri(); ?>/icons/trophy.svg" alt="Trophy Icon" class="card-icon">
-            <h3 class="card-title">theBreakout</h3>
-            <p class="card-description">Are you a profitable trader who is obsessed with the challenge of navigating today’s complex financial markets? Would you like to compete for $35,000 in cash prizes AND a chance to work for a top proprietary trading firm? We’re looking for traders who want to BREAKOUT!</p>
+            <h3 class="card-title">Do you want to Breakout?</h3>
+            <p class="card-description">Are you a profitable trader who is obsessed with the challenge of navigating today’s complex financial markets?  Would you like to compete for $35,000 in cash prizes AND a chance to work for a top proprietary trading firm? We’re looking for traders who want to BREAKOUT.</p>
         </div>
         <div class="card">
             <img src="<?php echo get_template_directory_uri(); ?>/icons/chart.svg" alt="Chart Icon" class="card-icon">
-            <h3 class="card-title">Futures & FX Masters</h3>
-            <p class="card-description">Gelber wants to see your trading SKILLS! Cash prizes will be awarded to the top P&L performers, but we are even more interested in your skills and trading approach. We will evaluate your trading over 8 weeks with a number of statistical and qualitative metrics, and select traders will be considered for employment on one of Gelber’s trading teams in Chicago, New York, or even remote</p>
+            <h3 class="card-title">Do you have the Skills?</h3>
+            <p class="card-description">Gelber wants to see your trading SKILLS!  Cash prizes will be awarded to the top P&L performers, but we are even more interested in your skills and trading approach.  We will evaluate your trading over 8 weeks with a number of statistical and qualitative metrics, and select traders will be considered for employment on one of Gelber’s trading teams in Chicago, New York, or even remote.</p>
         </div>
         <div class="card">
             <img src="<?php echo get_template_directory_uri(); ?>/icons/skills.svg" alt="Skills Icon" class="card-icon">
-            <h3 class="card-title">Don't just trade, Breakout!</h3>
-            <p class="card-description">You will receive valuable feedback and mentorship from professional veteran traders with decades of experience in generating 7-figure P&Ls. You will receive daily trading statistics to help you learn, grow, and refine your craft. All this, while trading on one of the world’s premier Futures & FX trading platforms.</p>
+            <h3 class="card-title">Do you want to evolve as a trader?</h3>
+            <p class="card-description">You will receive valuable feedback and mentorship from professional veteran traders with decades of experience in generating 7-figure P&Ls. You will receive daily trading statistics to help you learn, grow, and refine your craft.  All this, while trading on one of the world’s premier Futures & FX trading platforms.</p>
         </div>
     </div>
 </section>
@@ -3044,59 +3241,61 @@ margin: 0;
             <div class="prize-amount">$20,000
                 <img src="<?php echo get_template_directory_uri(); ?>/icons/gold.svg" alt="Gold Star" class="prize-star">
             </div>
-            <p class="prize-place">1ST PLACE</p>
+            <p class="prize-place">1<sup>st</sup> PLACE</p>
         </div>
         <div class="prize-card">
             <div class="prize-amount">$10,000
                 <img src="<?php echo get_template_directory_uri(); ?>/icons/silver.svg" alt="Silver Star" class="prize-star">
             </div>
-            <p class="prize-place">2ND PLACE</p>
+            <p class="prize-place">2<sup>nd</sup> PLACE</p>
         </div>
         <div class="prize-card">
             <div class="prize-amount">$5,000
                 <img src="<?php echo get_template_directory_uri(); ?>/icons/bronze.svg" alt="Bronze Star" class="prize-star">
             </div>
-            <p class="prize-place">3RD PLACE</p>
+            <p class="prize-place">3<sup>rd</sup> PLACE</p>
         </div>
     </div>
-    <a href="#" class="prizes-apply-button">SIGN UP TODAY</a>
+    <a  target="_blank" id="applynow" class="prizes-apply-button">Apply now</a>
 </section>
 
 <section id="gelbertgroup">
         <div class="title">
-            <h1>Join Gelber Group <br/>Trading Contest In 3 Easy Steps</h1>
+            <h1>3 Easy Steps to Apply to theBreakout</h1>
         </div>
         <div class="container">
             <div class="card">
                 <div class="content">
                     <h1>Step 1</h1>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/curve.svg" alt="">
-                    <p>Do you fit the criteria?.</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/icons/curve.svg" alt="">
+                    <p>Do you fit the criteria?</p>
                 </div>
                 <div class="button">
-                    <button class="check">CHECK NOW</button>
+                    <button id="check" class="check">CHECK NOW</button>
                 </div>
             </div>
             <div class="card">
                 <div class="content">
                     <h1>Step 2</h1>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/curve.svg" alt="">
-                    <p>Fill out our detailed application</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/icons/curve.svg" alt="">
+                    <p>Fill out our detailed application.</p>
                 </div>
                 <div class="button">
-                    <button class="check">APPLY NOW</button>
-                </div>
+    <button class="check" id="applynow" onclick="redirectApplyNow()">APPLY NOW</button>
+</div>
             </div>
             <div class="card">
                 <div class="content">
                     <h1>Step 3</h1>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/curve.svg" alt="">
-                    <p>Please await further communication from us as we finalize the selection of Traders throughout July and August. Once chosen, you will receive onboarding instructions that will commence during the first week of September</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/icons/curve.svg" alt="">
+                    <p>Please await further communication from us as we finalize the selection of Traders
+throughout July and August. Once chosen, you will receive onboarding instructions that
+will commence during the first week of September.</p>
                 </div>
-               
+                <div class="button">
+                </div>
             </div>
         </div>
-
         <div class="criteria">
             <div class="overlay">
                 <div class="close">
@@ -3105,27 +3304,39 @@ margin: 0;
                     </svg>
                 </div>
                 <div class="header">
-                    <h1>SEE IF YOU FIT CRITERIA</h1>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
                 </div>
                 <div class="requirement">
-                    <h1>REQUIREMENTS</h1>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia </p>
+                    <h1>The ideal candidate for theBreakout</h1>
                 </div>
                 <div class="list">
                     <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
-                    </svg></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </svg></span>1-2+ years of profitable experience in Futures &amp; FX Markets.</p>
                     <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
-                    </svg></span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </svg></span> U.S. Resident and 21+.</p>
                     <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
-                    </svg></span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur xcepteur sint.</p>
+                    </svg></span>Ability to demonstrate a defined trading style.</p>
+                    <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
+                    </svg></span>A desire to advance your career by joining Gelber Group.
+                    </p>
+                    <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
+                    </svg>
+                </span>Availability is required in early September for training modules and availability for
+trading extends from September 9th to October 31st . The individual will need to
+communicate several times per week for check-ins, feedback, and maintaining a
+trading reflection journal.</p>
+                    <p><span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.39165 26.1875L7.09581 22.3208L2.74581 21.3542L3.16873 16.8833L0.208313 13.5L3.16873 10.1167L2.74581 5.64583L7.09581 4.67917L9.39165 0.8125L13.5 2.56458L17.6083 0.8125L19.9041 4.67917L24.2541 5.64583L23.8312 10.1167L26.7916 13.5L23.8312 16.8833L24.2541 21.3542L19.9041 22.3208L17.6083 26.1875L13.5 24.4354L9.39165 26.1875ZM10.4187 23.1062L13.5 21.7771L16.6416 23.1062L18.3333 20.2062L21.6562 19.4208L21.3541 16.0375L23.5896 13.5L21.3541 10.9021L21.6562 7.51875L18.3333 6.79375L16.5812 3.89375L13.5 5.22292L10.3583 3.89375L8.66665 6.79375L5.34373 7.51875L5.64581 10.9021L3.4104 13.5L5.64581 16.0375L5.34373 19.4812L8.66665 20.2062L10.4187 23.1062ZM12.2312 17.7896L19.0583 10.9625L17.3666 9.21042L12.2312 14.3458L9.63331 11.8083L7.94165 13.5L12.2312 17.7896Z" fill="white"/>
+                    </svg></span>If you are currently employed or trading full-time from home, we understand that
+you are focused on generating income. Showcase your trading prowess by
+replicating your best trades on our system and demonstrating your skills!</p>
                 </div>
-
-                <div class="button">
-                    <button>APPLY NOW</button>
+                <div class="button"> 
+                <button > <a  id="applynow" target="_blank" >APPLY NOW</a></button>
                 </div>
             </div>
         </div>
@@ -3136,7 +3347,7 @@ margin: 0;
 <section id="timer">
         <div class="container">
             <div class="header">
-                <h1>STARTS IN</h1>
+                <h1>theBreakout starts in</h1>
             </div>
             <div class="content">
                 <div class="time bottom-border">
@@ -3162,7 +3373,7 @@ margin: 0;
             </div>
 
             <div class="footer">
-                <p>DON’T WAIT!</p> <p class="cursor">APPLY NOW <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <p>DON’T WAIT!</p> <a  target="_blank" id="applynow" class="cursor">APPLY NOW</a> <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect y="21" width="29.1778" height="29.1778" rx="14.5889" transform="rotate(-45 0 21)" fill="#009CFF"/>
 <path d="M25.1282 25.5566L24.2927 25.5566L24.2927 17.3391L16.0752 17.3391L16.0752 16.5036L25.1282 16.5036L25.1282 25.5566Z" fill="white"/>
 <path d="M16.1826 24.8555L16.7734 25.4463L25.0052 17.2145L24.4144 16.6237L16.1826 24.8555Z" fill="white"/>
@@ -3180,10 +3391,10 @@ margin: 0;
             <div class="right">
                 <div class="header">
                 <h1>BRIAN GELBER</h1>
-                <h2>ceo</h2>
+                <h2>Founder & CEO</h2>
             </div>
             <div class="content">
-                <p>"Trading is about expressing your market views authentically, in your own unique way.It’s challenging and the fun is in the challenge."</p>
+                <p>"Trading is about expressing your market views authentically, in your own unique way. It’s challenging and the fun is in the challenge."</p>
             </div>
             </div>
         </div>
@@ -3195,9 +3406,9 @@ margin: 0;
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider1.png" alt="Slider 1">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                    <h2>Join theBreakout <br>Gelber Group Trading<br> Contest </h2>
-                    <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
-                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
+                <img src="<?php echo get_template_directory_uri(); ?>/icons/br.svg" alt="Breakout Element" class="hero-element-updated">
+                    <p>This is the Trading Competition YOU have been waiting for. Compete for BIG money and potentially land your dream job as a Trader.  You will gain invaluable mentorship. Spots are limited, so apply today!</p>
+                    <a  target="_blank" id="applynow" class="carousel-button">Apply Now to see if YOU can BREAKOUT!</a>
                 </div>
             </div>
         </div>
@@ -3205,9 +3416,9 @@ margin: 0;
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider2.png" alt="Slider 2">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                    <h2>Join theBreakout <br>Gelber Group Trading<br> Contest </h2>
-                    <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
-                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
+                <img src="<?php echo get_template_directory_uri(); ?>/icons/br.svg" alt="Breakout Element" class="hero-element-updated">
+                    <p>This is the Trading Competition YOU have been waiting for. Compete for BIG money and potentially land your dream job as a Trader.  You will gain invaluable mentorship. Spots are limited, so apply today!</p>
+                    <a target="_blank" id="applynow" class="carousel-button">Apply Now to see if YOU can BREAKOUT!</a>
                 </div>
             </div>
         </div>
@@ -3217,8 +3428,8 @@ margin: 0;
             <div class="carousel-overlay justify-end">
                 <div class="carousel-text">
                     <h2>Locations</h2>
-                    <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
-                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
+                    <p>This is the Trading Competition YOU have been waiting for. Compete for BIG money and potentially land your dream job as a Trader.  You will gain invaluable mentorship. Spots are limited, so apply today!</p>
+                    <a  target="_blank" id="applynow" class="carousel-button">Apply Now to see if YOU can BREAKOUT!</a>
                 </div>
             </div>
         </div>
@@ -3226,9 +3437,9 @@ margin: 0;
             <img src="<?php echo get_template_directory_uri(); ?>/img/slider4.png" alt="Slider 4">
             <div class="carousel-overlay">
                 <div class="carousel-text">
-                    <h2>Join theBreakout <br>Gelber Group Trading<br> Contest </h2>
-                    <p>This is your chance to win big, gain invaluable mentorship, and potentially <br>land your dream job at a top trading firm. Spots are limited, so apply today!</p>
-                    <a href="#" class="carousel-button">Apply Now & Launch Your Trading Career!</a>
+                <img src="<?php echo get_template_directory_uri(); ?>/icons/br.svg" alt="Breakout Element" class="hero-element-updated">
+                    <p>This is the Trading Competition YOU have been waiting for. Compete for BIG money and potentially land your dream job as a Trader.  You will gain invaluable mentorship. Spots are limited, so apply today!</p>
+                    <a target="_blank" id="applynow" class="carousel-button">Apply Now to see if YOU can BREAKOUT!</a>
                 </div>
             </div>
         </div>
@@ -3247,15 +3458,14 @@ margin: 0;
     <h2 class="faq-title">FAQ</h2>
     <div class="faq-cards">
         <div class="faq-card">
-            <h3 class="faq-question">Who can participate in theBreakout competition?</h3>
-            <p class="faq-answer">theBreakout is open to legal residents of the United States who are 21 years of age or older
-            and have a minimum of 1-2 years of profitable trading experience.</p>
+            <h3 class="faq-question">Do I qualify for  theBreakout competition?</h3>
+            <p class="faq-answer">theBreakout is open to legal residents of the United States who are 21 years of age or older and have a minimum of 1-2 years of profitable trading experience.</p>
             <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow.svg" alt="Arrow Icon" class="faq-arrow">
         </div>
         <div class="faq-card">
         <h3 class="faq-question">What markets/products are eligible to trade?</h3>
         <div class="faq-answer">
-            <p>Effectively anything that trades on the CME, in addition to Spot FX. Examples:
+            <p>Futures on CME and Spot FX.  Examples:
 <li class="faq-list">Currency Futures - 6E, 6J, 6B, 6C, 6A, and others</li>
 <li class="faq-list">Equity Index Futures - ES, NQ, YM, RTY, NKY, and others</li>
 <li class="faq-list">Commodity Futures - CL, NG, GC, SI, HG, ZC, ZW, ZS, and others</li>
@@ -3267,48 +3477,23 @@ margin: 0;
         <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow.svg" alt="Arrow Icon" class="faq-arrow">
     </div>
         <div class="faq-card">
-            <h3 class="faq-question">How much of a time commitment is this competition?</h3>
-            <p class="faq-answer">Traders come in many styles and flavors. If you are an active day trader, you will spend more
-time than a swing trader who may only take a few positions per week. We are interested in all
-styles and time frames. If you work a full-time job and trade a few times a day (or trade at
-night), you are welcome to apply! We do expect anyone who applies to be available in
-September and October. We will communicate with you weekly or even sometimes daily,
-through chats and emails</p>
+            <h3 class="faq-question">What is the required time commitment?</h3>
+            <p class="faq-answer">We welcome applicants of all trading styles and time frames, including those who trade while holding full-time jobs or during night hours.  Applicants should be available in September and October.  Communication will occur weekly or even daily via chats and emails.</p>
             <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow.svg" alt="Arrow Icon" class="faq-arrow">
         </div>
         <div class="faq-card">
-            <h3 class="faq-question">How do I get selected for job offer?</h3>
-            <p class="faq-answer">While the cash prizes are attractive and fun to compete for, we are actively looking to recruit
-Traders for employment in either Chicago, New York, or fully remote. We will be evaluating not
-only your trading stats, but qualitative and human traits. For example, you may finish #9 in P&amp;L
-after the 2-month competition, but you displayed an impressive combination of aggressiveness,
-discipline, obsession, and articulate communication – we may think you’re a great fit!</p>
+            <h3 class="faq-question">How do I increase my chances of receiving a job offer?</h3>
+            <p class="faq-answer">We are currently seeking to hire Traders for positions in Chicago, New York, or as fully remote roles.  Our evaluation process considers not only your trading statistics but also qualitative and personal traits. Even if you rank #9 in P&L after the two-month competition, demonstrating valued trader traits could make you an ideal candidate for us!</p>
             <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow.svg" alt="Arrow Icon" class="faq-arrow">
         </div>
         <div class="faq-card">
             <h3 class="faq-question">I trade single name stocks, options, and crypto alt coins – do I qualify?</h3>
-            <p class="faq-answer">This is purely a Futures and FX trading competition. The only stocks that will be allowed are
-Index Futures like the S&amp;P500 emini (ES), Nasdaq100 (NQ), and a few others. The only crypto
-allowed are the BTC and ETH futures that trade on the CME. No options will be allowed. If you
-don’t trade Futures or FX, this competition is not for you. However, stay tuned in 2025 – we are
-planning a more vast competition. Follow us on Twitter (@GelberBreakout) and LinkedIn
-(https://www.linkedin.com/company/gelber-group-llc) to stay informed.</p>
+            <p class="faq-answer">This is a Futures and FX trading competition.  If you don’t trade Futures or FX, this competition is not for you.  Equity index futures and CME crypto futures are available to trade.</p>
             <img src="<?php echo get_template_directory_uri(); ?>/icons/arrow.svg" alt="Arrow Icon" class="faq-arrow">
         </div>
     </div>
 </section>
 
-<section class="tweets-section">
-    <h2 class="tweet-title">Competition updates</h2>
-    <div class="tweet-content">
-        <!-- Embed Elfsight Twitter Timeline -->
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-f7d306d7-e8b8-4f1f-b2a1-d9e536a2e927" data-elfsight-app-lazy></div>
-    </div>
-    <p class="tweet-p">Load more</p>
-    <a href="#" class="tweet-sign-button">VISIT X</a>
-
-</section>
 
 <div id="criteria-modal" class="modal">
     <div class="modal-content">
@@ -3322,13 +3507,45 @@ planning a more vast competition. Follow us on Twitter (@GelberBreakout) and Lin
             <li><img src="<?php echo get_template_directory_uri(); ?>/icons/tvector.svg" alt="Icon"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
             <li><img src="<?php echo get_template_directory_uri(); ?>/icons/tvector.svg" alt="Icon"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur xcepteur sint.</li>
         </ul>
-        <a href="#" class="modal-apply-button">APPLY NOW</a>
+        <a target="_blank" id="applynow" class="modal-apply-button">APPLY NOW</a>
     </div>
 </div>
 
+<section id="tweeter">
+    <div class="container">
+       
+    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="zxx" dir="ltr"><a href="https://t.co/2qfZKvinmc">https://t.co/2qfZKvinmc</a></p>&mdash; theBreakout Trading Competition (@GelberBreakout) <a href="https://twitter.com/GelberBreakout/status/1811535244081729734?ref_src=twsrc%5Etfw">July 11, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+       
+    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="zxx" dir="ltr"><a href="https://t.co/gQnXS1yVuc">https://t.co/gQnXS1yVuc</a></p>&mdash; theBreakout Trading Competition (@GelberBreakout) <a href="https://twitter.com/GelberBreakout/status/1811534130317754667?ref_src=twsrc%5Etfw">July 11, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">BIG Announcement coming soon!</p>&mdash; theBreakout Trading Competition (@GelberBreakout) <a href="https://twitter.com/GelberBreakout/status/1811050702636032484?ref_src=twsrc%5Etfw">July 10, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</section>
+
+
+<section id="miniFooter">
+        <div class="container">
+            <div class="logo"><img src="<?php echo get_template_directory_uri(); ?>/icons/br.svg" alt=""></div>
+            
+          
+        </div>
+</section>
 
 
 <script>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const applyNowButtons = document.querySelectorAll('#applynow');
+    applyNowButtons.forEach((applyNowButton) => {
+        applyNowButton.addEventListener('click', function() {
+            rdt('track', 'Custom', {customEventName: 'ApplyNowClicked'});
+            window.location.href = "https://boards.greenhouse.io/gelbergroup/jobs/4363017006";
+        });
+    });
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const prizeCards = document.querySelectorAll('.prize-card');
     const stepCards = document.querySelectorAll('.step-card');
@@ -3397,54 +3614,57 @@ document.addEventListener('DOMContentLoaded', function() {
             card.classList.toggle('active');
         });
     });
-});
+    // gelbertgroup
 
-// gelbertgroup
-
-
-document.querySelectorAll('.check').forEach(button => {
-            button.addEventListener('click', () => {
-                document.querySelector('#gelbertgroup .criteria').classList.add('show');
-                document.querySelector('#gelbertgroup .dark-overlay').classList.add('show');
+    document.querySelectorAll('#check').forEach(button => {
+                button.addEventListener('click', () => {
+                    console.log('test');
+                    document.querySelector('#gelbertgroup .criteria').classList.add('show');
+                    // document.querySelector('#gelbertgroup .dark-overlay').classList.add('show');
+                });
             });
-        });
-
-        document.querySelector('#gelbertgroup .close').addEventListener('click', () => {
-            document.querySelector('#gelbertgroup .criteria').classList.remove('show');
-            document.querySelector('#gelbertgroup .dark-overlay').classList.remove('show');
-        });
+    
+            document.querySelector('#gelbertgroup .close').addEventListener('click', () => {
+                document.querySelector('#gelbertgroup .criteria').classList.remove('show');
+                // document.querySelector('#gelbertgroup .dark-overlay').classList.remove('show');
+            });
+});
+const redirectApplyNow=()=>{
+    window.location.href='https://boards.greenhouse.io/gelbergroup/jobs/4363017006#app';
+}
 
 // gelbertgroup
 
 
 // timer 
 function updateTimer() {
-            const targetDate = new Date('August 23, 2024 00:00:00').getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
 
-            if (difference < 0) {
-                document.getElementById("days").innerText = "0";
-                document.getElementById("hours").innerText = "0";
-                document.getElementById("minutes").innerText = "0";
-                document.getElementById("seconds").innerText = "0";
-                return;
-            }
+    const targetDate = new Date('September 9, 2024 10:00:00 GMT-0500'); 
+    const now = new Date().getTime();
+    const difference = targetDate.getTime() - now;
 
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    if (difference < 0) {
+        document.getElementById("days").innerText = "0";
+        document.getElementById("hours").innerText = "0";
+        document.getElementById("minutes").innerText = "0";
+        document.getElementById("seconds").innerText = "0";
+        return;
+    }
 
-            document.getElementById("days").innerText = days;
-            document.getElementById("hours").innerText = hours;
-            document.getElementById("minutes").innerText = minutes;
-            document.getElementById("seconds").innerText = seconds;
-        }
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-       
-        setInterval(updateTimer, 1000);
-        updateTimer();
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
+
+setInterval(updateTimer, 1000);
+updateTimer();
+
 
         //timer
 
@@ -3613,4 +3833,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>

@@ -12,8 +12,6 @@ function enqueue_thebreakout_page_styles() {
 get_header(); ?>
 
 <!-- Preconnect for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Including Google Fonts for fallback or additional styling -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">

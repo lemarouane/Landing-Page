@@ -8,8 +8,7 @@ function enqueue_thebreakout_page_styles() {
     if (is_page_template('thebreakout.php')) {
     }
 }
-
-get_header(); ?>
+ ?>
 
 <!-- Preconnect for performance -->
 

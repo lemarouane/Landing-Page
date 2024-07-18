@@ -16,6 +16,8 @@ function enqueue_thebreakout_page_styles() {
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
 
 
+
+
 <style> 
     @font-face {
         font-family: 'Acumin Pro ExtraCondensed';

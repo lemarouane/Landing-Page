@@ -13,12 +13,10 @@ function enqueue_thebreakout_page_styles() {
 <!-- Preconnect for performance -->
 
 <!-- Including Google Fonts for fallback or additional styling -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
 
-
-
-
-<style> 
+<style>
     @font-face {
         font-family: 'Acumin Pro ExtraCondensed';
         src: url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.woff2') format('woff2'),

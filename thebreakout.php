@@ -10,8 +10,6 @@ function enqueue_thebreakout_page_styles() {
 }
  ?>
 
- 
-
 <!-- Preconnect for performance -->
 
 <!-- Including Google Fonts for fallback or additional styling -->
@@ -20,7 +18,6 @@ function enqueue_thebreakout_page_styles() {
 
 <style>
     @font-face {
-
         font-family: 'Acumin Pro ExtraCondensed';
         src: url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.woff2') format('woff2'),
             url('<?php echo get_template_directory_uri(); ?>/fonts/acumin-pro-extra-condensed.woff') format('woff'),

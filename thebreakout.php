@@ -103,15 +103,7 @@ function enqueue_thebreakout_page_styles() {
         background-attachment: fixed;
     }
 
-    .tweets-section {
-        padding: 100px 20px;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem;
-    }
+
 
     .tweet-title {
         font-family: 'Satoshi', sans-serif;

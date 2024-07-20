@@ -105,50 +105,6 @@ function enqueue_thebreakout_page_styles() {
 
 
 
-    .tweet-title {
-        font-family: 'Satoshi', sans-serif;
-        font-size: 80px;
-        font-style: normal;
-        line-height: 80px;
-        color: #fff;
-        margin-bottom: 50px;
-        margin-top: -4%;
-    }
-    .tweet-p {
-        font-family: 'Manrope', sans-serif;
-        font-size: 20px;
-        font-style: unset;
-        line-height: 80px;
-        color: #fff;
-        margin-bottom: 10px;
-        text-decoration-line: underline;
-        margin-top: 0em;
-    }
-    .tweet-sign-button {
-        display: inline-block;
-        padding: 24px 60px;
-        background: rgba(0, 156, 255, 1);
-        color: #fff;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: bold;
-        margin-top: 20px;
-        text-align: center;
-        border: 2px solid transparent;
-        margin-top: -2em;
-        font-size: 18px;
-    }
-
-    .tweet-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .tweet {
-        margin: 20px 0;
-    }
 
     #mobile-access ul li {
     line-height: 1.75;

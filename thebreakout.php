@@ -10,12 +10,9 @@ function enqueue_thebreakout_page_styles() {
 }
  ?>
 
-
 <!-- Preconnect for performance -->
 
 <!-- Including Google Fonts for fallback or additional styling -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
 
 <style>
     @font-face {

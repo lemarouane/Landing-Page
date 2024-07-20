@@ -106,10 +106,7 @@ function enqueue_thebreakout_page_styles() {
 
 
 
-    #mobile-access ul li {
-    line-height: 1.75;
-    font-size: 3rem !important;
-}
+
 
 
     .hero {

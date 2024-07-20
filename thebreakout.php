@@ -110,18 +110,7 @@ function enqueue_thebreakout_page_styles() {
     line-height: 1.75;
     font-size: 3rem !important;
 }
-    @media (max-width: 768px) {
-        .tweet-title {
-            font-family: 'Satoshi', sans-serif;
-            font-size: 54px;
-            font-style: normal;
-            line-height: 80px;
-            color: #fff;
-            margin-bottom: 10px;
-            margin-top: -4%;
-            line-height: 58px;
-        }
-    }
+
 
     .hero {
     position: relative;

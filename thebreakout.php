@@ -139,12 +139,7 @@ function enqueue_thebreakout_page_styles() {
     gap: 1rem;
 }
 
-.hero-title {
-    font-family: 'Satoshi', sans-serif;
-    font-size: 6vw;
-    line-height: 0.9;
-    color: #fff;
-}
+ 
 
 .hero-description {
 font-size: 1.5vw;

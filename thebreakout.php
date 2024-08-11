@@ -146,12 +146,7 @@ function enqueue_thebreakout_page_styles() {
     color: #fff;
 }
 
-.hero-description {
-font-size: 1.5vw;
-line-height: 28px;
-    color: #fff;
-  
-}
+
 
 .hero-button {
     display: inline-block;
